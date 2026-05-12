@@ -1,0 +1,36 @@
+﻿@model DigitalniKlubCitalaca.Models.Profil
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Profil</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Korisnik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Korisnik.KorisnikId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OpisProfila)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OpisProfila)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lokacija)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lokacija)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ProfilId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

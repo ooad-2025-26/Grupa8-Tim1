@@ -1,0 +1,66 @@
+﻿@model DigitalniKlubCitalaca.Models.CitalackaGrupa
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CitalackaGrupa</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Opis)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Opis)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zanr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zanr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Regija)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Regija)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Grad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Grad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaksimalanBrojClanova)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaksimalanBrojClanova)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipGrupe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipGrupe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DatumKreiranja)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DatumKreiranja)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.GrupaId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

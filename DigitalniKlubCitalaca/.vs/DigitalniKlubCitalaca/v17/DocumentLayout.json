@@ -1,0 +1,541 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\controllers\\citalackagrupacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:controllers\\citalackagrupacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\controllers\\zahtjevzapristupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:controllers\\zahtjevzapristupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\controllers\\sadrzajgrupecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:controllers\\sadrzajgrupecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\controllers\\knjigacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:controllers\\knjigacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\controllers\\knjigagrupacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:controllers\\knjigagrupacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\controllers\\clanstvogrupecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:controllers\\clanstvogrupecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\controllers\\profilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:controllers\\profilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\controllers\\komentarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:controllers\\komentarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\views\\korisnik\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:views\\korisnik\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\korisnikcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:korisnikcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\migrations\\20260511195945_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:migrations\\20260511195945_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\zahtjevzapristup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\zahtjevzapristup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\uloga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\uloga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\tipsadrzaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\tipsadrzaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\tipgrupe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\tipgrupe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\statuszahtjeva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\statuszahtjeva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\statussadrzaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\statussadrzaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\statusnaloga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\statusnaloga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\statuskomentara.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\statuskomentara.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\statusclanstva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\statusclanstva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\sadrzajgrupe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\sadrzajgrupe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\profil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\profil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\komentar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\komentar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\knjigagrupa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\knjigagrupa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\knjiga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\knjiga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\clanstvogrupe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\clanstvogrupe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|c:\\users\\korisnik\\source\\repos\\digitalniklubcitalaca\\models\\citalackagrupa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE31BCA7-A62D-46A6-AF8B-431936D06410}|DigitalniKlubCitalaca.csproj|solutionrelative:models\\citalackagrupa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CitalackaGrupaController.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\CitalackaGrupaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CitalackaGrupaController.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\CitalackaGrupaController.cs",
+              "RelativeToolTip": "Controllers\\CitalackaGrupaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T10:51:15.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ZahtjevZaPristupController.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\ZahtjevZaPristupController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ZahtjevZaPristupController.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\ZahtjevZaPristupController.cs",
+              "RelativeToolTip": "Controllers\\ZahtjevZaPristupController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T10:50:15.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SadrzajGrupeController.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\SadrzajGrupeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SadrzajGrupeController.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\SadrzajGrupeController.cs",
+              "RelativeToolTip": "Controllers\\SadrzajGrupeController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T10:47:06.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KnjigaController.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\KnjigaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KnjigaController.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\KnjigaController.cs",
+              "RelativeToolTip": "Controllers\\KnjigaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T10:45:50.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "KnjigaGrupaController.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\KnjigaGrupaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KnjigaGrupaController.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\KnjigaGrupaController.cs",
+              "RelativeToolTip": "Controllers\\KnjigaGrupaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T10:44:54.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClanstvoGrupeController.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\ClanstvoGrupeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClanstvoGrupeController.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\ClanstvoGrupeController.cs",
+              "RelativeToolTip": "Controllers\\ClanstvoGrupeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T10:44:14.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProfilController.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\ProfilController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProfilController.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\ProfilController.cs",
+              "RelativeToolTip": "Controllers\\ProfilController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T10:42:59.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KomentarController.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\KomentarController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KomentarController.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Controllers\\KomentarController.cs",
+              "RelativeToolTip": "Controllers\\KomentarController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T10:40:24.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Views\\Korisnik\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Korisnik\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Views\\Korisnik\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Korisnik\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-11T20:18:19.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "KorisnikController.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\KorisnikController.cs",
+              "RelativeDocumentMoniker": "KorisnikController.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\KorisnikController.cs",
+              "RelativeToolTip": "KorisnikController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T20:14:44.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20260511195945_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Migrations\\20260511195945_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260511195945_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Migrations\\20260511195945_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20260511195945_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:59:45.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:57:52.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-11T19:57:11.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:48:55.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Uloga.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\Uloga.cs",
+              "RelativeDocumentMoniker": "Models\\Uloga.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\Uloga.cs",
+              "RelativeToolTip": "Models\\Uloga.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:31:09.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ZahtjevZaPristup.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\ZahtjevZaPristup.cs",
+              "RelativeDocumentMoniker": "Models\\ZahtjevZaPristup.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\ZahtjevZaPristup.cs",
+              "RelativeToolTip": "Models\\ZahtjevZaPristup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:38:38.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TipSadrzaja.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\TipSadrzaja.cs",
+              "RelativeDocumentMoniker": "Models\\TipSadrzaja.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\TipSadrzaja.cs",
+              "RelativeToolTip": "Models\\TipSadrzaja.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:38:16.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TipGrupe.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\TipGrupe.cs",
+              "RelativeDocumentMoniker": "Models\\TipGrupe.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\TipGrupe.cs",
+              "RelativeToolTip": "Models\\TipGrupe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:37:56.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "StatusZahtjeva.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\StatusZahtjeva.cs",
+              "RelativeDocumentMoniker": "Models\\StatusZahtjeva.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\StatusZahtjeva.cs",
+              "RelativeToolTip": "Models\\StatusZahtjeva.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:37:40.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "StatusSadrzaja.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\StatusSadrzaja.cs",
+              "RelativeDocumentMoniker": "Models\\StatusSadrzaja.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\StatusSadrzaja.cs",
+              "RelativeToolTip": "Models\\StatusSadrzaja.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:37:16.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "StatusNaloga.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\StatusNaloga.cs",
+              "RelativeDocumentMoniker": "Models\\StatusNaloga.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\StatusNaloga.cs",
+              "RelativeToolTip": "Models\\StatusNaloga.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:36:24.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "StatusKomentara.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\StatusKomentara.cs",
+              "RelativeDocumentMoniker": "Models\\StatusKomentara.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\StatusKomentara.cs",
+              "RelativeToolTip": "Models\\StatusKomentara.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:35:50.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "StatusClanstva.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\StatusClanstva.cs",
+              "RelativeDocumentMoniker": "Models\\StatusClanstva.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\StatusClanstva.cs",
+              "RelativeToolTip": "Models\\StatusClanstva.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:34:55.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SadrzajGrupe.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\SadrzajGrupe.cs",
+              "RelativeDocumentMoniker": "Models\\SadrzajGrupe.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\SadrzajGrupe.cs",
+              "RelativeToolTip": "Models\\SadrzajGrupe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:34:31.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Profil.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\Profil.cs",
+              "RelativeDocumentMoniker": "Models\\Profil.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\Profil.cs",
+              "RelativeToolTip": "Models\\Profil.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:34:09.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Korisnik.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\Korisnik.cs",
+              "RelativeDocumentMoniker": "Models\\Korisnik.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\Korisnik.cs",
+              "RelativeToolTip": "Models\\Korisnik.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:30:04.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Komentar.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\Komentar.cs",
+              "RelativeDocumentMoniker": "Models\\Komentar.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\Komentar.cs",
+              "RelativeToolTip": "Models\\Komentar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:33:53.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "KnjigaGrupa.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\KnjigaGrupa.cs",
+              "RelativeDocumentMoniker": "Models\\KnjigaGrupa.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\KnjigaGrupa.cs",
+              "RelativeToolTip": "Models\\KnjigaGrupa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:33:35.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Knjiga.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\Knjiga.cs",
+              "RelativeDocumentMoniker": "Models\\Knjiga.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\Knjiga.cs",
+              "RelativeToolTip": "Models\\Knjiga.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:33:17.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:44:12.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ClanstvoGrupe.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\ClanstvoGrupe.cs",
+              "RelativeDocumentMoniker": "Models\\ClanstvoGrupe.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\ClanstvoGrupe.cs",
+              "RelativeToolTip": "Models\\ClanstvoGrupe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:32:52.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CitalackaGrupa.cs",
+              "DocumentMoniker": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\CitalackaGrupa.cs",
+              "RelativeDocumentMoniker": "Models\\CitalackaGrupa.cs",
+              "ToolTip": "C:\\Users\\Korisnik\\source\\repos\\DigitalniKlubCitalaca\\Models\\CitalackaGrupa.cs",
+              "RelativeToolTip": "Models\\CitalackaGrupa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T19:32:07.144Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
