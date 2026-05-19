@@ -26,7 +26,7 @@ namespace DigitalniKlubCitalaca
         }
 
         // GET: Korisnik/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string? id)
         {
             if (id == null)
             {
@@ -34,7 +34,7 @@ namespace DigitalniKlubCitalaca
             }
 
             var korisnik = await _context.Korisnici
-                .FirstOrDefaultAsync(m => m.KorisnikId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (korisnik == null)
             {
                 return NotFound();
@@ -86,9 +86,9 @@ namespace DigitalniKlubCitalaca
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("KorisnikId,Ime,Prezime,Email,Lozinka,ProfilnaSlika,Biografija,LokacijaX,LokacijaY,Uloga,StatusNaloga")] Korisnik korisnik)
+        public async Task<IActionResult> Edit(string id, [Bind("KorisnikId,Ime,Prezime,Email,Lozinka,ProfilnaSlika,Biografija,LokacijaX,LokacijaY,Uloga,StatusNaloga")] Korisnik korisnik)
         {
-            if (id != korisnik.KorisnikId)
+            if (id != korisnik.Id)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace DigitalniKlubCitalaca
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!KorisnikExists(korisnik.KorisnikId))
+                    if (!KorisnikExists(korisnik.Id))
                     {
                         return NotFound();
                     }
@@ -117,7 +117,7 @@ namespace DigitalniKlubCitalaca
         }
 
         // GET: Korisnik/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string? id)
         {
             if (id == null)
             {
@@ -125,7 +125,7 @@ namespace DigitalniKlubCitalaca
             }
 
             var korisnik = await _context.Korisnici
-                .FirstOrDefaultAsync(m => m.KorisnikId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (korisnik == null)
             {
                 return NotFound();
@@ -149,9 +149,9 @@ namespace DigitalniKlubCitalaca
             return RedirectToAction(nameof(Index));
         }
 
-        private bool KorisnikExists(int id)
+        private bool KorisnikExists(string id)
         {
-            return _context.Korisnici.Any(e => e.KorisnikId == id);
+            return _context.Korisnici.Any(e => e.Id == id);
         }
     }
 }

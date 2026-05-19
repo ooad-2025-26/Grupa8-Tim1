@@ -14,7 +14,7 @@ namespace DigitalniKlubCitalaca.Models
         public SadrzajGrupe SadrzajGrupe { get; set; } = null!;
 
         [ForeignKey("Autor")]
-        public int AutorId { get; set; }
+        public string AutorId { get; set; } = string.Empty;
 
         public Korisnik Autor { get; set; } = null!;
 

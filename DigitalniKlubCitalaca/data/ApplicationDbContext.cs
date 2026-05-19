@@ -1,17 +1,15 @@
 ﻿using DigitalniKlubCitalaca.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Reflection.Emit;
 
 namespace DigitalniKlubCitalaca.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<Korisnik>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-
         public DbSet<Korisnik> Korisnici { get; set; }
         public DbSet<Profil> Profili { get; set; }
         public DbSet<CitalackaGrupa> CitalackeGrupe { get; set; }
@@ -24,7 +22,10 @@ namespace DigitalniKlubCitalaca.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Korisnik>().ToTable("Korisnik");
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Korisnik>().ToTable("AspNetUsers");
+
             modelBuilder.Entity<Profil>().ToTable("Profil");
             modelBuilder.Entity<CitalackaGrupa>().ToTable("CitalackaGrupa");
             modelBuilder.Entity<ClanstvoGrupe>().ToTable("ClanstvoGrupe");
@@ -99,8 +100,6 @@ namespace DigitalniKlubCitalaca.Data
                 .WithMany()
                 .HasForeignKey(kg => kg.GrupaId)
                 .OnDelete(DeleteBehavior.NoAction);
-
-            base.OnModelCreating(modelBuilder);
         }
     }
 }
