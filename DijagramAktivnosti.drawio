@@ -1,0 +1,1849 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0.1 Safari/605.1.15">
+  <diagram name="Page-1" id="vjtNLiKsoJfxoIvz3y8G">
+    <mxGraphModel dx="1278" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-3" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Korisnik&lt;/font&gt;" vertex="1">
+          <mxGeometry height="950" width="250" x="77" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-7" parent="Wz4KeUB2xulx4hSwmTQG-3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="1.Gost otvara početnu stranicu i bira opciju &quot;Registracija&quot;" vertex="1">
+          <mxGeometry height="60" width="130" x="54" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-10" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-3" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" target="Wz4KeUB2xulx4hSwmTQG-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="190" y="120" as="sourcePoint" />
+            <mxPoint x="240" y="119.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-11" parent="Wz4KeUB2xulx4hSwmTQG-3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="3.Gost unosi tražene registracijske podatke i potvrđuje unos" vertex="1">
+          <mxGeometry height="60" width="130" x="57" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-17" parent="Wz4KeUB2xulx4hSwmTQG-3" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="5.Gost ispravlja podatke i ponovo potvrđuje unos" vertex="1">
+          <mxGeometry height="60" width="130" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-49" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-3" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" target="Wz4KeUB2xulx4hSwmTQG-27" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="490" />
+            </Array>
+            <mxPoint x="200" y="540" as="sourcePoint" />
+            <mxPoint x="250" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-285" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-3" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;entryX=0.433;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="118.28999999999999" y="40" as="sourcePoint" />
+            <mxPoint x="118.28999999999999" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-4" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="950" width="500" x="327" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-9" parent="Wz4KeUB2xulx4hSwmTQG-4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="2.Sistem prikazuje formu za registraciju" vertex="1">
+          <mxGeometry height="60" width="130" x="180" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-12" parent="Wz4KeUB2xulx4hSwmTQG-4" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="4.Sistem provjerava potpunost i ispravnost unesenih podataka" vertex="1">
+          <mxGeometry height="60" width="130" x="180" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-16" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-4" style="endArrow=classic;startArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-60" y="250" as="sourcePoint" />
+            <mxPoint x="170" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-30" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-4" source="Wz4KeUB2xulx4hSwmTQG-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" target="Wz4KeUB2xulx4hSwmTQG-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-18" parent="Wz4KeUB2xulx4hSwmTQG-4" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Jesu li uneseni podici potpuni i ispravni?" vertex="1">
+          <mxGeometry height="123" width="157" x="166.5" y="327" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-19" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-4" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="244.5" y="290" as="sourcePoint" />
+            <mxPoint x="245" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-22" parent="Wz4KeUB2xulx4hSwmTQG-4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Da li ovaj korisnički račun već postoji?(saistim e-mailom)" vertex="1">
+          <mxGeometry height="60" width="120" x="185" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-24" parent="Wz4KeUB2xulx4hSwmTQG-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="DA" vertex="1">
+          <mxGeometry height="30" width="60" x="250" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-26" parent="Wz4KeUB2xulx4hSwmTQG-4" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Da li korisnički račun već postoji?" vertex="1">
+          <mxGeometry height="110" width="170" x="160" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-25" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-4" source="Wz4KeUB2xulx4hSwmTQG-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-27" parent="Wz4KeUB2xulx4hSwmTQG-4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Sistem pokazuje poruku o grešci i označava neispravna polja." vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-29" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-4" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="244.5" y="455" as="sourcePoint" />
+            <mxPoint x="245" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-32" parent="Wz4KeUB2xulx4hSwmTQG-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="NE&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="100" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-37" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-4" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" target="Wz4KeUB2xulx4hSwmTQG-39" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="685" />
+            </Array>
+            <mxPoint x="330" y="684.5" as="sourcePoint" />
+            <mxPoint x="400" y="685" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-38" parent="Wz4KeUB2xulx4hSwmTQG-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="NE&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-54" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-4" source="Wz4KeUB2xulx4hSwmTQG-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-39" parent="Wz4KeUB2xulx4hSwmTQG-4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Sistem kreira korisnički račun i šalje potvrdu o uspješnoj registraciji" vertex="1">
+          <mxGeometry height="60" width="120" x="340" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-42" parent="Wz4KeUB2xulx4hSwmTQG-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="DA&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="100" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-43" parent="Wz4KeUB2xulx4hSwmTQG-4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Sistem prijavljuje da je e-mail već zauzet" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-44" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-4" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" target="Wz4KeUB2xulx4hSwmTQG-43" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="160" y="684.5" as="sourcePoint" />
+            <mxPoint x="130" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-55" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-4" source="Wz4KeUB2xulx4hSwmTQG-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" target="Wz4KeUB2xulx4hSwmTQG-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="860" />
+              <mxPoint x="310" y="785" />
+            </Array>
+            <mxPoint x="310" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-50" parent="Wz4KeUB2xulx4hSwmTQG-4" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Sistem ponavlja validaciju registracijskih podataka&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="130" x="140" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-51" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-4" source="Wz4KeUB2xulx4hSwmTQG-43" style="endArrow=classic;html=1;rounded=0;exitX=0.417;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="850" />
+            </Array>
+            <mxPoint x="70" y="870" as="sourcePoint" />
+            <mxPoint x="130" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-56" parent="Wz4KeUB2xulx4hSwmTQG-4" style="shape=mxgraph.sysml.actFinal;html=1;verticalLabelPosition=bottom;labelBackgroundColor=none;verticalAlign=top;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="380" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Scenario 1:Registrovanje korisnika&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="320" x="77" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-45" edge="1" parent="1" source="Wz4KeUB2xulx4hSwmTQG-43" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="377" y="660" />
+              <mxPoint x="307" y="660" />
+              <mxPoint x="277" y="660" />
+            </Array>
+            <mxPoint x="377" y="840" as="sourcePoint" />
+            <mxPoint x="252" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Scenario 2:Prijavljivanje korisnika&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="310" x="77" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-58" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Korisnik&lt;/font&gt;" vertex="1">
+          <mxGeometry height="890" width="250" x="77" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-59" parent="Wz4KeUB2xulx4hSwmTQG-58" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="1.Bira opciju za prijavu" vertex="1">
+          <mxGeometry height="60" width="130" x="54" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-61" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-58" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" target="Wz4KeUB2xulx4hSwmTQG-69" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="190" y="120" as="sourcePoint" />
+            <mxPoint x="240" y="119.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-294" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-58" source="Wz4KeUB2xulx4hSwmTQG-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" target="Wz4KeUB2xulx4hSwmTQG-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-62" parent="Wz4KeUB2xulx4hSwmTQG-58" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="3.Unosi e-mail adresu I šifru" vertex="1">
+          <mxGeometry height="60" width="130" x="57" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-63" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-58" source="Wz4KeUB2xulx4hSwmTQG-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="105" y="610" />
+              <mxPoint x="350" y="610" />
+            </Array>
+            <mxPoint x="350" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-64" parent="Wz4KeUB2xulx4hSwmTQG-58" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="8.Gost ispravlja podatke i ponovo potvrđuje unos" vertex="1">
+          <mxGeometry height="60" width="130" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-66" parent="Wz4KeUB2xulx4hSwmTQG-58" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="4.Potvrđuje prijavu" vertex="1">
+          <mxGeometry height="60" width="120" x="62" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-68" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="890" width="500" x="327" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-69" parent="Wz4KeUB2xulx4hSwmTQG-68" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="2.Sistem prikazuje formu za prijavu" vertex="1">
+          <mxGeometry height="60" width="130" x="180" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-70" parent="Wz4KeUB2xulx4hSwmTQG-68" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="4.Sistem provjerava potpunost i ispravnost unesenih podataka" vertex="1">
+          <mxGeometry height="60" width="130" x="180" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-72" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-68" source="Wz4KeUB2xulx4hSwmTQG-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" target="Wz4KeUB2xulx4hSwmTQG-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-73" parent="Wz4KeUB2xulx4hSwmTQG-68" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Jesu li uneseni podaci potpuni i ispravni?" vertex="1">
+          <mxGeometry height="123" width="157" x="166.5" y="327" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-74" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-68" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="244.5" y="290" as="sourcePoint" />
+            <mxPoint x="245" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-75" parent="Wz4KeUB2xulx4hSwmTQG-68" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="5.Sistem dodjeljuje ovlaštenja" vertex="1">
+          <mxGeometry height="60" width="120" x="185" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-76" parent="Wz4KeUB2xulx4hSwmTQG-68" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="DA" vertex="1">
+          <mxGeometry height="30" width="60" x="250" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-77" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-68" source="Wz4KeUB2xulx4hSwmTQG-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-78" parent="Wz4KeUB2xulx4hSwmTQG-68" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="7.Sistem pokazuje poruku o grešci." vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-79" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-68" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="244.5" y="455" as="sourcePoint" />
+            <mxPoint x="245" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-80" parent="Wz4KeUB2xulx4hSwmTQG-68" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="NE&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="100" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-81" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-68" source="Wz4KeUB2xulx4hSwmTQG-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="244.99999999999977" y="779.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-82" parent="Wz4KeUB2xulx4hSwmTQG-68" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="6.Sistem otvara korisnički nalog" vertex="1">
+          <mxGeometry height="60" width="120" x="185" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-83" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-68" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-30" y="470" />
+              <mxPoint x="-30" y="530" />
+            </Array>
+            <mxPoint x="20" y="470" as="sourcePoint" />
+            <mxPoint x="-70" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-84" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-68" source="Wz4KeUB2xulx4hSwmTQG-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="219.99999999999977" y="779.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-85" parent="Wz4KeUB2xulx4hSwmTQG-68" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="9.Sistem omogućava ponovnu prijavu" vertex="1">
+          <mxGeometry height="60" width="130" x="40" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-86" parent="Wz4KeUB2xulx4hSwmTQG-68" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="230" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-87" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Scenario 3: Pridruživanje čitalačkoj grupi&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="370" x="77" y="2180" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-88" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Registrovani član kluba čitalaca&lt;/span&gt;" vertex="1">
+          <mxGeometry height="1250" width="250" x="70" y="2240" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-89" parent="Wz4KeUB2xulx4hSwmTQG-88" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="1.Korisnik otvara pregled dostupnih grupa" vertex="1">
+          <mxGeometry height="60" width="130" x="54" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-91" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-88" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" target="Wz4KeUB2xulx4hSwmTQG-96" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="190" y="120" as="sourcePoint" />
+            <mxPoint x="240" y="119.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-92" parent="Wz4KeUB2xulx4hSwmTQG-88" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="3.Korisnik bira željenu grupu" vertex="1">
+          <mxGeometry height="60" width="133" x="57" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-93" parent="Wz4KeUB2xulx4hSwmTQG-88" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="4.Korisnik bira privatnu grupu i potvrđuje zahtjev za pristup" vertex="1">
+          <mxGeometry height="60" width="130" x="54" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-94" parent="Wz4KeUB2xulx4hSwmTQG-88" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="190" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-95" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="1250" width="420" x="320" y="2240" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-96" parent="Wz4KeUB2xulx4hSwmTQG-95" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="2.Sistem prikazuje listu javnih i privatnih grupa" vertex="1">
+          <mxGeometry height="60" width="130" x="180" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-97" parent="Wz4KeUB2xulx4hSwmTQG-95" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Da li je odabrana grupa javna?" vertex="1">
+          <mxGeometry height="123" width="157" x="166.5" y="277" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-98" parent="Wz4KeUB2xulx4hSwmTQG-95" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="4.Sistem evidentira korisnika kao člana odabrane javne grupe" vertex="1">
+          <mxGeometry height="60" width="120" x="185" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-99" parent="Wz4KeUB2xulx4hSwmTQG-95" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="DA" vertex="1">
+          <mxGeometry height="30" width="60" x="245" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-100" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-95" source="Wz4KeUB2xulx4hSwmTQG-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-101" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-95" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="245" y="410" as="sourcePoint" />
+            <mxPoint x="245" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-102" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-95" source="Wz4KeUB2xulx4hSwmTQG-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="244.99999999999977" y="779.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-103" parent="Wz4KeUB2xulx4hSwmTQG-95" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="5.Sistem prikazuje potvrdu o uspješnom pridruživanju" vertex="1">
+          <mxGeometry height="60" width="120" x="185" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-104" parent="Wz4KeUB2xulx4hSwmTQG-95" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="230" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-105" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-95" source="Wz4KeUB2xulx4hSwmTQG-94" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;exitX=0;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="520" />
+              <mxPoint x="50" y="930" />
+            </Array>
+            <mxPoint x="50" y="520" as="sourcePoint" />
+            <mxPoint x="180" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-107" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-95" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="Wz4KeUB2xulx4hSwmTQG-93" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="160" y="337.83" as="sourcePoint" />
+            <mxPoint x="60" y="338" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-108" parent="Wz4KeUB2xulx4hSwmTQG-95" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="NE&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="90" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-110" parent="Wz4KeUB2xulx4hSwmTQG-95" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="5.Sistem evidentira zahtjev za pristup privatnoj grupi&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="190" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-111" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-95" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-117" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="320" y="919.33" as="sourcePoint" />
+            <mxPoint x="520" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-112" parent="Wz4KeUB2xulx4hSwmTQG-95" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="7.Sistem obavještava korisnika da je zahtej poslan moderatoru" vertex="1">
+          <mxGeometry height="60" width="120" x="185" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-113" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-95" source="Wz4KeUB2xulx4hSwmTQG-117" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="1079" />
+            </Array>
+            <mxPoint x="630" y="960" as="sourcePoint" />
+            <mxPoint x="310" y="1079.33" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-114" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-95" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="244.32999999999998" y="1110" as="sourcePoint" />
+            <mxPoint x="244.32999999999998" y="1170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-115" parent="Wz4KeUB2xulx4hSwmTQG-95" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="230" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-116" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Moderator grupe&lt;/font&gt;" vertex="1">
+          <mxGeometry height="1250" width="300" x="740" y="2240" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-117" parent="Wz4KeUB2xulx4hSwmTQG-116" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="6.Moderator prima zahtjev za pristup privtnoj grupi" vertex="1">
+          <mxGeometry height="60" width="120" x="70" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-118" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Scenario 4: Primanje notifikacija&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="300" x="70" y="3600" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-120" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/span&gt;" vertex="1">
+          <mxGeometry height="990" width="250" x="70" y="3670" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-121" parent="Wz4KeUB2xulx4hSwmTQG-120" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="1.U sistemu se desi relevantna aktivnost" vertex="1">
+          <mxGeometry height="60" width="130" x="54" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-124" parent="Wz4KeUB2xulx4hSwmTQG-120" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="2.Sistem generiše notifikaciju" vertex="1">
+          <mxGeometry height="60" width="133" x="57" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-209" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-120" source="Wz4KeUB2xulx4hSwmTQG-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-125" parent="Wz4KeUB2xulx4hSwmTQG-120" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="3.Sistem pokušava poslati notifikaciju(e-mail)" vertex="1">
+          <mxGeometry height="60" width="130" x="60" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-150" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-120" source="Wz4KeUB2xulx4hSwmTQG-121" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="118" y="160" as="sourcePoint" />
+            <mxPoint x="118" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-151" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-120" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="118.17" y="270" as="sourcePoint" />
+            <mxPoint x="118" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-160" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-120" source="Wz4KeUB2xulx4hSwmTQG-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="512" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-129" parent="Wz4KeUB2xulx4hSwmTQG-120" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;br&gt;&lt;div&gt;E-mail uspješan?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="123" width="157" x="40.5" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-152" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-120" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="118" y="450" as="sourcePoint" />
+            <mxPoint x="118.17000000000002" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-154" parent="Wz4KeUB2xulx4hSwmTQG-120" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="4.Neuspješno slanje e-maila" vertex="1">
+          <mxGeometry height="60" width="120" x="59" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-153" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-120" source="Wz4KeUB2xulx4hSwmTQG-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-154">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="119" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-156" parent="Wz4KeUB2xulx4hSwmTQG-120" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="5.Zadržava notifikaciju na prikazu u aplikaciji" vertex="1">
+          <mxGeometry height="60" width="120" x="59" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-155" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-120" source="Wz4KeUB2xulx4hSwmTQG-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-156">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="119" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-157" parent="Wz4KeUB2xulx4hSwmTQG-120" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="DA&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="119" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-158" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-120" source="Wz4KeUB2xulx4hSwmTQG-156" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-164" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-120" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-165" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="120" y="850" as="sourcePoint" />
+            <mxPoint x="420" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-206" parent="Wz4KeUB2xulx4hSwmTQG-120" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="104" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-127" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Korisnik&lt;/span&gt;" vertex="1">
+          <mxGeometry height="990" width="450" x="320" y="3670" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-130" parent="Wz4KeUB2xulx4hSwmTQG-127" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="4.Evidentira neuspješno e-mail stanje" vertex="1">
+          <mxGeometry height="60" width="120" x="185" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-132" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-127" source="Wz4KeUB2xulx4hSwmTQG-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-135" parent="Wz4KeUB2xulx4hSwmTQG-127" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="5.Zadržava notifikaciju u aplikaciji" vertex="1">
+          <mxGeometry height="60" width="120" x="185" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-161" parent="Wz4KeUB2xulx4hSwmTQG-127" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="&lt;div&gt;NE&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-165" parent="Wz4KeUB2xulx4hSwmTQG-127" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="6.Pregleda notifikaciju u aplikaciji" vertex="1">
+          <mxGeometry height="60" width="120" x="200.00000000000023" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-207" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-127" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="180" y="659.1700000000001" as="sourcePoint" />
+            <mxPoint x="-60" y="659" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-208" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-127" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="244.16999999999996" y="700" as="sourcePoint" />
+            <mxPoint x="244" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-210" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-127" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="240" y="370" as="sourcePoint" />
+            <mxPoint x="240" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-212" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-127" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-213" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="305" y="659.1700000000001" as="sourcePoint" />
+            <mxPoint x="540" y="659" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-148" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Moderator grupe&lt;/font&gt;" vertex="1">
+          <mxGeometry height="990" width="270" x="770" y="3670" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-167" parent="Wz4KeUB2xulx4hSwmTQG-148" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="4.Dostavlja notifikaciju putem e-maila" vertex="1">
+          <mxGeometry height="60" width="120" x="50" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-213" parent="Wz4KeUB2xulx4hSwmTQG-148" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Označava notifikaciju kao pročitanu ili isporučenu" vertex="1">
+          <mxGeometry height="60" width="120" x="50" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-215" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-148" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-213" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="110" y="430" as="sourcePoint" />
+            <mxPoint x="109.17" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-216" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-148" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-217" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="109.17" y="720" as="sourcePoint" />
+            <mxPoint x="109.17" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-217" parent="Wz4KeUB2xulx4hSwmTQG-148" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="95.00000000000011" y="815" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-168" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Scenario 5: Dijeljenje PDF sadržaja&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="340" x="76" y="4750" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-169" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Korisnik&lt;/font&gt;" vertex="1">
+          <mxGeometry height="850" width="250" x="70" y="4810" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-170" parent="Wz4KeUB2xulx4hSwmTQG-169" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="1.Otvara željenu grupu" vertex="1">
+          <mxGeometry height="60" width="130" x="54" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-173" parent="Wz4KeUB2xulx4hSwmTQG-169" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="2.Bira opciju za dijeljenje PDF-a" vertex="1">
+          <mxGeometry height="60" width="130" x="57" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-175" parent="Wz4KeUB2xulx4hSwmTQG-169" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="6.Korisnik bira drugi dokument ili odustaje" vertex="1">
+          <mxGeometry height="60" width="130" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-176" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-169" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="118.41" y="150" as="sourcePoint" />
+            <mxPoint x="118.41" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-177" parent="Wz4KeUB2xulx4hSwmTQG-169" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="3.Bira PDF dokument i potvrđuje" vertex="1">
+          <mxGeometry height="60" width="120" x="62" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-178" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-169" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="118.40999999999997" y="270" as="sourcePoint" />
+            <mxPoint x="118" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-204" parent="Wz4KeUB2xulx4hSwmTQG-169" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="90" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-203" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-169" source="Wz4KeUB2xulx4hSwmTQG-175" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-204">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-179" parent="1" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;startSize=23;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="850" width="500" x="320" y="4810" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-181" parent="Wz4KeUB2xulx4hSwmTQG-179" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="4.Sistem provjerava format i veličinu" vertex="1">
+          <mxGeometry height="60" width="130" x="180" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-184" parent="Wz4KeUB2xulx4hSwmTQG-179" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Validan dokument?" vertex="1">
+          <mxGeometry height="123" width="157" x="166.5" y="327" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-185" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-179" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="244.5" y="290" as="sourcePoint" />
+            <mxPoint x="245" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-186" parent="Wz4KeUB2xulx4hSwmTQG-179" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="5.Sistem pohranjuje dokument" vertex="1">
+          <mxGeometry height="60" width="120" x="185" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-187" parent="Wz4KeUB2xulx4hSwmTQG-179" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="DA" vertex="1">
+          <mxGeometry height="30" width="60" x="250" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-188" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-179" source="Wz4KeUB2xulx4hSwmTQG-186" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-190" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-179" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;strokeColor=#A8201A;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="244.5" y="455" as="sourcePoint" />
+            <mxPoint x="245" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-192" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-179" source="Wz4KeUB2xulx4hSwmTQG-193" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="244.99999999999977" y="779.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-193" parent="Wz4KeUB2xulx4hSwmTQG-179" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="6.Objavljuje PDF u grupi" vertex="1">
+          <mxGeometry height="60" width="120" x="185" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-197" parent="Wz4KeUB2xulx4hSwmTQG-179" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="230" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-198" parent="Wz4KeUB2xulx4hSwmTQG-179" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="NE" vertex="1">
+          <mxGeometry height="30" width="60" x="90" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-199" parent="Wz4KeUB2xulx4hSwmTQG-179" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="5.Sistem prikazuje grešku" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-200" edge="1" parent="Wz4KeUB2xulx4hSwmTQG-179" source="Wz4KeUB2xulx4hSwmTQG-184" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-199" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="390" />
+            </Array>
+            <mxPoint x="130" y="340" as="sourcePoint" />
+            <mxPoint x="130" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Wz4KeUB2xulx4hSwmTQG-202" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-175" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="5340" />
+            </Array>
+            <mxPoint x="400" y="5300" as="sourcePoint" />
+            <mxPoint x="450" y="5250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-1" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;fontColor=#143642;startSize=23;labelBackgroundColor=none;fontStyle=0" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Korisnik&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="640" width="250" x="70" y="5820" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-2" edge="1" parent="_VQoSi75X91pMswlhK5U-1" source="_VQoSi75X91pMswlhK5U-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="121" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-3" parent="_VQoSi75X91pMswlhK5U-1" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Bira opciju za kreiranje nove gupe" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-4" parent="_VQoSi75X91pMswlhK5U-1" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Unosi naziv, opis, tematiku i status grupe" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-5" edge="1" parent="_VQoSi75X91pMswlhK5U-1" source="_VQoSi75X91pMswlhK5U-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="125" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-6" parent="_VQoSi75X91pMswlhK5U-1" style="ellipse;html=1;shape=startState;fillColor=#A8201A;strokeColor=#0F8B8D;fontColor=#143642;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="110" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-7" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;startSize=23;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="640" width="400" x="320" y="5820" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-8" edge="1" parent="_VQoSi75X91pMswlhK5U-7" source="_VQoSi75X91pMswlhK5U-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-130" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-9" parent="_VQoSi75X91pMswlhK5U-7" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje formu za unos podataka o grupi&lt;span style=&quot;font-family: monospace; font-size: 0px; text-align: start; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20parent%3D%221%22%20style%3D%22rounded%3D1%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfontColor%3Dlight-dark(%23000000%2C%23000000)%3BfillColor%3Dnone%3BstrokeColor%3Dlight-dark(%23000000%2C%23000000)%3B%22%20value%3D%22Bira%20opciju%20za%20kreiranje%20nove%20gupe%22%20vertex%3D%221%22%3E%3CmxGeometry%20height%3D%2260%22%20width%3D%22120%22%20x%3D%22110%22%20y%3D%22-320%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-10" edge="1" parent="_VQoSi75X91pMswlhK5U-7" source="_VQoSi75X91pMswlhK5U-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-11" parent="_VQoSi75X91pMswlhK5U-7" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Validira unesene podatke" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-12" edge="1" parent="_VQoSi75X91pMswlhK5U-7" source="_VQoSi75X91pMswlhK5U-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-13" parent="_VQoSi75X91pMswlhK5U-7" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fillColor=#FAE5C7;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;Podaci ispravni&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="160" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-14" parent="_VQoSi75X91pMswlhK5U-7" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Evidentira novu grupu u sistemu&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-15" edge="1" parent="_VQoSi75X91pMswlhK5U-7" source="_VQoSi75X91pMswlhK5U-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=default;labelBackgroundColor=none;strokeColor=#A8201A;" target="_VQoSi75X91pMswlhK5U-25" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="550" />
+              <mxPoint x="300" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-16" parent="_VQoSi75X91pMswlhK5U-7" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje potvrdu o uspjesnom kreiranju&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-17" parent="_VQoSi75X91pMswlhK5U-7" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje grešku" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-18" edge="1" parent="_VQoSi75X91pMswlhK5U-7" source="_VQoSi75X91pMswlhK5U-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-19" parent="_VQoSi75X91pMswlhK5U-7" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Ispravlja podatke i ponavlja postupak" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-20" edge="1" parent="_VQoSi75X91pMswlhK5U-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-70" y="220" />
+            </Array>
+            <mxPoint x="-60" y="220" as="sourcePoint" />
+            <mxPoint x="120" y="221" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-21" edge="1" parent="_VQoSi75X91pMswlhK5U-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;entryX=0.333;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="330" />
+            </Array>
+            <mxPoint x="160" y="330" as="sourcePoint" />
+            <mxPoint x="80" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-22" edge="1" parent="_VQoSi75X91pMswlhK5U-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="105" y="420" />
+            </Array>
+            <mxPoint x="95" y="420" as="sourcePoint" />
+            <mxPoint x="105" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-23" edge="1" parent="_VQoSi75X91pMswlhK5U-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="299.38" y="420" />
+            </Array>
+            <mxPoint x="299.38" y="420" as="sourcePoint" />
+            <mxPoint x="299.38" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-24" parent="_VQoSi75X91pMswlhK5U-7" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;DA&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="240" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-25" parent="_VQoSi75X91pMswlhK5U-7" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="285" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-26" edge="1" parent="_VQoSi75X91pMswlhK5U-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="530" />
+            </Array>
+            <mxPoint x="300" y="530" as="sourcePoint" />
+            <mxPoint x="300" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;NE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="6120" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Scenario 6: Kreiranje čitalačke grupe&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="350" x="77" y="5750" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-29" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;fontColor=#143642;startSize=23;labelBackgroundColor=none;fontStyle=0" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Korisnik&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="610" width="250" x="70" y="6590" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-30" parent="_VQoSi75X91pMswlhK5U-29" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Otvara objavljeni sadržaj u grupi&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-31" parent="_VQoSi75X91pMswlhK5U-29" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Unosi komentar i potvrđuje objavu" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-32" edge="1" parent="_VQoSi75X91pMswlhK5U-29" source="_VQoSi75X91pMswlhK5U-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="125" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-33" parent="_VQoSi75X91pMswlhK5U-29" style="ellipse;html=1;shape=startState;fillColor=#A8201A;strokeColor=#0F8B8D;fontColor=#143642;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="110" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-34" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;startSize=23;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="610" width="400" x="320" y="6590" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-35" edge="1" parent="_VQoSi75X91pMswlhK5U-34" source="_VQoSi75X91pMswlhK5U-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-130" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-36" parent="_VQoSi75X91pMswlhK5U-34" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje mogućnost dodavanja komentara" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-37" edge="1" parent="_VQoSi75X91pMswlhK5U-34" source="_VQoSi75X91pMswlhK5U-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-38" parent="_VQoSi75X91pMswlhK5U-34" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Provjerava sadržaj komentara" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-39" edge="1" parent="_VQoSi75X91pMswlhK5U-34" source="_VQoSi75X91pMswlhK5U-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-40" parent="_VQoSi75X91pMswlhK5U-34" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fillColor=#FAE5C7;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;Komentar ispravan?&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="160" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-41" parent="_VQoSi75X91pMswlhK5U-34" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Evidentira novu grupu u sistemu&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-42" edge="1" parent="_VQoSi75X91pMswlhK5U-34" source="_VQoSi75X91pMswlhK5U-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=default;labelBackgroundColor=none;strokeColor=#A8201A;" target="_VQoSi75X91pMswlhK5U-52" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="550" />
+              <mxPoint x="300" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-43" parent="_VQoSi75X91pMswlhK5U-34" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Objavljuje komentar i prikazuje ga ostalim članovima grupe" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-44" parent="_VQoSi75X91pMswlhK5U-34" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje grešku" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-45" edge="1" parent="_VQoSi75X91pMswlhK5U-34" source="_VQoSi75X91pMswlhK5U-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-46" parent="_VQoSi75X91pMswlhK5U-34" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Ispravlja komentar i ponavlja objavu" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-47" edge="1" parent="_VQoSi75X91pMswlhK5U-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-70" y="220" />
+            </Array>
+            <mxPoint x="-60" y="220" as="sourcePoint" />
+            <mxPoint x="120" y="221" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-48" edge="1" parent="_VQoSi75X91pMswlhK5U-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;entryX=0.333;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-44">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="330" />
+            </Array>
+            <mxPoint x="160" y="330" as="sourcePoint" />
+            <mxPoint x="80" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-49" edge="1" parent="_VQoSi75X91pMswlhK5U-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="105" y="420" />
+            </Array>
+            <mxPoint x="95" y="420" as="sourcePoint" />
+            <mxPoint x="105" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-50" edge="1" parent="_VQoSi75X91pMswlhK5U-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="299.38" y="420" />
+            </Array>
+            <mxPoint x="299.38" y="420" as="sourcePoint" />
+            <mxPoint x="299.38" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-51" parent="_VQoSi75X91pMswlhK5U-34" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;DA&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="240" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-52" parent="_VQoSi75X91pMswlhK5U-34" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="285" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-53" edge="1" parent="_VQoSi75X91pMswlhK5U-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="530" />
+            </Array>
+            <mxPoint x="300" y="530" as="sourcePoint" />
+            <mxPoint x="300" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-54" edge="1" parent="_VQoSi75X91pMswlhK5U-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="119" />
+              <mxPoint x="20" y="121" />
+            </Array>
+            <mxPoint x="-70" y="119.47" as="sourcePoint" />
+            <mxPoint x="110" y="120.47" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-55" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;NE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="6890" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-56" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Scenario 7: Komentarisanje sadrzaja&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="346" x="77" y="6530" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-57" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;fontColor=#143642;startSize=23;labelBackgroundColor=none;fontStyle=0" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Korisnik&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="570" width="250" x="70" y="7340" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-58" parent="_VQoSi75X91pMswlhK5U-57" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Otvara svoj korisnički profil" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-59" parent="_VQoSi75X91pMswlhK5U-57" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Mijenja željenje informacije" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-60" edge="1" parent="_VQoSi75X91pMswlhK5U-57" source="_VQoSi75X91pMswlhK5U-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="125" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-61" parent="_VQoSi75X91pMswlhK5U-57" style="ellipse;html=1;shape=startState;fillColor=#A8201A;strokeColor=#0F8B8D;labelBackgroundColor=none;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="110" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-62" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;startSize=23;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="570" width="400" x="320" y="7340" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-63" edge="1" parent="_VQoSi75X91pMswlhK5U-62" source="_VQoSi75X91pMswlhK5U-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-130" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-64" parent="_VQoSi75X91pMswlhK5U-62" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje postojeće korisničke podatke" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-65" edge="1" parent="_VQoSi75X91pMswlhK5U-62" source="_VQoSi75X91pMswlhK5U-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-66" parent="_VQoSi75X91pMswlhK5U-62" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Provjerava i pohranjuje izmjene&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-67" edge="1" parent="_VQoSi75X91pMswlhK5U-62" source="_VQoSi75X91pMswlhK5U-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-68" parent="_VQoSi75X91pMswlhK5U-62" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fillColor=#FAE5C7;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;Izmjene ispravne?&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="160" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-69" parent="_VQoSi75X91pMswlhK5U-62" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje ažuriran korisnički profil" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-70" parent="_VQoSi75X91pMswlhK5U-62" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje grešku" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-71" edge="1" parent="_VQoSi75X91pMswlhK5U-62" source="_VQoSi75X91pMswlhK5U-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-72" parent="_VQoSi75X91pMswlhK5U-62" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Koriguje podatke i ponavlja izmjenu" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-73" edge="1" parent="_VQoSi75X91pMswlhK5U-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-70" y="220" />
+            </Array>
+            <mxPoint x="-60" y="220" as="sourcePoint" />
+            <mxPoint x="120" y="221" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-74" edge="1" parent="_VQoSi75X91pMswlhK5U-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;entryX=0.333;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-70">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="330" />
+            </Array>
+            <mxPoint x="160" y="330" as="sourcePoint" />
+            <mxPoint x="80" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-75" edge="1" parent="_VQoSi75X91pMswlhK5U-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="105" y="420" />
+            </Array>
+            <mxPoint x="95" y="420" as="sourcePoint" />
+            <mxPoint x="105" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-76" parent="_VQoSi75X91pMswlhK5U-62" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;DA&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="240" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-77" parent="_VQoSi75X91pMswlhK5U-62" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="285" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-78" edge="1" parent="_VQoSi75X91pMswlhK5U-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="299.13" y="420" />
+            </Array>
+            <mxPoint x="299.13" y="420" as="sourcePoint" />
+            <mxPoint x="299.13" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-79" edge="1" parent="_VQoSi75X91pMswlhK5U-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="119" />
+              <mxPoint x="20" y="121" />
+            </Array>
+            <mxPoint x="-70" y="119.47" as="sourcePoint" />
+            <mxPoint x="110" y="120.47" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-80" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;NE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="7640" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-81" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Scenario 8: Upravljanje korisničkim profilom&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="400" x="77" y="7280" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-82" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;fontColor=#143642;startSize=23;labelBackgroundColor=none;fontStyle=0" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Korisnik&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="580" width="250" x="70" y="8060" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-83" parent="_VQoSi75X91pMswlhK5U-82" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Bira opciju za kreiranje novog članka" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-84" parent="_VQoSi75X91pMswlhK5U-82" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Unosi naslov, tekst, objavu i slike" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-85" edge="1" parent="_VQoSi75X91pMswlhK5U-82" source="_VQoSi75X91pMswlhK5U-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="125" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-86" parent="_VQoSi75X91pMswlhK5U-82" style="ellipse;html=1;shape=startState;fillColor=#A8201A;strokeColor=#0F8B8D;labelBackgroundColor=none;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="110" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-87" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;startSize=23;labelBackgroundColor=none;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="580" width="400" x="320" y="8060" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-88" edge="1" parent="_VQoSi75X91pMswlhK5U-87" source="_VQoSi75X91pMswlhK5U-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-130" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-89" parent="_VQoSi75X91pMswlhK5U-87" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje formu za unos sadržaja članka" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-90" edge="1" parent="_VQoSi75X91pMswlhK5U-87" source="_VQoSi75X91pMswlhK5U-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-91" parent="_VQoSi75X91pMswlhK5U-87" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Provjerava i pohranjuje članak&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-92" edge="1" parent="_VQoSi75X91pMswlhK5U-87" source="_VQoSi75X91pMswlhK5U-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-94">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-93" parent="_VQoSi75X91pMswlhK5U-87" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fillColor=#FAE5C7;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;Članak ispravan?&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="160" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-94" parent="_VQoSi75X91pMswlhK5U-87" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Objavljuje članak prema odabranim postavkama" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-95" parent="_VQoSi75X91pMswlhK5U-87" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje grešku" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-96" edge="1" parent="_VQoSi75X91pMswlhK5U-87" source="_VQoSi75X91pMswlhK5U-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-97" parent="_VQoSi75X91pMswlhK5U-87" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Ispravlja sadržaj i ponavlja objavu" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-98" edge="1" parent="_VQoSi75X91pMswlhK5U-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-70" y="220" />
+            </Array>
+            <mxPoint x="-60" y="220" as="sourcePoint" />
+            <mxPoint x="120" y="221" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-99" edge="1" parent="_VQoSi75X91pMswlhK5U-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;entryX=0.333;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-95">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="330" />
+            </Array>
+            <mxPoint x="160" y="330" as="sourcePoint" />
+            <mxPoint x="80" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-100" edge="1" parent="_VQoSi75X91pMswlhK5U-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="105" y="420" />
+            </Array>
+            <mxPoint x="95" y="420" as="sourcePoint" />
+            <mxPoint x="105" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-101" parent="_VQoSi75X91pMswlhK5U-87" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;DA&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="240" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-102" parent="_VQoSi75X91pMswlhK5U-87" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="285" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-103" edge="1" parent="_VQoSi75X91pMswlhK5U-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="299.13" y="420" />
+            </Array>
+            <mxPoint x="299.13" y="420" as="sourcePoint" />
+            <mxPoint x="299.13" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-104" edge="1" parent="_VQoSi75X91pMswlhK5U-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="119" />
+              <mxPoint x="20" y="121" />
+            </Array>
+            <mxPoint x="-70" y="119.47" as="sourcePoint" />
+            <mxPoint x="110" y="120.47" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-105" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;NE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="8360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-106" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Scenario 9: Objavljivanje članaka&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="346" x="70" y="8000" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-108" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;fontColor=#143642;startSize=23;labelBackgroundColor=none;fontStyle=0" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Korisnik&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="610" width="250" x="70" y="8780" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-109" parent="_VQoSi75X91pMswlhK5U-108" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Bira opciju za kreiranje stroy objave" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-110" edge="1" parent="_VQoSi75X91pMswlhK5U-108" source="_VQoSi75X91pMswlhK5U-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="125" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-111" parent="_VQoSi75X91pMswlhK5U-108" style="ellipse;html=1;shape=startState;fillColor=#A8201A;strokeColor=#0F8B8D;labelBackgroundColor=none;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="110" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-112" parent="_VQoSi75X91pMswlhK5U-108" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Dodaje opis, citat ili komentar" vertex="1">
+          <mxGeometry height="60" width="120" x="90" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-113" edge="1" parent="_VQoSi75X91pMswlhK5U-108" source="_VQoSi75X91pMswlhK5U-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;exitX=0.406;exitY=1.017;exitDx=0;exitDy=0;exitPerimeter=0;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="361" />
+            </Array>
+            <mxPoint x="140" y="370" as="sourcePoint" />
+            <mxPoint x="140" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-114" parent="_VQoSi75X91pMswlhK5U-108" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fillColor=#FAE5C7;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;Potvrđuje objavu?&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="100" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-115" edge="1" parent="_VQoSi75X91pMswlhK5U-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="139.38" y="490" />
+            </Array>
+            <mxPoint x="139.38" y="490" as="sourcePoint" />
+            <mxPoint x="139.38" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-116" parent="_VQoSi75X91pMswlhK5U-108" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="125" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-117" parent="_VQoSi75X91pMswlhK5U-108" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;NE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="80" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-118" parent="_VQoSi75X91pMswlhK5U-108" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font&gt;DA&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="190" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-119" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;startSize=23;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="610" width="400" x="320" y="8780" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-120" edge="1" parent="_VQoSi75X91pMswlhK5U-119" source="_VQoSi75X91pMswlhK5U-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-122">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-121" parent="_VQoSi75X91pMswlhK5U-119" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fillColor=#FAE5C7;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;Pristup&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&amp;nbsp;kameri odabran?&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="140" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-122" parent="_VQoSi75X91pMswlhK5U-119" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Omogućuje odabir slike iz memorije" vertex="1">
+          <mxGeometry height="60" width="120" x="230" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-123" parent="_VQoSi75X91pMswlhK5U-119" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Objavljuje story i omogućava pregled ograničeno vrijeme" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-124" edge="1" parent="_VQoSi75X91pMswlhK5U-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;entryX=0.333;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="160" />
+            </Array>
+            <mxPoint x="140" y="160" as="sourcePoint" />
+            <mxPoint x="59.960000000000036" y="188.01999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-125" parent="_VQoSi75X91pMswlhK5U-119" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;DA&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="60" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-126" edge="1" parent="_VQoSi75X91pMswlhK5U-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-121">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="119" />
+              <mxPoint x="20" y="121" />
+              <mxPoint x="180" y="121" />
+            </Array>
+            <mxPoint x="-70" y="119.47" as="sourcePoint" />
+            <mxPoint x="110" y="120.47" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-127" parent="_VQoSi75X91pMswlhK5U-119" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;NE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="225" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-128" parent="_VQoSi75X91pMswlhK5U-119" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Omogućava fotografisanje" vertex="1">
+          <mxGeometry height="60" width="120" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-129" edge="1" parent="_VQoSi75X91pMswlhK5U-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-123">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="450" />
+            </Array>
+            <mxPoint x="-70" y="450" as="sourcePoint" />
+            <mxPoint x="180" y="450.53" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-130" parent="_VQoSi75X91pMswlhK5U-119" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="100" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-131" edge="1" parent="_VQoSi75X91pMswlhK5U-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;exitX=0.406;exitY=1.017;exitDx=0;exitDy=0;exitPerimeter=0;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115.38" y="530" />
+            </Array>
+            <mxPoint x="114.38" y="530" as="sourcePoint" />
+            <mxPoint x="115" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-132" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Scenario 10: Kreiranje story objave&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="346" x="77" y="8710" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-133" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.396;entryY=-0.046;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-134" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-135" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;fontColor=#143642;startSize=23;labelBackgroundColor=none;fontStyle=0" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Moderator&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="610" width="250" x="70" y="9530" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-136" parent="_VQoSi75X91pMswlhK5U-135" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Otvara postavke čitalačke grupe" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-137" parent="_VQoSi75X91pMswlhK5U-135" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Mijenja naziv, opis, tematiku ili status" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-138" edge="1" parent="_VQoSi75X91pMswlhK5U-135" source="_VQoSi75X91pMswlhK5U-139" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="125" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-139" parent="_VQoSi75X91pMswlhK5U-135" style="ellipse;html=1;shape=startState;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="110" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-140" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAE5C7;strokeWidth=1;strokeColor=#0F8B8D;startSize=23;labelBackgroundColor=none;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="610" width="400" x="320" y="9530" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-141" edge="1" parent="_VQoSi75X91pMswlhK5U-140" source="_VQoSi75X91pMswlhK5U-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-130" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-142" parent="_VQoSi75X91pMswlhK5U-140" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje postojeće podatke o gurpi" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-143" edge="1" parent="_VQoSi75X91pMswlhK5U-140" source="_VQoSi75X91pMswlhK5U-144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-146">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-144" parent="_VQoSi75X91pMswlhK5U-140" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Validira unesene izmjene" vertex="1">
+          <mxGeometry height="60" width="120" x="130" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-145" edge="1" parent="_VQoSi75X91pMswlhK5U-140" source="_VQoSi75X91pMswlhK5U-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-147">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-146" parent="_VQoSi75X91pMswlhK5U-140" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fillColor=#FAE5C7;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;Izmjene ispravne?&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="160" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-147" parent="_VQoSi75X91pMswlhK5U-140" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Podaci su ažurirani" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-148" parent="_VQoSi75X91pMswlhK5U-140" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Prikazuje grešku" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-149" edge="1" parent="_VQoSi75X91pMswlhK5U-140" source="_VQoSi75X91pMswlhK5U-150" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-144">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-150" parent="_VQoSi75X91pMswlhK5U-140" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#143642;fillColor=#FAE5C7;strokeColor=#0F8B8D;labelBackgroundColor=none;" value="Ispravlja podatke i ponavlja radnju" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-151" edge="1" parent="_VQoSi75X91pMswlhK5U-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-70" y="220" />
+            </Array>
+            <mxPoint x="-60" y="220" as="sourcePoint" />
+            <mxPoint x="120" y="221" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-152" edge="1" parent="_VQoSi75X91pMswlhK5U-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;entryX=0.333;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=default;labelBackgroundColor=none;" target="_VQoSi75X91pMswlhK5U-148">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="330" />
+            </Array>
+            <mxPoint x="160" y="330" as="sourcePoint" />
+            <mxPoint x="80" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-153" edge="1" parent="_VQoSi75X91pMswlhK5U-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="105" y="420" />
+            </Array>
+            <mxPoint x="95" y="420" as="sourcePoint" />
+            <mxPoint x="105" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-154" parent="_VQoSi75X91pMswlhK5U-140" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;DA&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="240" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-155" parent="_VQoSi75X91pMswlhK5U-140" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;labelBackgroundColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="285" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-156" edge="1" parent="_VQoSi75X91pMswlhK5U-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#A8201A;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="299.13" y="420" />
+            </Array>
+            <mxPoint x="299.13" y="420" as="sourcePoint" />
+            <mxPoint x="299.13" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-157" edge="1" parent="_VQoSi75X91pMswlhK5U-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;strokeWidth=1;fontColor=default;labelBackgroundColor=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="119" />
+              <mxPoint x="20" y="121" />
+            </Array>
+            <mxPoint x="-70" y="119.47" as="sourcePoint" />
+            <mxPoint x="110" y="120.47" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-158" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;&quot;&gt;NE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="9830" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-160" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#143642;labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Scenario 11:Uređivanje čitalačke grupe&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="346" x="77" y="9460" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-162" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Moderator&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="250" x="70" y="10280" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-163" parent="_VQoSi75X91pMswlhK5U-162" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Otvara pregled članova grupe" vertex="1">
+          <mxGeometry height="30" width="170" x="36" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-164" parent="_VQoSi75X91pMswlhK5U-162" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Bira korisnika za uklanjanje" vertex="1">
+          <mxGeometry height="30" width="170" x="36" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-165" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="376" x="320" y="10280" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-166" parent="_VQoSi75X91pMswlhK5U-165" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje listu članova" vertex="1">
+          <mxGeometry height="30" width="150" x="110" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-167" edge="1" parent="_VQoSi75X91pMswlhK5U-165" source="_VQoSi75X91pMswlhK5U-171" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="91" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-168" connectable="0" parent="_VQoSi75X91pMswlhK5U-167" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" value="DA" vertex="1">
+          <mxGeometry relative="1" x="-0.3643" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-169" edge="1" parent="_VQoSi75X91pMswlhK5U-165" source="_VQoSi75X91pMswlhK5U-171" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-173">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-170" connectable="0" parent="_VQoSi75X91pMswlhK5U-169" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" value="NE" vertex="1">
+          <mxGeometry relative="1" x="-0.4678" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-171" parent="_VQoSi75X91pMswlhK5U-165" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Korisnik postoji i moderator ima ovlaštenje?" vertex="1">
+          <mxGeometry height="100" width="110" x="133" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-172" edge="1" parent="_VQoSi75X91pMswlhK5U-165" source="_VQoSi75X91pMswlhK5U-173" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-176">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-173" parent="_VQoSi75X91pMswlhK5U-165" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje poruku o grešci" vertex="1">
+          <mxGeometry height="30" width="170" x="206" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-174" edge="1" parent="_VQoSi75X91pMswlhK5U-165" source="_VQoSi75X91pMswlhK5U-175" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-176">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-175" parent="_VQoSi75X91pMswlhK5U-165" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Ažurira listu članova i evidentira radnju" vertex="1">
+          <mxGeometry height="30" width="170" x="6" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-176" parent="_VQoSi75X91pMswlhK5U-165" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="76" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-177" edge="1" parent="_VQoSi75X91pMswlhK5U-165" source="_VQoSi75X91pMswlhK5U-178" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-171">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-178" parent="_VQoSi75X91pMswlhK5U-165" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Sistem provjerava ovlaštenje" vertex="1">
+          <mxGeometry height="30" width="170" x="100" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-179" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-163" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-166" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="10450" as="sourcePoint" />
+            <mxPoint x="380" y="10400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-180" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-166" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.464;entryY=-0.04;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-164" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="10450" as="sourcePoint" />
+            <mxPoint x="380" y="10400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-181" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-164" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-178">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-182" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;entryX=0.433;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-163" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="180" y="10310" as="sourcePoint" />
+            <mxPoint x="390" y="10570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-183" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Moderator&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="250" x="70" y="10940" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-184" parent="_VQoSi75X91pMswlhK5U-183" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Pregledava sadržaj u grupi" vertex="1">
+          <mxGeometry height="30" width="170" x="36" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-185" parent="_VQoSi75X91pMswlhK5U-183" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Bira neprimjereni sadržaj" vertex="1">
+          <mxGeometry height="30" width="170" x="36" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-186" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="376" x="320" y="10940" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-187" parent="_VQoSi75X91pMswlhK5U-186" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje raspoloživ sadržaj" vertex="1">
+          <mxGeometry height="30" width="150" x="110" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-188" edge="1" parent="_VQoSi75X91pMswlhK5U-186" source="_VQoSi75X91pMswlhK5U-192" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="91" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-189" connectable="0" parent="_VQoSi75X91pMswlhK5U-188" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" value="DA" vertex="1">
+          <mxGeometry relative="1" x="-0.3643" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-190" edge="1" parent="_VQoSi75X91pMswlhK5U-186" source="_VQoSi75X91pMswlhK5U-192" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-194">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-191" connectable="0" parent="_VQoSi75X91pMswlhK5U-190" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" value="NE" vertex="1">
+          <mxGeometry relative="1" x="-0.4678" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-192" parent="_VQoSi75X91pMswlhK5U-186" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Da li je sadržaj dostupan?" vertex="1">
+          <mxGeometry height="100" width="110" x="133" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-193" edge="1" parent="_VQoSi75X91pMswlhK5U-186" source="_VQoSi75X91pMswlhK5U-194" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-197">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-194" parent="_VQoSi75X91pMswlhK5U-186" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Obavještavanje moderatora da sadržaj nije dostupan ili je već uklonjen" vertex="1">
+          <mxGeometry height="50" width="170" x="206" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-195" edge="1" parent="_VQoSi75X91pMswlhK5U-186" source="_VQoSi75X91pMswlhK5U-196" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-197">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-196" parent="_VQoSi75X91pMswlhK5U-186" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Briše i evidentira moderacijsku radnju" vertex="1">
+          <mxGeometry height="30" width="170" x="6" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-197" parent="_VQoSi75X91pMswlhK5U-186" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="76" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-198" edge="1" parent="_VQoSi75X91pMswlhK5U-186" source="_VQoSi75X91pMswlhK5U-199" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-192">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-199" parent="_VQoSi75X91pMswlhK5U-186" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Sistem provjerava dostupnost" vertex="1">
+          <mxGeometry height="30" width="170" x="100" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-200" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-184" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-187" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="11110" as="sourcePoint" />
+            <mxPoint x="380" y="11060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-201" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-187" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.464;entryY=-0.04;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-185" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="11110" as="sourcePoint" />
+            <mxPoint x="380" y="11060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-202" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-185" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-199">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="11105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-203" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;entryX=0.433;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-184" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="180" y="10970" as="sourcePoint" />
+            <mxPoint x="390" y="11230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-204" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Administrator&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="250" x="70" y="11610" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-205" parent="_VQoSi75X91pMswlhK5U-204" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Otvara pregled korisničkih naloga" vertex="1">
+          <mxGeometry height="30" width="170" x="36" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-206" parent="_VQoSi75X91pMswlhK5U-204" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Bira željeni korisnički nalog" vertex="1">
+          <mxGeometry height="30" width="170" x="36" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-207" edge="1" parent="_VQoSi75X91pMswlhK5U-204" source="_VQoSi75X91pMswlhK5U-208" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-209">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-208" parent="_VQoSi75X91pMswlhK5U-204" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Bira željenu radnju (brisanje, ažuriranje ili blokiranje)" vertex="1">
+          <mxGeometry height="30" width="170" x="40" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-209" parent="_VQoSi75X91pMswlhK5U-204" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Potvrđuje izvršenje radnje" vertex="1">
+          <mxGeometry height="30" width="170" x="40" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-210" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="376" x="320" y="11610" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-211" parent="_VQoSi75X91pMswlhK5U-210" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje listu registrovanih korisnika" vertex="1">
+          <mxGeometry height="30" width="150" x="110" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-212" edge="1" parent="_VQoSi75X91pMswlhK5U-210" source="_VQoSi75X91pMswlhK5U-214" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-216">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-213" connectable="0" parent="_VQoSi75X91pMswlhK5U-212" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" value="NE" vertex="1">
+          <mxGeometry relative="1" x="-0.4678" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-214" parent="_VQoSi75X91pMswlhK5U-210" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Nalog postoji?" vertex="1">
+          <mxGeometry height="100" width="110" x="133" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-215" edge="1" parent="_VQoSi75X91pMswlhK5U-210" source="_VQoSi75X91pMswlhK5U-216" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-217">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-216" parent="_VQoSi75X91pMswlhK5U-210" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje poruku o grešci" vertex="1">
+          <mxGeometry height="30" width="170" x="206" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-217" parent="_VQoSi75X91pMswlhK5U-210" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="276" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-218" edge="1" parent="_VQoSi75X91pMswlhK5U-210" source="_VQoSi75X91pMswlhK5U-219" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-214">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-219" parent="_VQoSi75X91pMswlhK5U-210" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Sistem provjerava nalog" vertex="1">
+          <mxGeometry height="30" width="170" x="100" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-220" edge="1" parent="_VQoSi75X91pMswlhK5U-210" source="_VQoSi75X91pMswlhK5U-221" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-223">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-221" parent="_VQoSi75X91pMswlhK5U-210" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Pohranjuje promjene nad odabranim nalogom" vertex="1">
+          <mxGeometry height="30" width="170" x="34" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-222" edge="1" parent="_VQoSi75X91pMswlhK5U-210" source="_VQoSi75X91pMswlhK5U-223" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-217">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="119" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-223" parent="_VQoSi75X91pMswlhK5U-210" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje potvrdu o izvršenoj radnji" vertex="1">
+          <mxGeometry height="30" width="170" x="34" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-224" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-205" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-211" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="11780" as="sourcePoint" />
+            <mxPoint x="380" y="11730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-225" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-211" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.464;entryY=-0.04;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-206" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="11780" as="sourcePoint" />
+            <mxPoint x="380" y="11730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-226" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-206" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-219">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="11775" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-227" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;entryX=0.433;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-205" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="180" y="11640" as="sourcePoint" />
+            <mxPoint x="390" y="11900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-228" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-214" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-208">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="411" y="11940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-229" connectable="0" parent="_VQoSi75X91pMswlhK5U-228" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" value="DA" vertex="1">
+          <mxGeometry relative="1" x="-0.3643" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-230" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-209" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-221">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="11985" />
+              <mxPoint x="300" y="12015" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-231" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Moderator&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="250" x="70" y="12280" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-232" parent="_VQoSi75X91pMswlhK5U-231" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Bira opciju za slanje obavijesti" vertex="1">
+          <mxGeometry height="30" width="170" x="36" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-233" parent="_VQoSi75X91pMswlhK5U-231" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Unosi tekst obavijesti i potvrđuje slanje" vertex="1">
+          <mxGeometry height="30" width="170" x="36" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-234" parent="_VQoSi75X91pMswlhK5U-231" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Ispravlja podatke i ponavlja slanje" vertex="1">
+          <mxGeometry height="30" width="170" x="40" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-235" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="250" x="320" y="12280" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-236" parent="_VQoSi75X91pMswlhK5U-235" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje formu i izbor primalaca" vertex="1">
+          <mxGeometry height="30" width="150" x="50" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-237" edge="1" parent="_VQoSi75X91pMswlhK5U-235" source="_VQoSi75X91pMswlhK5U-239" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-243">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-238" connectable="0" parent="_VQoSi75X91pMswlhK5U-237" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" value="NE" vertex="1">
+          <mxGeometry relative="1" x="0.376" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-239" parent="_VQoSi75X91pMswlhK5U-235" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Sadržaj i primaoci ispravni?" vertex="1">
+          <mxGeometry height="90" width="94" x="76" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-240" parent="_VQoSi75X91pMswlhK5U-235" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="110" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-241" edge="1" parent="_VQoSi75X91pMswlhK5U-235" source="_VQoSi75X91pMswlhK5U-242" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-239">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-242" parent="_VQoSi75X91pMswlhK5U-235" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Sistem provjerava ispravnost" vertex="1">
+          <mxGeometry height="30" width="170" x="40" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-243" parent="_VQoSi75X91pMswlhK5U-235" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje grešku" vertex="1">
+          <mxGeometry height="30" width="170" x="38" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-244" edge="1" parent="_VQoSi75X91pMswlhK5U-235" source="_VQoSi75X91pMswlhK5U-245" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-240">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-245" parent="_VQoSi75X91pMswlhK5U-235" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje potvrdu o uspješno poslanom obavještenju" vertex="1">
+          <mxGeometry height="30" width="170" x="40" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-246" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;entryX=0.433;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-232" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="180" y="12310" as="sourcePoint" />
+            <mxPoint x="390" y="12570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-247" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Korisnik&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="250" x="570" y="12280" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-248" parent="_VQoSi75X91pMswlhK5U-247" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prima obavijest" vertex="1">
+          <mxGeometry height="30" width="170" x="40" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-249" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-232" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-236">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-250" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-236" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-233">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-251" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-233" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-242">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-252" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-243" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-234">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-253" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-239" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-248">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-254" connectable="0" parent="_VQoSi75X91pMswlhK5U-253" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" value="DA" vertex="1">
+          <mxGeometry relative="1" x="-0.1855" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-255" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-248" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-245">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-256" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-234" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.088;entryY=1.08;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-242">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="12490" />
+              <mxPoint x="375" y="12490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-257" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Administrator&lt;/font&gt;" vertex="1">
+          <mxGeometry height="500" width="250" x="70" y="12950" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-258" parent="_VQoSi75X91pMswlhK5U-257" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Pristupa administrativnom panelu" vertex="1">
+          <mxGeometry height="30" width="170" x="36" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-259" parent="_VQoSi75X91pMswlhK5U-257" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Bira željenu administrativnu funkciju" vertex="1">
+          <mxGeometry height="30" width="170" x="36" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-260" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sistem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="500" width="376" x="320" y="12950" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-261" parent="_VQoSi75X91pMswlhK5U-260" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje dostupne administrativne opcije" vertex="1">
+          <mxGeometry height="30" width="150" x="110" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-262" edge="1" parent="_VQoSi75X91pMswlhK5U-260" source="_VQoSi75X91pMswlhK5U-264" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-266">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-263" connectable="0" parent="_VQoSi75X91pMswlhK5U-262" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" value="NE" vertex="1">
+          <mxGeometry relative="1" x="-0.4678" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-264" parent="_VQoSi75X91pMswlhK5U-260" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Radnja uspješno završena?" vertex="1">
+          <mxGeometry height="100" width="110" x="133" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-265" edge="1" parent="_VQoSi75X91pMswlhK5U-260" source="_VQoSi75X91pMswlhK5U-266" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-267">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-266" parent="_VQoSi75X91pMswlhK5U-260" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje poruku o grešci" vertex="1">
+          <mxGeometry height="30" width="170" x="206" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-267" parent="_VQoSi75X91pMswlhK5U-260" style="ellipse;html=1;shape=endState;fillColor=#FAE5C7;labelBackgroundColor=none;strokeColor=#0F8B8D;fontColor=#143642;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="176" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-268" edge="1" parent="_VQoSi75X91pMswlhK5U-260" source="_VQoSi75X91pMswlhK5U-269" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-264">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-269" parent="_VQoSi75X91pMswlhK5U-260" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Izvršava odabranu radnju i evidentira promjenu" vertex="1">
+          <mxGeometry height="30" width="170" x="100" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-270" edge="1" parent="_VQoSi75X91pMswlhK5U-260" source="_VQoSi75X91pMswlhK5U-264" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.452;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-273">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="85" y="270" />
+              <mxPoint x="85" y="340" />
+            </Array>
+            <mxPoint x="85" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-271" connectable="0" parent="_VQoSi75X91pMswlhK5U-270" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" value="DA" vertex="1">
+          <mxGeometry relative="1" x="-0.3643" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-272" edge="1" parent="_VQoSi75X91pMswlhK5U-260" source="_VQoSi75X91pMswlhK5U-273" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-267">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-273" parent="_VQoSi75X91pMswlhK5U-260" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" value="Prikazuje rezultat" vertex="1">
+          <mxGeometry height="30" width="170" x="6" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-274" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-258" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-261" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="13120" as="sourcePoint" />
+            <mxPoint x="380" y="13070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-275" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-261" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.464;entryY=-0.04;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-259" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="13120" as="sourcePoint" />
+            <mxPoint x="380" y="13070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-276" edge="1" parent="1" source="_VQoSi75X91pMswlhK5U-259" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-269">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="13115" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-277" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;entryX=0.433;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="_VQoSi75X91pMswlhK5U-258" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="180" y="12980" as="sourcePoint" />
+            <mxPoint x="390" y="13240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-278" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;labelBackgroundColor=none;fontColor=#143642;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Scenario 12: Uklanjanje korisnika iz grupe&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="380" x="77" y="10210" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-279" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;labelBackgroundColor=none;fontColor=#143642;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Scenario 13: Brisanje neprimjerenog sadržaja&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="410" x="77" y="10870" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-280" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;labelBackgroundColor=none;fontColor=#143642;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Scenario 14: Upravljanje korisničkim nalozima&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="410" x="77" y="11520" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-281" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;labelBackgroundColor=none;fontColor=#143642;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Scenario 15: Slanje obavijesti korisnicima&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="380" x="77" y="12190" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-282" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;labelBackgroundColor=none;fontColor=#143642;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Scenario 16: Administracija sistema&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="340" x="77" y="12870" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-287" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="200" y="1240" as="sourcePoint" />
+            <mxPoint x="200" y="1290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-288" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;entryX=0.433;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="180" y="2270" as="sourcePoint" />
+            <mxPoint x="180" y="2330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-289" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-121" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="189" y="3700" as="sourcePoint" />
+            <mxPoint x="180" y="3770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-290" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" target="Wz4KeUB2xulx4hSwmTQG-170" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="190" y="4840" as="sourcePoint" />
+            <mxPoint x="180" y="4900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-292" edge="1" parent="1" source="Wz4KeUB2xulx4hSwmTQG-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" target="Wz4KeUB2xulx4hSwmTQG-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-293" edge="1" parent="1" source="Wz4KeUB2xulx4hSwmTQG-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" target="Wz4KeUB2xulx4hSwmTQG-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-295" edge="1" parent="1" source="Wz4KeUB2xulx4hSwmTQG-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Wz4KeUB2xulx4hSwmTQG-70">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="1450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-296" edge="1" parent="1" source="Wz4KeUB2xulx4hSwmTQG-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" target="Wz4KeUB2xulx4hSwmTQG-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-297" edge="1" parent="1" source="Wz4KeUB2xulx4hSwmTQG-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" target="Wz4KeUB2xulx4hSwmTQG-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_VQoSi75X91pMswlhK5U-299" edge="1" parent="1" source="Wz4KeUB2xulx4hSwmTQG-177" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Wz4KeUB2xulx4hSwmTQG-181">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="5060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
