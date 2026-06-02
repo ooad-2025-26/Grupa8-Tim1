@@ -1,59 +1,75 @@
 ﻿@model IEnumerable<DigitalniKlubCitalaca.Models.Knjiga>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Knjige";
 }
 
-<h1>Index</h1>
+<section class="section">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+        <div>
+            <h1 class="section-title">Biblioteka knjiga</h1>
+            <p style="color:#8a8a8a; margin-top:-10px;">
+                Pregled knjiga koje se koriste u čitalačkim grupama.
+            </p>
+        </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Naziv)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Autor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Opis)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BrojStranica)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Zanr)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Naziv)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Autor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Opis)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BrojStranica)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Zanr)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.KnjigaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.KnjigaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.KnjigaId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <a class="btn-pink" asp-action="Create">
+            + Dodaj knjigu
+        </a>
+    </div>
+
+    <div class="grid-3">
+        @foreach (var item in Model)
+        {
+            <div class="card" style="overflow:hidden;">
+                <div style="
+                    height:180px;
+                    background:linear-gradient(135deg,#fff0f3,#f2ebe4);
+                    border-radius:22px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:70px;
+                    margin-bottom:20px;">
+                    📖
+                </div>
+
+                <span class="badge">@item.Zanr</span>
+
+                <h2 style="font-family:Georgia,serif; margin:16px 0 6px;">
+                    @item.Naziv
+                </h2>
+
+                <p style="color:#8a8a8a; margin-bottom:14px;">
+                    Autor: @item.Autor
+                </p>
+
+                <p style="color:#555; min-height:70px;">
+                    @(string.IsNullOrWhiteSpace(item.Opis)
+                        ? "Opis knjige nije dodan."
+                        : item.Opis.Length > 120
+                            ? item.Opis.Substring(0, 120) + "..."
+                            : item.Opis)
+                </p>
+
+                <div style="display:flex; gap:8px; flex-wrap:wrap; margin:18px 0;">
+                    <span class="badge">📄 @item.BrojStranica stranica</span>
+                </div>
+
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;">
+                    <a class="btn-pink" asp-action="Details" asp-route-id="@item.KnjigaId">
+                        Detalji
+                    </a>
+
+                    <a class="btn-dark" asp-action="Edit" asp-route-id="@item.KnjigaId">
+                        Uredi
+                    </a>
+
+                    <a class="btn-dark" asp-action="Delete" asp-route-id="@item.KnjigaId">
+                        Obriši
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</section>

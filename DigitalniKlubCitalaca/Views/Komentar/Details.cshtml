@@ -1,48 +1,38 @@
 ﻿@model DigitalniKlubCitalaca.Models.Komentar
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalji komentara";
 }
 
-<h1>Details</h1>
+<section class="section">
+    <div style="max-width:760px; margin:auto;">
+        <h1 class="section-title">Detalji komentara</h1>
 
-<div>
-    <h4>Komentar</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SadrzajGrupe)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SadrzajGrupe.SadrzajId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Autor)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Autor.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tekst)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Tekst)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DatumKomentara)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DatumKomentara)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.StatusKomentara)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.StatusKomentara)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.KomentarId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+        <div class="card" style="padding:30px; border-radius:28px;">
+            <div style="display:flex; gap:14px;">
+                <div style="width:48px; height:48px; border-radius:50%; background:#fff0f3; display:flex; align-items:center; justify-content:center;">
+                    💬
+                </div>
+
+                <div style="flex:1;">
+                    <strong>@(Model.Autor?.Email ?? Model.Autor?.UserName ?? "Nepoznat korisnik")</strong>
+
+                    <p style="color:#8a8a8a; font-size:14px;">
+                        @Model.DatumKomentara.ToString("dd.MM.yyyy HH:mm")
+                    </p>
+
+                    <p style="font-size:18px; color:#444;">
+                        @Model.Tekst
+                    </p>
+
+                    <span class="badge">@Model.StatusKomentara</span>
+                </div>
+            </div>
+
+            <div style="display:flex; justify-content:flex-end; gap:12px; margin-top:28px;">
+                <a class="btn-dark" asp-action="Index">Nazad</a>
+                <a class="btn-pink" asp-action="Edit" asp-route-id="@Model.KomentarId">Uredi</a>
+            </div>
+        </div>
+    </div>
+</section>

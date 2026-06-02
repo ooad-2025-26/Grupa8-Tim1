@@ -17,223 +17,224 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v8.0
+build_property.EntryPointFilePath = 
 build_property.RootNamespace = DigitalniKlubCitalaca
 build_property.RootNamespace = DigitalniKlubCitalaca
-build_property.ProjectDir = C:\Users\Admin\Desktop\Grupa8-Tim1\DigitalniKlubCitalaca\
+build_property.ProjectDir = /Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Admin\Desktop\Grupa8-Tim1\DigitalniKlubCitalaca
+build_property.MSBuildProjectDirectory = /Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/CitalackaGrupa/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YWxhY2thR3J1cGFcQ3JlYXRlLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/CitalackaGrupa/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0YWxhY2thR3J1cGEvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/CitalackaGrupa/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YWxhY2thR3J1cGFcRGVsZXRlLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/CitalackaGrupa/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0YWxhY2thR3J1cGEvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/CitalackaGrupa/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YWxhY2thR3J1cGFcRGV0YWlscy5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/CitalackaGrupa/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0YWxhY2thR3J1cGEvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/CitalackaGrupa/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YWxhY2thR3J1cGFcRWRpdC5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/CitalackaGrupa/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0YWxhY2thR3J1cGEvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/CitalackaGrupa/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YWxhY2thR3J1cGFcSW5kZXguY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/CitalackaGrupa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0YWxhY2thR3J1cGEvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/ClanstvoGrupe/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhbnN0dm9HcnVwZVxDcmVhdGUuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/ClanstvoGrupe/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xhbnN0dm9HcnVwZS9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/ClanstvoGrupe/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhbnN0dm9HcnVwZVxEZWxldGUuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/ClanstvoGrupe/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xhbnN0dm9HcnVwZS9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/ClanstvoGrupe/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhbnN0dm9HcnVwZVxEZXRhaWxzLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/ClanstvoGrupe/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xhbnN0dm9HcnVwZS9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/ClanstvoGrupe/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhbnN0dm9HcnVwZVxFZGl0LmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/ClanstvoGrupe/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xhbnN0dm9HcnVwZS9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/ClanstvoGrupe/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhbnN0dm9HcnVwZVxJbmRleC5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/ClanstvoGrupe/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xhbnN0dm9HcnVwZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/KnjigaGrupa/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25qaWdhR3J1cGFcQ3JlYXRlLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Knjiga/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS25qaWdhL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/KnjigaGrupa/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25qaWdhR3J1cGFcRGVsZXRlLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Knjiga/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS25qaWdhL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/KnjigaGrupa/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25qaWdhR3J1cGFcRGV0YWlscy5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Knjiga/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS25qaWdhL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/KnjigaGrupa/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25qaWdhR3J1cGFcRWRpdC5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Knjiga/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS25qaWdhL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/KnjigaGrupa/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25qaWdhR3J1cGFcSW5kZXguY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Knjiga/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS25qaWdhL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Knjiga/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25qaWdhXENyZWF0ZS5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/KnjigaGrupa/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS25qaWdhR3J1cGEvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Knjiga/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25qaWdhXERlbGV0ZS5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/KnjigaGrupa/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS25qaWdhR3J1cGEvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Knjiga/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25qaWdhXERldGFpbHMuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/KnjigaGrupa/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS25qaWdhR3J1cGEvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Knjiga/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25qaWdhXEVkaXQuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/KnjigaGrupa/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS25qaWdhR3J1cGEvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Knjiga/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25qaWdhXEluZGV4LmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/KnjigaGrupa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS25qaWdhR3J1cGEvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Komentar/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29tZW50YXJcQ3JlYXRlLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Komentar/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29tZW50YXIvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Komentar/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29tZW50YXJcRGVsZXRlLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Komentar/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29tZW50YXIvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Komentar/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29tZW50YXJcRGV0YWlscy5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Komentar/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29tZW50YXIvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Komentar/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29tZW50YXJcRWRpdC5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Komentar/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29tZW50YXIvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Komentar/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29tZW50YXJcSW5kZXguY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Komentar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29tZW50YXIvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Korisnik/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcQ3JlYXRlLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Korisnik/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29yaXNuaWsvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Korisnik/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcRGVsZXRlLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Korisnik/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29yaXNuaWsvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Korisnik/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcRGV0YWlscy5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Korisnik/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29yaXNuaWsvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Korisnik/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcRWRpdC5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Korisnik/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29yaXNuaWsvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Korisnik/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcSW5kZXguY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Korisnik/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvS29yaXNuaWsvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Profil/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsXENyZWF0ZS5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Profil/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmlsL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Profil/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsXERlbGV0ZS5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Profil/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmlsL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Profil/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsXERldGFpbHMuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Profil/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmlsL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Profil/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsXEVkaXQuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Profil/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmlsL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Profil/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsXEluZGV4LmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Profil/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmlsL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/SadrzajGrupe/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FkcnphakdydXBlXENyZWF0ZS5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/SadrzajGrupe/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FkcnphakdydXBlL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/SadrzajGrupe/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FkcnphakdydXBlXERlbGV0ZS5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/SadrzajGrupe/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FkcnphakdydXBlL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/SadrzajGrupe/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FkcnphakdydXBlXERldGFpbHMuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/SadrzajGrupe/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FkcnphakdydXBlL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/SadrzajGrupe/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FkcnphakdydXBlXEVkaXQuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/SadrzajGrupe/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FkcnphakdydXBlL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/SadrzajGrupe/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FkcnphakdydXBlXEluZGV4LmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/SadrzajGrupe/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2FkcnphakdydXBlL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/ZahtjevZaPristup/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFodGpldlphUHJpc3R1cFxDcmVhdGUuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/ZahtjevZaPristup/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmFodGpldlphUHJpc3R1cC9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/ZahtjevZaPristup/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFodGpldlphUHJpc3R1cFxEZWxldGUuY3NodG1s
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/ZahtjevZaPristup/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmFodGpldlphUHJpc3R1cC9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/ZahtjevZaPristup/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFodGpldlphUHJpc3R1cFxEZXRhaWxzLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/ZahtjevZaPristup/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmFodGpldlphUHJpc3R1cC9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/ZahtjevZaPristup/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFodGpldlphUHJpc3R1cFxFZGl0LmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/ZahtjevZaPristup/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmFodGpldlphUHJpc3R1cC9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/ZahtjevZaPristup/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFodGpldlphUHJpc3R1cFxJbmRleC5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/ZahtjevZaPristup/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmFodGpldlphUHJpc3R1cC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Desktop/Grupa8-Tim1/DigitalniKlubCitalaca/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-mlkp7llr9v
+[/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-l67nncpu6s

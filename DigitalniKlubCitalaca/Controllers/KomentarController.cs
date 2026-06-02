@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -19,44 +18,39 @@ namespace DigitalniKlubCitalaca.Controllers
             _context = context;
         }
 
-        // GET: Komentar
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Komentari.Include(k => k.Autor).Include(k => k.SadrzajGrupe);
+            var applicationDbContext = _context.Komentari
+                .Include(k => k.Autor)
+                .Include(k => k.SadrzajGrupe);
+
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Komentar/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var komentar = await _context.Komentari
                 .Include(k => k.Autor)
                 .Include(k => k.SadrzajGrupe)
                 .FirstOrDefaultAsync(m => m.KomentarId == id);
+
             if (komentar == null)
-            {
                 return NotFound();
-            }
 
             return View(komentar);
         }
 
-        // GET: Komentar/Create
         public IActionResult Create()
         {
-            ViewData["AutorId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId");
+            ViewData["AutorId"] = new SelectList(_context.Korisnici, "Id", "Email");
             ViewData["SadrzajId"] = new SelectList(_context.SadrzajiGrupe, "SadrzajId", "SadrzajId");
+
             return View();
         }
 
-        // POST: Komentar/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("KomentarId,SadrzajId,AutorId,Tekst,DatumKomentara,StatusKomentara")] Komentar komentar)
@@ -67,40 +61,35 @@ namespace DigitalniKlubCitalaca.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AutorId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId", komentar.AutorId);
+
+            ViewData["AutorId"] = new SelectList(_context.Korisnici, "Id", "Email", komentar.AutorId);
             ViewData["SadrzajId"] = new SelectList(_context.SadrzajiGrupe, "SadrzajId", "SadrzajId", komentar.SadrzajId);
+
             return View(komentar);
         }
 
-        // GET: Komentar/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var komentar = await _context.Komentari.FindAsync(id);
+
             if (komentar == null)
-            {
                 return NotFound();
-            }
-            ViewData["AutorId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId", komentar.AutorId);
+
+            ViewData["AutorId"] = new SelectList(_context.Korisnici, "Id", "Email", komentar.AutorId);
             ViewData["SadrzajId"] = new SelectList(_context.SadrzajiGrupe, "SadrzajId", "SadrzajId", komentar.SadrzajId);
+
             return View(komentar);
         }
 
-        // POST: Komentar/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("KomentarId,SadrzajId,AutorId,Tekst,DatumKomentara,StatusKomentara")] Komentar komentar)
         {
             if (id != komentar.KomentarId)
-            {
                 return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
@@ -112,47 +101,42 @@ namespace DigitalniKlubCitalaca.Controllers
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!KomentarExists(komentar.KomentarId))
-                    {
                         return NotFound();
-                    }
                     else
-                    {
                         throw;
-                    }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AutorId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId", komentar.AutorId);
+
+            ViewData["AutorId"] = new SelectList(_context.Korisnici, "Id", "Email", komentar.AutorId);
             ViewData["SadrzajId"] = new SelectList(_context.SadrzajiGrupe, "SadrzajId", "SadrzajId", komentar.SadrzajId);
+
             return View(komentar);
         }
 
-        // GET: Komentar/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var komentar = await _context.Komentari
                 .Include(k => k.Autor)
                 .Include(k => k.SadrzajGrupe)
                 .FirstOrDefaultAsync(m => m.KomentarId == id);
+
             if (komentar == null)
-            {
                 return NotFound();
-            }
 
             return View(komentar);
         }
 
-        // POST: Komentar/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var komentar = await _context.Komentari.FindAsync(id);
+
             if (komentar != null)
             {
                 _context.Komentari.Remove(komentar);

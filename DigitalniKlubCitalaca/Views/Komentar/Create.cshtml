@@ -1,50 +1,87 @@
 ﻿@model DigitalniKlubCitalaca.Models.Komentar
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Dodaj komentar";
 }
 
-<h1>Create</h1>
+<section class="section">
+    <div style="max-width:760px; margin:auto;">
 
-<h4>Komentar</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="SadrzajId" class="control-label"></label>
-                <select asp-for="SadrzajId" class ="form-control" asp-items="ViewBag.SadrzajId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="AutorId" class="control-label"></label>
-                <select asp-for="AutorId" class ="form-control" asp-items="ViewBag.AutorId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Tekst" class="control-label"></label>
-                <input asp-for="Tekst" class="form-control" />
-                <span asp-validation-for="Tekst" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DatumKomentara" class="control-label"></label>
-                <input asp-for="DatumKomentara" class="form-control" />
-                <span asp-validation-for="DatumKomentara" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="StatusKomentara" class="control-label"></label>
-                <select asp-for="StatusKomentara" class="form-control"></select>
-                <span asp-validation-for="StatusKomentara" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        <div style="margin-bottom:28px;">
+            <h1 class="section-title">Dodaj komentar</h1>
+            <p style="color:#8a8a8a; margin-top:-10px;">
+                Napišite komentar na sadržaj unutar čitalačke grupe.
+            </p>
+        </div>
+
+        <div class="card" style="padding:30px; border-radius:28px;">
+
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div style="display:flex; gap:14px; align-items:flex-start;">
+                    <div style="width:48px; height:48px; border-radius:50%; background:#fff0f3; display:flex; align-items:center; justify-content:center; font-size:22px;">
+                        👤
+                    </div>
+
+                    <div style="flex:1;">
+                        <label asp-for="Tekst" style="font-weight:600;">
+                            Komentar
+                        </label>
+
+                        <textarea asp-for="Tekst"
+                                  rows="5"
+                                  placeholder="Dodaj komentar..."
+                                  style="width:100%; margin-top:8px; padding:14px 16px; border:1px solid #eee7df; border-radius:18px;"></textarea>
+
+                        <span asp-validation-for="Tekst" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:22px;">
+                    <div>
+                        <label asp-for="SadrzajId">Sadržaj ID</label>
+                        <input asp-for="SadrzajId" type="number" />
+                        <span asp-validation-for="SadrzajId" class="text-danger"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="AutorId">Autor ID</label>
+                        <input asp-for="AutorId" />
+                        <span asp-validation-for="AutorId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:8px;">
+                    <div>
+                        <label asp-for="DatumKomentara">Datum</label>
+                        <input asp-for="DatumKomentara" type="text" placeholder="2026-05-25 12:30" />
+                        <span asp-validation-for="DatumKomentara" class="text-danger"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="StatusKomentara">Status</label>
+                        <select asp-for="StatusKomentara"
+                                asp-items="Html.GetEnumSelectList<DigitalniKlubCitalaca.Models.StatusKomentara>()">
+                        </select>
+                        <span asp-validation-for="StatusKomentara" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="display:flex; justify-content:flex-end; gap:12px; margin-top:28px;">
+                    <a class="btn-dark" asp-action="Index">
+                        Nazad
+                    </a>
+
+                    <button type="submit" class="btn-pink">
+                        Objavi komentar
+                    </button>
+                </div>
+            </form>
+
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</section>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

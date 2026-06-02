@@ -26,29 +26,30 @@ namespace DigitalniKlubCitalaca.Controllers
         }
 
         // GET: Knjiga/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        // GET: Knjiga/Details/5
+public async Task<IActionResult> Details(int? id)
+{
+    if (id == null)
+    {
+        return NotFound();
+    }
 
-            var knjiga = await _context.Knjige
-                .FirstOrDefaultAsync(m => m.KnjigaId == id);
-            if (knjiga == null)
-            {
-                return NotFound();
-            }
+    var knjiga = await _context.Knjige
+        .FirstOrDefaultAsync(m => m.KnjigaId == id);
 
-            return View(knjiga);
-        }
+    if (knjiga == null)
+    {
+        return NotFound();
+    }
 
-        // GET: Knjiga/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
+    ViewBag.Komentari = await _context.Komentari
+        .Include(k => k.Autor)
+        .OrderByDescending(k => k.DatumKomentara)
+        .Take(5)
+        .ToListAsync();
 
+    return View(knjiga);
+}
         // POST: Knjiga/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -148,7 +149,41 @@ namespace DigitalniKlubCitalaca.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> DodajKomentar(int knjigaId, string tekst)
+{
+    if (string.IsNullOrWhiteSpace(tekst))
+    {
+        TempData["KomentarGreska"] = "Komentar ne može biti prazan.";
+        return RedirectToAction(nameof(Details), new { id = knjigaId });
+    }
 
+    var prviSadrzaj = await _context.SadrzajiGrupe.FirstOrDefaultAsync();
+
+    var prviKorisnik = await _context.Korisnici.FirstOrDefaultAsync();
+
+    if (prviSadrzaj == null || prviKorisnik == null)
+    {
+        TempData["KomentarGreska"] = "Nije moguće dodati komentar jer nedostaje sadržaj ili korisnik.";
+        return RedirectToAction(nameof(Details), new { id = knjigaId });
+    }
+
+    var komentar = new Komentar
+    {
+        Tekst = tekst,
+        DatumKomentara = DateTime.Now,
+        SadrzajId = prviSadrzaj.SadrzajId,
+        AutorId = prviKorisnik.Id
+    };
+
+    _context.Komentari.Add(komentar);
+    await _context.SaveChangesAsync();
+
+    TempData["KomentarPoruka"] = "Komentar je uspješno objavljen.";
+
+    return RedirectToAction(nameof(Details), new { id = knjigaId });
+}
         private bool KnjigaExists(int id)
         {
             return _context.Knjige.Any(e => e.KnjigaId == id);

@@ -1,53 +1,74 @@
 ﻿@model DigitalniKlubCitalaca.Models.Knjiga
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Dodaj knjigu";
 }
 
-<h1>Create</h1>
+<section class="section">
 
-<h4>Knjiga</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Naziv" class="control-label"></label>
-                <input asp-for="Naziv" class="form-control" />
+    <div style="max-width:700px; margin:auto;">
+
+        <div style="margin-bottom:30px;">
+            <h1 class="section-title">Dodaj novu knjigu</h1>
+
+            <p style="color:#8a8a8a; margin-top:-10px;">
+                Unesite podatke o knjizi za Digitalni klub čitalaca.
+            </p>
+        </div>
+
+        <div class="card form-box">
+
+            <form asp-action="Create">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <label asp-for="Naziv">Naziv knjige</label>
+                <input asp-for="Naziv" placeholder="Unesite naziv knjige..." />
                 <span asp-validation-for="Naziv" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Autor" class="control-label"></label>
-                <input asp-for="Autor" class="form-control" />
-                <span asp-validation-for="Autor" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Opis" class="control-label"></label>
-                <input asp-for="Opis" class="form-control" />
-                <span asp-validation-for="Opis" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="BrojStranica" class="control-label"></label>
-                <input asp-for="BrojStranica" class="form-control" />
-                <span asp-validation-for="BrojStranica" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Zanr" class="control-label"></label>
-                <input asp-for="Zanr" class="form-control" />
-                <span asp-validation-for="Zanr" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+                <label asp-for="Autor">Autor</label>
+                <input asp-for="Autor" placeholder="Ime autora..." />
+                <span asp-validation-for="Autor" class="text-danger"></span>
+
+                <label asp-for="Opis">Opis</label>
+                <textarea asp-for="Opis"
+                          rows="5"
+                          placeholder="Kratak opis knjige..."></textarea>
+                <span asp-validation-for="Opis" class="text-danger"></span>
+
+                <label asp-for="BrojStranica">Broj stranica</label>
+                <input asp-for="BrojStranica" type="number" />
+                <span asp-validation-for="BrojStranica" class="text-danger"></span>
+
+                <label asp-for="Zanr">Žanr</label>
+                <input asp-for="Zanr" placeholder="Drama, Roman, Fantastika..." />
+                <span asp-validation-for="Zanr" class="text-danger"></span>
+
+                <div style="
+                    display:flex;
+                    gap:12px;
+                    margin-top:30px;">
+
+                    <button type="submit" class="btn-pink">
+                        Sačuvaj knjigu
+                    </button>
+
+                    <a asp-action="Index" class="btn-dark">
+                        Nazad
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
