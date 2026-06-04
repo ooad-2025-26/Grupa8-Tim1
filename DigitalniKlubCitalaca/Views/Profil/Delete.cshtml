@@ -1,39 +1,56 @@
 ﻿@model DigitalniKlubCitalaca.Models.Profil
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Obriši profil";
 }
 
-<h1>Delete</h1>
+<section class="section">
+    <div style="margin-bottom:30px;">
+        <h1 class="section-title">Brisanje profila</h1>
+        <p style="color:#8a8a8a; margin-top:-10px;">
+            Pregledajte podatke prije trajnog brisanja profila.
+        </p>
+    </div>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Profil</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Korisnik)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Korisnik.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OpisProfila)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OpisProfila)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Lokacija)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Lokacija)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="ProfilId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
-</div>
+    <div class="card" style="max-width:700px; margin:auto; padding:36px;">
+        <div style="display:flex; align-items:center; gap:20px; margin-bottom:30px;">
+            <div style="width:80px; height:80px; border-radius:50%; background:#fff0f3; display:flex; align-items:center; justify-content:center; font-size:36px;">
+                👤
+            </div>
+
+            <div>
+                <h2 style="margin:0;">Obrisati ovaj profil?</h2>
+                <p style="color:#8a8a8a; margin-top:8px;">
+                    Ova akcija je trajna i profil će biti uklonjen iz sistema.
+                </p>
+            </div>
+        </div>
+
+        <div style="background:#fbfaf5; border:1px solid #eee7df; border-radius:20px; padding:22px; margin-bottom:22px;">
+            <h3 style="margin-top:0;">Opis profila</h3>
+            <p style="margin-bottom:0;">
+                @(string.IsNullOrWhiteSpace(Model.OpisProfila) ? "Opis profila nije dodan." : Model.OpisProfila)
+            </p>
+        </div>
+
+        <div style="margin-bottom:30px;">
+            <h3>Lokacija</h3>
+            <span class="badge">📍 @Model.Lokacija</span>
+        </div>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="ProfilId" />
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                <button type="submit"
+                        style="background:#e63946; color:white; padding:10px 22px; border-radius:24px; border:none; cursor:pointer;">
+                    Obriši profil
+                </button>
+
+                <a class="btn-dark" asp-action="Index">
+                    Odustani
+                </a>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,42 +1,44 @@
 ﻿@model DigitalniKlubCitalaca.Models.Profil
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Kreiraj profil";
 }
 
-<h1>Create</h1>
+<section class="section">
+    <div style="margin-bottom:30px;">
+        <h1 class="section-title">Kreiraj profil</h1>
+        <p style="color:#8a8a8a; margin-top:-10px;">
+            Dodaj opis profila i lokaciju korisnika.
+        </p>
+    </div>
 
-<h4>Profil</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+    <div class="card form-box">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="KorisnikId" class="control-label"></label>
-                <select asp-for="KorisnikId" class ="form-control" asp-items="ViewBag.KorisnikId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="OpisProfila" class="control-label"></label>
-                <input asp-for="OpisProfila" class="form-control" />
-                <span asp-validation-for="OpisProfila" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Lokacija" class="control-label"></label>
-                <input asp-for="Lokacija" class="form-control" />
-                <span asp-validation-for="Lokacija" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+            <label asp-for="OpisProfila">Opis profila</label>
+            <textarea asp-for="OpisProfila" rows="5" placeholder="Napiši nešto o sebi..."></textarea>
+            <span asp-validation-for="OpisProfila" class="text-danger"></span>
+
+            <label asp-for="Lokacija">Lokacija</label>
+            <input asp-for="Lokacija" placeholder="npr. Sarajevo" />
+            <span asp-validation-for="Lokacija" class="text-danger"></span>
+
+            <div style="display:flex; gap:12px; margin-top:25px;">
+                <button type="submit" class="btn-pink">
+                    Kreiraj profil
+                </button>
+
+                <a class="btn-dark" asp-action="Index">
+                    Nazad
+                </a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</section>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

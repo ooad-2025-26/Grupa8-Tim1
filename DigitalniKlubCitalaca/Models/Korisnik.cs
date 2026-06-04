@@ -12,6 +12,9 @@ namespace DigitalniKlubCitalaca.Models
         public double LokacijaX { get; set; }
         public double LokacijaY { get; set; }
 
+        public string Regija { get; set; } = string.Empty;
+        public string Grad { get; set; } = string.Empty;
+
         public Uloga Uloga { get; set; }
         public StatusNaloga StatusNaloga { get; set; }
 

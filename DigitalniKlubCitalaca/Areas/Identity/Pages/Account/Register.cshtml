@@ -1,0 +1,64 @@
+﻿@page
+@model RegisterModel
+
+@{
+    ViewData["Title"] = "Registracija";
+}
+
+<section style="min-height:75vh; display:flex; justify-content:center; align-items:center; background:#fbfaf5;">
+    <div class="card" style="width:440px; padding:36px; border-radius:28px; text-align:center;">
+
+        <h1 style="font-family:Georgia, serif; color:#e85d75; font-size:38px; margin-bottom:8px;">
+            Digitalni Klub Čitalaca
+        </h1>
+
+        <p style="color:#8a8a8a; margin-bottom:25px;">
+            Kreiraj novi korisnički nalog
+        </p>
+
+        <div style="display:flex; background:#fff0f3; border-radius:25px; padding:5px; margin-bottom:25px;">
+            <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl"
+               style="flex:1; padding:10px; text-decoration:none; color:#8a8a8a; font-weight:600;">
+                Prijava
+            </a>
+
+            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"
+               style="flex:1; padding:10px; border-radius:20px; background:white; color:#e85d75; text-decoration:none; font-weight:700;">
+                Registracija
+            </a>
+        </div>
+
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" style="text-align:left;">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+            <label>Ime</label>
+            <input asp-for="Input.Ime" placeholder="Unesi ime" />
+            <span asp-validation-for="Input.Ime" class="text-danger"></span>
+
+            <label>Prezime</label>
+            <input asp-for="Input.Prezime" placeholder="Unesi prezime" />
+            <span asp-validation-for="Input.Prezime" class="text-danger"></span>
+
+            <label>Email</label>
+            <input asp-for="Input.Email" autocomplete="username" placeholder="name@example.com" />
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+            <label>Lozinka</label>
+            <input asp-for="Input.Password" autocomplete="new-password" placeholder="Unesi lozinku" />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+            <label>Potvrdi lozinku</label>
+            <input asp-for="Input.ConfirmPassword" autocomplete="new-password" placeholder="Ponovi lozinku" />
+            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+
+            <button id="registerSubmit" type="submit"
+                    style="width:100%; margin-top:22px; background:#e85d75; color:white; border:none; border-radius:25px; padding:13px; font-weight:700; cursor:pointer;">
+                Registruj se
+            </button>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
