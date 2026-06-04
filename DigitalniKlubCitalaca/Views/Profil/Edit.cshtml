@@ -1,44 +1,131 @@
 ﻿@model DigitalniKlubCitalaca.Models.Profil
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Uredi profil";
 }
 
-<h1>Edit</h1>
+<section class="section">
+    <h1 class="section-title"
+        style="text-align:center; font-size:52px;">
+        Uredi profil
+    </h1>
 
-<h4>Profil</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ProfilId" />
-            <div class="form-group">
-                <label asp-for="KorisnikId" class="control-label"></label>
-                <select asp-for="KorisnikId" class="form-control" asp-items="ViewBag.KorisnikId"></select>
-                <span asp-validation-for="KorisnikId" class="text-danger"></span>
+    <div style="display:grid; grid-template-columns:280px 1fr; gap:28px; max-width:920px; margin:30px auto;">
+        <div>
+            <div class="card" style="text-align:center; padding:28px;">
+                <div style="width:130px; height:130px; border-radius:50%; background:#fff0f3; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; font-size:58px;">
+                    👤
+                </div>
+
+                <h2 style="margin-bottom:5px;">
+                    @(string.IsNullOrWhiteSpace(Model.Korisnik.Ime + Model.Korisnik.Prezime)
+                                        ? "Korisnik"
+                                        : Model.Korisnik.Ime + " " + Model.Korisnik.Prezime)
+                </h2>
+
+                <p style="color:#8a8a8a;">
+                    @@@(Model.Korisnik.UserName?.Split('@')[0])
+                </p>
+
+                <p style="color:#8a8a8a; margin-top:15px;">
+                    📍 @Model.Lokacija
+                </p>
             </div>
-            <div class="form-group">
-                <label asp-for="OpisProfila" class="control-label"></label>
-                <input asp-for="OpisProfila" class="form-control" />
-                <span asp-validation-for="OpisProfila" class="text-danger"></span>
+
+            <div class="card" style="margin-top:22px; text-align:center; padding:25px;">
+                <h4>Statistika</h4>
+
+                <div style="display:flex; justify-content:center; gap:45px; margin-top:20px;">
+                    <div>
+                        <h2 style="color:#e85d75; margin:0;">12</h2>
+                        <p style="color:#8a8a8a;">KNJIGA</p>
+                    </div>
+
+                    <div>
+                        <h2 style="color:#e85d75; margin:0;">4</h2>
+                        <p style="color:#8a8a8a;">GRUPE</p>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Lokacija" class="control-label"></label>
-                <input asp-for="Lokacija" class="form-control" />
-                <span asp-validation-for="Lokacija" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+
+        <div class="card" style="padding:30px;">
+            <h2 style="margin-bottom:30px;">Lični podaci</h2>
+
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <input type="hidden" asp-for="ProfilId" />
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px;">
+                    <div>
+                        <label>Ime</label>
+                        <input asp-for="Korisnik.Ime" placeholder="Unesi ime" />
+                    </div>
+
+                    <div>
+                        <label>Prezime</label>
+                        <input asp-for="Korisnik.Prezime" placeholder="Unesi prezime" />
+                    </div>
+
+                    <div>
+                        <label>Korisničko ime</label>
+                        <input value="@(Model.Korisnik.UserName?.Split('@')[0])" readonly />
+                    </div>
+
+                    <div>
+                        <label>E-mail adresa</label>
+                        <input value="@Model.Korisnik.Email" readonly />
+                    </div>
+
+                    <div>
+                        <label>Regija</label>
+                        <input asp-for="Korisnik.Regija" placeholder="npr. Bosna i Hercegovina" />
+                    </div>
+
+                    <div>
+                        <label>Grad</label>
+                        <input asp-for="Korisnik.Grad" placeholder="npr. Sarajevo" />
+                    </div>
+
+                    <div style="grid-column:1 / 3;">
+                        <label>Lokacija za prikaz</label>
+                        <input asp-for="Lokacija" placeholder="npr. Sarajevo" />
+                        <span asp-validation-for="Lokacija" class="text-danger"></span>
+                    </div>
+
+                    <div style="grid-column:1 / 3;">
+                        <label>Biografija</label>
+                        <textarea asp-for="OpisProfila" rows="5" placeholder="Napiši nešto o sebi..."></textarea>
+                        <span asp-validation-for="OpisProfila" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div style="display:flex; gap:12px; margin-top:28px;">
+                    <button type="submit"
+                        style="
+                        background:#e85d75;
+                        color:white;
+                        border:none;
+                        border-radius:25px;
+                        padding:12px 24px;
+                        font-weight:600;
+                        min-width:230px;
+                        cursor:pointer;">
+                        Sačuvaj promjene
+                    </button>
+
+                    <a class="btn-pink" asp-action="Index">
+                        Odustani
+                    </a>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</section>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

@@ -1,47 +1,100 @@
 ﻿@model IEnumerable<DigitalniKlubCitalaca.Models.Profil>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Moj profil";
+    var item = Model.FirstOrDefault();
 }
 
-<h1>Index</h1>
+@if (item != null)
+{
+    var punoIme = string.IsNullOrWhiteSpace(item.Korisnik.Ime + item.Korisnik.Prezime)
+        ? "Korisnik"
+        : item.Korisnik.Ime + " " + item.Korisnik.Prezime;
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Korisnik)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OpisProfila)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Lokacija)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Korisnik.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OpisProfila)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lokacija)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ProfilId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProfilId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProfilId">Delete</a>
-            </td>
-        </tr>
+    var korisnickoIme = item.Korisnik.UserName != null
+        ? item.Korisnik.UserName.Split('@')[0]
+        : "korisnik";
+
+    <section class="section">
+        <h1 class="section-title" style="text-align:center;">Moj Profil</h1>
+
+        <div style="display:grid; grid-template-columns:320px 1fr; gap:35px; max-width:1000px; margin:40px auto;">
+
+            <div>
+                <div class="card" style="text-align:center; padding:35px;">
+                    <div style="width:130px; height:130px; border-radius:50%; background:#fff0f3; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; font-size:58px;">
+                        👤
+                    </div>
+
+                    <h2 style="margin-bottom:5px;">@punoIme</h2>
+                    <p style="color:#8a8a8a;">@@@korisnickoIme</p>
+                    <p style="color:#8a8a8a; margin-top:15px;">📍 @item.Lokacija</p>
+                </div>
+
+                <div class="card" style="margin-top:22px; text-align:center; padding:25px;">
+                    <h4>Statistika</h4>
+
+                    <div style="display:flex; justify-content:center; gap:45px; margin-top:20px;">
+                        <div>
+                            <h2 style="color:#e85d75; margin:0;">12</h2>
+                            <p style="color:#8a8a8a;">KNJIGA</p>
+                        </div>
+
+                        <div>
+                            <h2 style="color:#e85d75; margin:0;">4</h2>
+                            <p style="color:#8a8a8a;">GRUPE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="padding:38px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
+                    <h2 style="margin:0;">Lični podaci</h2>
+
+                    <a asp-action="Edit" asp-route-id="@item.ProfilId"
+                       style="color:#e85d75; text-decoration:none; font-weight:600;">
+                        Uredi profil
+                    </a>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-bottom:30px;">
+                    <div>
+                        <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">Ime i prezime</p>
+                        <h4>@punoIme</h4>
+                    </div>
+
+                    <div>
+                        <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">Korisničko ime</p>
+                        <h4>@korisnickoIme</h4>
+                    </div>
+
+                    <div>
+                        <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">E-mail adresa</p>
+                        <h4>@item.Korisnik.Email</h4>
+                    </div>
+
+                    <div>
+                        <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">Regija</p>
+                        <h4>@(string.IsNullOrWhiteSpace(item.Korisnik.Regija) ? "Nije uneseno" : item.Korisnik.Regija)</h4>
+                    </div>
+
+                    <div>
+                        <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">Grad</p>
+                        <h4>@(string.IsNullOrWhiteSpace(item.Korisnik.Grad) ? item.Lokacija : item.Korisnik.Grad)</h4>
+                    </div>
+                </div>
+
+                <div>
+                    <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">Biografija</p>
+
+                    <p style="font-size:17px; line-height:1.7;">
+                        @(string.IsNullOrWhiteSpace(item.OpisProfila)
+                                            ? "Korisnik još nije dodao biografiju."
+                                            : item.OpisProfila)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 }
-    </tbody>
-</table>

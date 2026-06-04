@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DigitalniKlubCitalaca.Data;
 using DigitalniKlubCitalaca.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace DigitalniKlubCitalaca.Controllers
 {
+    [Authorize]
     public class ProfilController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -22,8 +25,18 @@ namespace DigitalniKlubCitalaca.Controllers
         // GET: Profil
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Profili.Include(p => p.Korisnik);
-            return View(await applicationDbContext.ToListAsync());
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var profil = await _context.Profili
+                .Include(p => p.Korisnik)
+                .FirstOrDefaultAsync(p => p.KorisnikId == korisnikId);
+
+            if (profil == null)
+            {
+                return RedirectToAction(nameof(Create));
+            }
+
+            return View(new List<Profil> { profil });
         }
 
         // GET: Profil/Details/5
@@ -48,24 +61,32 @@ namespace DigitalniKlubCitalaca.Controllers
         // GET: Profil/Create
         public IActionResult Create()
         {
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId");
             return View();
         }
 
         // POST: Profil/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProfilId,KorisnikId,OpisProfila,Lokacija")] Profil profil)
+        public async Task<IActionResult> Create([Bind("OpisProfila,Lokacija")] Profil profil)
         {
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (korisnikId == null)
+            {
+                return RedirectToPage("/Account/Login", new { area = "Identity" });
+            }
+
+            profil.KorisnikId = korisnikId;
+            ModelState.Remove("KorisnikId");
+            ModelState.Remove("Korisnik");
+
             if (ModelState.IsValid)
             {
                 _context.Add(profil);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId", profil.KorisnikId);
+
             return View(profil);
         }
 
@@ -77,12 +98,16 @@ namespace DigitalniKlubCitalaca.Controllers
                 return NotFound();
             }
 
-            var profil = await _context.Profili.FindAsync(id);
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var profil = await _context.Profili.Include(p => p.Korisnik)
+                    .FirstOrDefaultAsync(p => p.ProfilId == id && p.KorisnikId == korisnikId);
+
             if (profil == null)
             {
                 return NotFound();
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId", profil.KorisnikId);
+
             return View(profil);
         }
 
@@ -91,35 +116,51 @@ namespace DigitalniKlubCitalaca.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProfilId,KorisnikId,OpisProfila,Lokacija")] Profil profil)
+        public async Task<IActionResult> Edit(int id, Profil profil)
         {
             if (id != profil.ProfilId)
             {
                 return NotFound();
             }
 
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var profilIzBaze = await _context.Profili
+                .Include(p => p.Korisnik)
+                .FirstOrDefaultAsync(p => p.ProfilId == id && p.KorisnikId == korisnikId);
+
+            if (profilIzBaze == null)
+            {
+                return NotFound();
+            }
+
+            ModelState.Remove("KorisnikId");
+            ModelState.Remove("Korisnik");
+            ModelState.Remove("Korisnik.Id");
+            ModelState.Remove("Korisnik.UserName");
+            ModelState.Remove("Korisnik.NormalizedUserName");
+            ModelState.Remove("Korisnik.NormalizedEmail");
+            ModelState.Remove("Korisnik.PasswordHash");
+            ModelState.Remove("Korisnik.SecurityStamp");
+            ModelState.Remove("Korisnik.ConcurrencyStamp");
+
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(profil);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ProfilExists(profil.ProfilId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                profilIzBaze.OpisProfila = profil.OpisProfila;
+                profilIzBaze.Lokacija = profil.Lokacija;
+
+                profilIzBaze.Korisnik.Ime = profil.Korisnik.Ime;
+                profilIzBaze.Korisnik.Prezime = profil.Korisnik.Prezime;
+                profilIzBaze.Korisnik.Regija = profil.Korisnik.Regija;
+                profilIzBaze.Korisnik.Grad = profil.Korisnik.Grad;
+                profilIzBaze.Korisnik.Biografija = profil.Korisnik.Biografija;
+
+                await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId", profil.KorisnikId);
-            return View(profil);
+
+            return View(profilIzBaze);
         }
 
         // GET: Profil/Delete/5

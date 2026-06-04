@@ -18,6 +18,9 @@ builder.Services.AddDefaultIdentity<Korisnik>(options =>
 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
+
+
 
 var app = builder.Build();
 

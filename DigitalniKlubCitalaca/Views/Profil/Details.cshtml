@@ -1,36 +1,96 @@
 ﻿@model DigitalniKlubCitalaca.Models.Profil
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Moj profil";
+    var korisnickoIme = Model.Korisnik.UserName != null
+        ? Model.Korisnik.UserName.Split('@')[0]
+        : "korisnik";
 }
 
-<h1>Details</h1>
+<section class="section">
+    <h1 class="section-title" style="text-align:center;">Moj Profil</h1>
 
-<div>
-    <h4>Profil</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Korisnik)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Korisnik.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OpisProfila)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OpisProfila)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Lokacija)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Lokacija)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.ProfilId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div style="display:grid; grid-template-columns:320px 1fr; gap:35px; max-width:1000px; margin:40px auto;">
+
+        <div>
+            <div class="card" style="text-align:center; padding:35px;">
+                <div style="width:130px; height:130px; border-radius:50%; background:#fff0f3; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; font-size:60px;">
+                    👤
+                </div>
+
+                <h2 style="margin-bottom:5px;">@korisnickoIme</h2>
+
+                <p style="color:#8a8a8a;">@@@korisnickoIme</p>
+
+                <p style="color:#8a8a8a; margin-top:15px;">
+                    📍 @Model.Lokacija
+                </p>
+            </div>
+
+            <div class="card" style="margin-top:22px; text-align:center;">
+                <h4>Statistika</h4>
+
+                <div style="display:flex; justify-content:center; gap:45px; margin-top:20px;">
+                    <div>
+                        <h2 style="color:#e85d75; margin:0;">12</h2>
+                        <p style="color:#8a8a8a;">KNJIGA</p>
+                    </div>
+
+                    <div>
+                        <h2 style="color:#e85d75; margin:0;">4</h2>
+                        <p style="color:#8a8a8a;">GRUPE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="padding:38px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
+                <h2 style="margin:0;">Lični podaci</h2>
+
+                <a asp-action="Edit" asp-route-id="@Model.ProfilId" style="color:#e85d75; text-decoration:none; font-weight:600;">
+                    Uredi profil
+                </a>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-bottom:30px;">
+                <div>
+                    <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">Korisničko ime</p>
+                    <h4>@korisnickoIme</h4>
+                </div>
+
+                <div>
+                    <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">E-mail adresa</p>
+                    <h4>@Model.Korisnik.Email</h4>
+                </div>
+
+                <div>
+                    <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">Regija</p>
+                    <h4>Bosna i Hercegovina</h4>
+                </div>
+
+                <div>
+                    <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">Grad</p>
+                    <h4>@Model.Lokacija</h4>
+                </div>
+            </div>
+
+            <div>
+                <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">Biografija</p>
+
+                <p style="font-size:17px; line-height:1.7;">
+                    @(string.IsNullOrWhiteSpace(Model.OpisProfila)
+                                        ? "Korisnik još nije dodao biografiju."
+                                        : Model.OpisProfila)
+                </p>
+            </div>
+
+            <div style="margin-top:35px;">
+                <a class="btn-dark" asp-action="Index">
+                    Nazad
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>

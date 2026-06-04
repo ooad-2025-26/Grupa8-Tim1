@@ -206,6 +206,10 @@ namespace DigitalniKlubCitalaca.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Grad")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Ime")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -244,6 +248,10 @@ namespace DigitalniKlubCitalaca.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProfilnaSlika")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Regija")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
