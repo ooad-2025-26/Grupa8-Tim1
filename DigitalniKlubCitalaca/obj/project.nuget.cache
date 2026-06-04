@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Cwi4Jf9YXg=",
+  "dgSpecHash": "X5mxXS04Vac=",
   "success": true,
-  "projectFilePath": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
+  "projectFilePath": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
   "expectedPackageFiles": [
     "/Users/aminapestalic/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/aminapestalic/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",

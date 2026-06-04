@@ -7766,11 +7766,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
+      "projectUniqueName": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
       "projectName": "DigitalniKlubCitalaca",
-      "projectPath": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
+      "projectPath": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
       "packagesPath": "/Users/aminapestalic/.nuget/packages/",
-      "outputPath": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/obj/",
+      "outputPath": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aminapestalic/.nuget/NuGet/NuGet.Config"

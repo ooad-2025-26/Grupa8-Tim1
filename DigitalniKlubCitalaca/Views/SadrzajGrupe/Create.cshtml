@@ -1,65 +1,69 @@
 ﻿@model DigitalniKlubCitalaca.Models.SadrzajGrupe
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nova objava";
 }
 
-<h1>Create</h1>
+<section class="section">
+    <div style="max-width:700px; margin:auto;">
 
-<h4>SadrzajGrupe</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="AutorId" class="control-label"></label>
-                <select asp-for="AutorId" class ="form-control" asp-items="ViewBag.AutorId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="GrupaId" class="control-label"></label>
-                <select asp-for="GrupaId" class ="form-control" asp-items="ViewBag.GrupaId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="DatumObjave" class="control-label"></label>
-                <input asp-for="DatumObjave" class="form-control" />
-                <span asp-validation-for="DatumObjave" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Naslov" class="control-label"></label>
-                <input asp-for="Naslov" class="form-control" />
+        <div style="margin-bottom:30px;">
+            <h1 class="section-title">Nova objava</h1>
+            <p style="color:#8a8a8a; margin-top:-10px;">
+                Kreirajte novi sadržaj za čitalačku grupu.
+            </p>
+        </div>
+
+        <div class="card form-box">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <label asp-for="AutorId">Autor</label>
+                <select asp-for="AutorId" asp-items="ViewBag.AutorId"></select>
+                <span asp-validation-for="AutorId" class="text-danger"></span>
+
+                <label asp-for="GrupaId">Čitalačka grupa</label>
+                <select asp-for="GrupaId" asp-items="ViewBag.GrupaId"></select>
+                <span asp-validation-for="GrupaId" class="text-danger"></span>
+
+                <label asp-for="Naslov">Naslov</label>
+                <input asp-for="Naslov" placeholder="Unesite naslov objave..." />
                 <span asp-validation-for="Naslov" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Opis" class="control-label"></label>
-                <input asp-for="Opis" class="form-control" />
-                <span asp-validation-for="Opis" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Link" class="control-label"></label>
-                <input asp-for="Link" class="form-control" />
-                <span asp-validation-for="Link" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TipSadrzaja" class="control-label"></label>
-                <select asp-for="TipSadrzaja" class="form-control"></select>
-                <span asp-validation-for="TipSadrzaja" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="StatusSadrzaja" class="control-label"></label>
-                <select asp-for="StatusSadrzaja" class="form-control"></select>
-                <span asp-validation-for="StatusSadrzaja" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+                <label asp-for="Opis">Opis</label>
+                <textarea asp-for="Opis" rows="5" placeholder="Napišite opis objave..."></textarea>
+                <span asp-validation-for="Opis" class="text-danger"></span>
+
+                <label asp-for="Link">Link</label>
+                <input asp-for="Link" placeholder="https://..." />
+                <span asp-validation-for="Link" class="text-danger"></span>
+
+                <label asp-for="TipSadrzaja">Tip sadržaja</label>
+                <select asp-for="TipSadrzaja"
+                        asp-items="Html.GetEnumSelectList<DigitalniKlubCitalaca.Models.TipSadrzaja>()">
+                </select>
+                <span asp-validation-for="TipSadrzaja" class="text-danger"></span>
+
+                <label asp-for="StatusSadrzaja">Status sadržaja</label>
+                <select asp-for="StatusSadrzaja"
+                        asp-items="Html.GetEnumSelectList<DigitalniKlubCitalaca.Models.StatusSadrzaja>()">
+                </select>
+                <span asp-validation-for="StatusSadrzaja" class="text-danger"></span>
+
+                <div style="display:flex; gap:12px; margin-top:28px;">
+                    <button type="submit" class="btn-pink">
+                        Objavi sadržaj
+                    </button>
+
+                    <a class="btn-dark" asp-action="Index">
+                        Nazad
+                    </a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

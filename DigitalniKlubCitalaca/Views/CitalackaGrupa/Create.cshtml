@@ -1,67 +1,78 @@
 ﻿@model DigitalniKlubCitalaca.Models.CitalackaGrupa
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nova grupa";
 }
 
-<h1>Create</h1>
+<section class="section">
 
-<h4>CitalackaGrupa</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Naziv" class="control-label"></label>
-                <input asp-for="Naziv" class="form-control" />
+    <div style="max-width:700px; margin:auto;">
+
+        <div style="margin-bottom:30px;">
+            <h1 class="section-title">Nova čitalačka grupa</h1>
+
+            <p style="color:#8a8a8a; margin-top:-10px;">
+                Kreirajte novu grupu za ljubitelje knjiga.
+            </p>
+        </div>
+
+        <div class="card form-box">
+
+            <form asp-action="Create">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <label asp-for="Naziv">Naziv grupe</label>
+                <input asp-for="Naziv" />
                 <span asp-validation-for="Naziv" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Opis" class="control-label"></label>
-                <input asp-for="Opis" class="form-control" />
-                <span asp-validation-for="Opis" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Zanr" class="control-label"></label>
-                <input asp-for="Zanr" class="form-control" />
-                <span asp-validation-for="Zanr" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Regija" class="control-label"></label>
-                <input asp-for="Regija" class="form-control" />
-                <span asp-validation-for="Regija" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Grad" class="control-label"></label>
-                <input asp-for="Grad" class="form-control" />
-                <span asp-validation-for="Grad" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MaksimalanBrojClanova" class="control-label"></label>
-                <input asp-for="MaksimalanBrojClanova" class="form-control" />
-                <span asp-validation-for="MaksimalanBrojClanova" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TipGrupe" class="control-label"></label>
-                <select asp-for="TipGrupe" class="form-control"></select>
-                <span asp-validation-for="TipGrupe" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DatumKreiranja" class="control-label"></label>
-                <input asp-for="DatumKreiranja" class="form-control" />
-                <span asp-validation-for="DatumKreiranja" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+                <label asp-for="Opis">Opis</label>
+                <textarea asp-for="Opis" rows="5"></textarea>
+                <span asp-validation-for="Opis" class="text-danger"></span>
+
+                <label asp-for="Zanr">Žanr</label>
+                <input asp-for="Zanr" />
+                <span asp-validation-for="Zanr" class="text-danger"></span>
+
+                <label asp-for="Regija">Regija</label>
+                <input asp-for="Regija" />
+                <span asp-validation-for="Regija" class="text-danger"></span>
+
+                <label asp-for="Grad">Grad</label>
+                <input asp-for="Grad" />
+                <span asp-validation-for="Grad" class="text-danger"></span>
+
+                <label asp-for="MaksimalanBrojClanova">Maksimalan broj članova</label>
+                <input asp-for="MaksimalanBrojClanova" />
+                <span asp-validation-for="MaksimalanBrojClanova" class="text-danger"></span>
+
+                <label asp-for="TipGrupe">Tip grupe</label>
+<select asp-for="TipGrupe">
+    <option value="">Odaberite tip grupe</option>
+    <option value="javna">javna</option>
+    <option value="privatna">privatna</option>
+</select>
+<span asp-validation-for="TipGrupe" class="text-danger"></span>
+
+                <div style="display:flex; gap:12px; margin-top:30px;">
+
+                    <button type="submit" class="btn-pink">
+                        Kreiraj grupu
+                    </button>
+
+                    <a asp-action="Index" class="btn-dark">
+                        Nazad
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

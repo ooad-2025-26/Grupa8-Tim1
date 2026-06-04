@@ -1,69 +1,98 @@
 ﻿@model DigitalniKlubCitalaca.Models.CitalackaGrupa
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Obriši grupu";
 }
 
-<h1>Delete</h1>
+<section class="section">
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>CitalackaGrupa</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Naziv)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Naziv)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Opis)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Opis)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Zanr)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Zanr)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Regija)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Regija)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Grad)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Grad)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaksimalanBrojClanova)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaksimalanBrojClanova)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipGrupe)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipGrupe)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DatumKreiranja)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DatumKreiranja)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="GrupaId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
-</div>
+    <div style="max-width:700px; margin:auto;">
+
+        <div class="card" style="text-align:center;">
+
+            <div style="
+                width:90px;
+                height:90px;
+                border-radius:50%;
+                background:#fff0f3;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                font-size:40px;
+                margin:auto auto 20px;">
+                🗑️
+            </div>
+
+            <h1 class="section-title">
+                Obriši grupu
+            </h1>
+
+            <p style="color:#8a8a8a; margin-top:-10px; margin-bottom:30px;">
+                Da li ste sigurni da želite obrisati ovu čitalačku grupu?
+            </p>
+
+            <div style="
+                background:#fbfaf5;
+                border:1px solid #eee7df;
+                border-radius:20px;
+                padding:22px;
+                text-align:left;
+                margin-bottom:25px;">
+
+                <h3 style="margin-top:0;">
+                    @(string.IsNullOrWhiteSpace(Model.Naziv) ? "Grupa bez naziva" : Model.Naziv)
+                </h3>
+
+                <p>
+                    @(string.IsNullOrWhiteSpace(Model.Opis)
+                        ? "Opis grupe nije dodan."
+                        : Model.Opis)
+                </p>
+
+                <p style="color:#8a8a8a;">
+                    📍 @Model.Grad, @Model.Regija
+                </p>
+
+                <p style="color:#8a8a8a;">
+                    📚 Žanr: @Model.Zanr
+                </p>
+
+                <p style="color:#8a8a8a;">
+                    👥 Maksimalno članova: @Model.MaksimalanBrojClanova
+                </p>
+
+                <p style="color:#8a8a8a;">
+                    📅 Kreirana: @Model.DatumKreiranja.ToString("dd.MM.yyyy")
+                </p>
+
+            </div>
+
+            <form asp-action="Delete">
+
+                <input type="hidden" asp-for="GrupaId" />
+
+                <div style="display:flex; justify-content:center; gap:12px;">
+
+                    <button type="submit"
+                            style="
+                                background:#e63946;
+                                color:white;
+                                padding:12px 24px;
+                                border-radius:28px;
+                                border:none;">
+                        Obriši
+                    </button>
+
+                    <a asp-action="Index" class="btn-dark">
+                        Odustani
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
