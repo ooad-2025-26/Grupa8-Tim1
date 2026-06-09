@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DigitalniKlubCitalaca.Data;
 using DigitalniKlubCitalaca.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DigitalniKlubCitalaca.Controllers
 {
@@ -38,60 +39,103 @@ namespace DigitalniKlubCitalaca.Controllers
             return View(sadrzajGrupe);
         }
 
-        public IActionResult Create()
+        [Authorize]
+        public IActionResult Create(int grupaId)
         {
-            ViewData["AutorId"] = new SelectList(_context.Korisnici.ToList(), "Id", "Email");
-            ViewData["GrupaId"] = new SelectList(_context.CitalackeGrupe.ToList(), "GrupaId", "GrupaId");
+            var objava = new SadrzajGrupe
+            {
+                GrupaId = grupaId,
+                DatumObjave = DateTime.Now
+            };
 
-            return View();
+            return View(objava);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SadrzajId,AutorId,GrupaId,Naslov,Opis,Link,TipSadrzaja,StatusSadrzaja")] SadrzajGrupe sadrzajGrupe)
+        [Authorize]
+        public async Task<IActionResult> Create([FromForm] SadrzajGrupe sadrzajGrupe, [FromForm] IFormFile? pdfFile)
         {
-            ModelState.Remove("DatumObjave");
             ModelState.Remove("Autor");
             ModelState.Remove("CitalackaGrupa");
+            ModelState.Remove("AutorId");
+            ModelState.Remove("DatumObjave");
+            ModelState.Remove("Link");
 
-            sadrzajGrupe.DatumObjave = DateTime.Now;
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            if (ModelState.IsValid)
+            if (korisnikId == null)
             {
-                _context.Add(sadrzajGrupe);
-                await _context.SaveChangesAsync();
-
-                return RedirectToAction(nameof(Index));
+                return RedirectToPage("/Account/Login", new { area = "Identity" });
             }
 
-            ViewData["AutorId"] = new SelectList(_context.Korisnici.ToList(), "Id", "Email", sadrzajGrupe.AutorId);
-            ViewData["GrupaId"] = new SelectList(_context.CitalackeGrupe.ToList(), "GrupaId", "GrupaId", sadrzajGrupe.GrupaId);
+            sadrzajGrupe.AutorId = korisnikId;
+            sadrzajGrupe.DatumObjave = DateTime.Now;
 
-            return View(sadrzajGrupe);
-        }
+            if (sadrzajGrupe.TipSadrzaja == TipSadrzaja.pdf)
+            {
 
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null) return NotFound();
+                if (pdfFile == null || pdfFile.Length == 0)
+                {
+                    ModelState.AddModelError("pdfFile", "Morate odabrati PDF dokument.");
+                }
+            }
 
-            var sadrzajGrupe = await _context.SadrzajiGrupe.FindAsync(id);
+            if (!ModelState.IsValid)
+            {
+                return View(sadrzajGrupe);
+            }
 
-            if (sadrzajGrupe == null) return NotFound();
+            if (sadrzajGrupe.TipSadrzaja == TipSadrzaja.pdf && pdfFile != null)
+            {
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
 
-            ViewData["AutorId"] = new SelectList(_context.Korisnici.ToList(), "Id", "Email", sadrzajGrupe.AutorId);
-            ViewData["GrupaId"] = new SelectList(_context.CitalackeGrupe.ToList(), "GrupaId", "GrupaId", sadrzajGrupe.GrupaId);
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
 
-            return View(sadrzajGrupe);
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(pdfFile.FileName);
+                var filePath = Path.Combine(folder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await pdfFile.CopyToAsync(stream);
+                }
+
+                sadrzajGrupe.Link = "/uploads/" + fileName;
+            }
+
+            _context.SadrzajiGrupe.Add(sadrzajGrupe);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Details", "CitalackaGrupa", new { id = sadrzajGrupe.GrupaId });
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SadrzajId,AutorId,GrupaId,DatumObjave,Naslov,Opis,Link,TipSadrzaja,StatusSadrzaja")] SadrzajGrupe sadrzajGrupe)
+        public async Task<IActionResult> Edit(int id, SadrzajGrupe sadrzajGrupe, IFormFile? pdfFile)
         {
             ModelState.Remove("Autor");
             ModelState.Remove("CitalackaGrupa");
 
             if (id != sadrzajGrupe.SadrzajId) return NotFound();
+
+            if (sadrzajGrupe.TipSadrzaja == TipSadrzaja.pdf && pdfFile != null)
+            {
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
+
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(pdfFile.FileName);
+                var filePath = Path.Combine(folder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await pdfFile.CopyToAsync(stream);
+                }
+
+                sadrzajGrupe.Link = "/uploads/" + fileName;
+            }
 
             if (ModelState.IsValid)
             {
@@ -108,11 +152,8 @@ namespace DigitalniKlubCitalaca.Controllers
                     throw;
                 }
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", "CitalackaGrupa", new { id = sadrzajGrupe.GrupaId });
             }
-
-            ViewData["AutorId"] = new SelectList(_context.Korisnici.ToList(), "Id", "Email", sadrzajGrupe.AutorId);
-            ViewData["GrupaId"] = new SelectList(_context.CitalackeGrupe.ToList(), "GrupaId", "GrupaId", sadrzajGrupe.GrupaId);
 
             return View(sadrzajGrupe);
         }
@@ -137,14 +178,14 @@ namespace DigitalniKlubCitalaca.Controllers
         {
             var sadrzajGrupe = await _context.SadrzajiGrupe.FindAsync(id);
 
-            if (sadrzajGrupe != null)
-            {
-                _context.SadrzajiGrupe.Remove(sadrzajGrupe);
-            }
+            if (sadrzajGrupe == null) return NotFound();
 
+            int grupaId = sadrzajGrupe.GrupaId;
+
+            _context.SadrzajiGrupe.Remove(sadrzajGrupe);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Details", "CitalackaGrupa", new { id = grupaId });
         }
 
         private bool SadrzajGrupeExists(int id)

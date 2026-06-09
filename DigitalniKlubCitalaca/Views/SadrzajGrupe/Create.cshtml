@@ -5,66 +5,137 @@
 }
 
 <section class="section">
-    <div style="max-width:700px; margin:auto;">
+    <div style="max-width:800px; margin:auto;">
 
-        <div style="margin-bottom:30px;">
-            <h1 class="section-title">Nova objava</h1>
-            <p style="color:#8a8a8a; margin-top:-10px;">
-                Kreirajte novi sadržaj za čitalačku grupu.
-            </p>
-        </div>
+        <h1 class="section-title">Nova objava</h1>
+        <p style="color:#8a8a8a; margin-top:-10px;">
+            Kreirajte story, PDF materijal ili članak unutar ove grupe.
+        </p>
 
         <div class="card form-box">
-            <form asp-action="Create">
+            <form asp-controller="SadrzajGrupe" asp-action="Create" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                <label asp-for="AutorId">Autor</label>
-                <select asp-for="AutorId" asp-items="ViewBag.AutorId"></select>
-                <span asp-validation-for="AutorId" class="text-danger"></span>
+                <input type="hidden" asp-for="GrupaId" />
+                <input type="hidden" asp-for="Link" />
 
-                <label asp-for="GrupaId">Čitalačka grupa</label>
-                <select asp-for="GrupaId" asp-items="ViewBag.GrupaId"></select>
-                <span asp-validation-for="GrupaId" class="text-danger"></span>
+                <label asp-for="TipSadrzaja">Tip objave</label>
+                <select asp-for="TipSadrzaja"
+                        id="tipSadrzaja"
+                        asp-items="Html.GetEnumSelectList<DigitalniKlubCitalaca.Models.TipSadrzaja>()">
+                </select>
 
                 <label asp-for="Naslov">Naslov</label>
                 <input asp-for="Naslov" placeholder="Unesite naslov objave..." />
                 <span asp-validation-for="Naslov" class="text-danger"></span>
 
-                <label asp-for="Opis">Opis</label>
-                <textarea asp-for="Opis" rows="5" placeholder="Napišite opis objave..."></textarea>
-                <span asp-validation-for="Opis" class="text-danger"></span>
+                <div id="clanakBox">
+                    <label asp-for="Opis">Tekst članka / osvrta</label>
+                    <textarea asp-for="Opis" rows="7" placeholder="Napišite vlastiti osvrt, mišljenje ili članak..."></textarea>
+                    <span asp-validation-for="Opis" class="text-danger"></span>
+                </div>
 
-                <label asp-for="Link">Link</label>
-                <input asp-for="Link" placeholder="https://..." />
-                <span asp-validation-for="Link" class="text-danger"></span>
+                <div id="pdfBox" style="display:none;">
+                    <label>PDF materijal</label>
+                    <input type="file" name="pdfFile" accept="application/pdf" />
+                    <small style="color:#8a8a8a;">
+                        Odaberite PDF materijal koji želite podijeliti u grupi.
+                    </small>
+                </div>
 
-                <label asp-for="TipSadrzaja">Tip sadržaja</label>
-                <select asp-for="TipSadrzaja"
-                        asp-items="Html.GetEnumSelectList<DigitalniKlubCitalaca.Models.TipSadrzaja>()">
-                </select>
-                <span asp-validation-for="TipSadrzaja" class="text-danger"></span>
+                <div id="storyBox" style="display:none; margin-top:20px;">
+                    <label>Story objava</label>
 
-                <label asp-for="StatusSadrzaja">Status sadržaja</label>
-                <select asp-for="StatusSadrzaja"
-                        asp-items="Html.GetEnumSelectList<DigitalniKlubCitalaca.Models.StatusSadrzaja>()">
-                </select>
-                <span asp-validation-for="StatusSadrzaja" class="text-danger"></span>
+                    <div style="padding:1rem; display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                        <div id="results"
+                             style="border:1px dashed #ddd; border-radius:18px; padding:20px; min-height:240px;">
+                            Slika će se prikazati ovdje...
+                        </div>
+
+                        <div>
+                            <div id="my_camera"></div>
+
+                            <input type="button"
+                                   id="takeshot"
+                                   class="btn-pink"
+                                   value="Uslikaj"
+                                   onclick="take_snapshot()"
+                                   style="margin-top:15px;" />
+                        </div>
+                    </div>
+                </div>
 
                 <div style="display:flex; gap:12px; margin-top:28px;">
                     <button type="submit" class="btn-pink">
-                        Objavi sadržaj
+                        Objavi
                     </button>
 
-                    <a class="btn-dark" asp-action="Index">
-                        Nazad
+                    <a class="btn-dark"
+                           asp-controller="CitalackaGrupa"
+                           asp-action="Details"
+                           asp-route-id="@Model.GrupaId">
+                        Nazad u grupu
                     </a>
                 </div>
             </form>
         </div>
-
     </div>
 </section>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="~/js/webcam.min.js"></script>
+
+    <script>
+        function prikaziPolja() {
+            var tip = document.getElementById("tipSadrzaja").value;
+
+            document.getElementById("clanakBox").style.display = "none";
+            document.getElementById("pdfBox").style.display = "none";
+            document.getElementById("storyBox").style.display = "none";
+
+            if (tip == "0") {
+                document.getElementById("pdfBox").style.display = "block";
+            }
+            else if (tip == "1") {
+                document.getElementById("clanakBox").style.display = "block";
+            }
+            else if (tip == "2") {
+                document.getElementById("storyBox").style.display = "block";
+                pokreniKameru();
+            }
+        }
+
+        let kameraPokrenuta = false;
+
+        function pokreniKameru() {
+            if (kameraPokrenuta) return;
+
+            Webcam.set({
+                width: 320,
+                height: 240,
+                image_format: 'jpeg',
+                jpeg_quality: 90
+            });
+
+            Webcam.attach('#my_camera');
+            kameraPokrenuta = true;
+        }
+
+        function take_snapshot() {
+            Webcam.snap(function (data_uri) {
+                document.getElementById('results').innerHTML =
+                    '<img src="' + data_uri + '" style="max-width:100%; border-radius:18px;" />';
+
+                document.getElementById('Link').value = data_uri;
+            });
+        }
+
+        document.getElementById("tipSadrzaja").addEventListener("change", prikaziPolja);
+        prikaziPolja();
+    </script>
 }
