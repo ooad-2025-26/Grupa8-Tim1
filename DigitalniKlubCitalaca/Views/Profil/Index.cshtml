@@ -51,11 +51,24 @@
             <div class="card" style="padding:38px;">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
                     <h2 style="margin:0;">Lični podaci</h2>
+                    <div style="display:flex; gap:15px; align-items:center;">
+                        <a asp-action="Edit" asp-route-id="@item.ProfilId"
+                           style="color:#e85d75; text-decoration:none; font-weight:600;">
+                            Uredi profil
+                        </a>
 
-                    <a asp-action="Edit" asp-route-id="@item.ProfilId"
-                       style="color:#e85d75; text-decoration:none; font-weight:600;">
-                        Uredi profil
-                    </a>
+                        <form asp-area="Identity"
+                              asp-page="/Account/Logout"
+                              asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
+                              method="post"
+                              style="margin:0;">
+                            <button type="submit"
+                                    style="background:#1f1f1f; color:white; border:none; border-radius:22px; padding:9px 18px; font-weight:600; cursor:pointer;">
+                                Odjava
+                            </button>
+                        </form>
+                    </div>
+                    
                 </div>
 
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-bottom:30px;">
@@ -81,7 +94,7 @@
 
                     <div>
                         <p style="color:#8a8a8a; font-size:13px; text-transform:uppercase;">Grad</p>
-                        <h4>@(string.IsNullOrWhiteSpace(item.Korisnik.Grad) ? item.Lokacija : item.Korisnik.Grad)</h4>
+                        <h4>@item.Lokacija</h4>
                     </div>
                 </div>
 

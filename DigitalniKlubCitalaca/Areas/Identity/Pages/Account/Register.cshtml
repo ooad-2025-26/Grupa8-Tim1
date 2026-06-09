@@ -12,8 +12,12 @@
             Digitalni Klub Čitalaca
         </h1>
 
+        <h2 style="font-size:24px; margin:8px 0 6px; color:#333;">
+            Pridruži se zajednici
+        </h2>
+
         <p style="color:#8a8a8a; margin-bottom:25px;">
-            Kreiraj novi korisnički nalog
+            Kreirajte svoj profil i počnite istraživati
         </p>
 
         <div style="display:flex; background:#fff0f3; border-radius:25px; padding:5px; margin-bottom:25px;">
@@ -31,17 +35,41 @@
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" style="text-align:left;">
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 
-            <label>Ime</label>
-            <input asp-for="Input.Ime" placeholder="Unesi ime" />
-            <span asp-validation-for="Input.Ime" class="text-danger"></span>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                <div>
+                    <label>Ime</label>
+                    <input asp-for="Input.Ime" placeholder="Ime" />
+                    <span asp-validation-for="Input.Ime" class="text-danger"></span>
+                </div>
 
-            <label>Prezime</label>
-            <input asp-for="Input.Prezime" placeholder="Unesi prezime" />
-            <span asp-validation-for="Input.Prezime" class="text-danger"></span>
+                <div>
+                    <label>Prezime</label>
+                    <input asp-for="Input.Prezime" placeholder="Prezime" />
+                    <span asp-validation-for="Input.Prezime" class="text-danger"></span>
+                </div>
+            </div>
+
+            <label>Korisničko ime</label>
+            <input asp-for="Input.UserName" placeholder="username" />
+            <span asp-validation-for="Input.UserName" class="text-danger"></span>
 
             <label>Email</label>
             <input asp-for="Input.Email" autocomplete="username" placeholder="name@example.com" />
             <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                <div>
+                    <label>Regija</label>
+                    <input asp-for="Input.Regija" placeholder="Regija" />
+                    <span asp-validation-for="Input.Regija" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label>Grad</label>
+                    <input asp-for="Input.Grad" placeholder="Grad" />
+                    <span asp-validation-for="Input.Grad" class="text-danger"></span>
+                </div>
+            </div>
 
             <label>Lozinka</label>
             <input asp-for="Input.Password" autocomplete="new-password" placeholder="Unesi lozinku" />
@@ -53,7 +81,7 @@
 
             <button id="registerSubmit" type="submit"
                     style="width:100%; margin-top:22px; background:#e85d75; color:white; border:none; border-radius:25px; padding:13px; font-weight:700; cursor:pointer;">
-                Registruj se
+                Pridruži se
             </button>
         </form>
     </div>

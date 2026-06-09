@@ -2,81 +2,57 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Prijava";
 }
 
-<h1>@ViewData["Title"]</h1>
-<div class="row">
-    <div class="col-md-4">
-        <section>
-            <form id="account" method="post">
-                <h2>Use a local account to log in.</h2>
-                <hr />
-                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                    <label asp-for="Input.Email" class="form-label">Email</label>
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-                </div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label asp-for="Input.Password" class="form-label">Password</label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div class="checkbox mb-3">
-                    <label asp-for="Input.RememberMe" class="form-label">
-                        <input class="form-check-input" asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
-                    </label>
-                </div>
-                <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-                </div>
-                <div>
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
-                    </p>
-                </div>
-            </form>
-        </section>
+<section style="min-height:75vh; display:flex; justify-content:center; align-items:center; background:#fbfaf5;">
+    <div class="card" style="width:440px; padding:36px; border-radius:28px; text-align:center;">
+
+        <h1 style="font-family:Georgia, serif; color:#e85d75; font-size:38px; margin-bottom:8px;">
+            Digitalni Klub Čitalaca
+        </h1>
+
+        <p style="color:#8a8a8a; margin-bottom:25px;">
+            Prijavite se i nastavite čitati
+        </p>
+
+        <div style="display:flex; background:#fff0f3; border-radius:25px; padding:5px; margin-bottom:25px;">
+            <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl"
+               style="flex:1; padding:10px; border-radius:20px; background:white; color:#e85d75; text-decoration:none; font-weight:700;">
+                Prijava
+            </a>
+
+            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"
+               style="flex:1; padding:10px; text-decoration:none; color:#8a8a8a; font-weight:600;">
+                Registracija
+            </a>
+        </div>
+
+        <form id="account" method="post" style="text-align:left;">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+            <label>Email</label>
+            <input asp-for="Input.Email" autocomplete="username" placeholder="name@example.com" />
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+            <label>Lozinka</label>
+            <input asp-for="Input.Password" autocomplete="current-password" placeholder="Unesi lozinku" />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+            <div style="display:flex; align-items:center; gap:8px; margin-top:14px;">
+                <input asp-for="Input.RememberMe" style="width:auto;" />
+                <label asp-for="Input.RememberMe" style="margin:0; color:#666;">
+                    Zapamti me
+                </label>
+            </div>
+
+            <button id="login-submit" type="submit"
+                    style="width:100%; margin-top:22px; background:#e85d75; color:white; border:none; border-radius:25px; padding:13px; font-weight:700; cursor:pointer;">
+                Prijavi se
+            </button>
+        </form>
     </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to log in.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
-    </div>
-</div>
+</section>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

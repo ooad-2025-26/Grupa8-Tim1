@@ -83,6 +83,10 @@ namespace DigitalniKlubCitalaca.Areas.Identity.Pages.Account
             public string Ime { get; set; }
 
             [Required]
+            [Display(Name = "Korisničko ime")]
+            public string UserName { get; set; }
+
+            [Required]
             public string Prezime { get; set; }
 
             public string Grad { get; set; }
@@ -125,10 +129,14 @@ namespace DigitalniKlubCitalaca.Areas.Identity.Pages.Account
                 var user = CreateUser();
                 user.Ime = Input.Ime;
                 user.Prezime = Input.Prezime;
+                user.Grad = Input.Grad;
+                user.Regija = Input.Regija;
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
+                
                 var result = await _userManager.CreateAsync(user, Input.Password);
+                
 
                 if (result.Succeeded)
                 {
