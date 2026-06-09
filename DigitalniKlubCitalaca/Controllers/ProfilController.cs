@@ -152,9 +152,9 @@ namespace DigitalniKlubCitalaca.Controllers
                 profilIzBaze.Korisnik.Ime = profil.Korisnik.Ime;
                 profilIzBaze.Korisnik.Prezime = profil.Korisnik.Prezime;
                 profilIzBaze.Korisnik.Regija = profil.Korisnik.Regija;
-                profilIzBaze.Korisnik.Grad = profil.Korisnik.Grad;
-                profilIzBaze.Korisnik.Biografija = profil.Korisnik.Biografija;
-
+                profilIzBaze.Korisnik.Grad = profil.Lokacija;
+                profilIzBaze.Korisnik.Biografija = profil.OpisProfila;
+                
                 await _context.SaveChangesAsync();
 
                 return RedirectToAction(nameof(Index));
