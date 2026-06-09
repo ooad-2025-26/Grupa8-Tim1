@@ -21,7 +21,7 @@ namespace DigitalniKlubCitalaca.Models
         public DateTime DatumObjave { get; set; }
 
         public string Naslov { get; set; } = string.Empty;
-        public string Opis { get; set; } = string.Empty;
+        public string? Opis { get; set; } = string.Empty;
         public string Link { get; set; } = string.Empty;
 
         public TipSadrzaja TipSadrzaja { get; set; }

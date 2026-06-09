@@ -14,6 +14,7 @@
 
         <div class="card form-box">
             <form asp-controller="SadrzajGrupe" asp-action="Create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="All" class="text-danger"></div>
                 @Html.AntiForgeryToken()
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 

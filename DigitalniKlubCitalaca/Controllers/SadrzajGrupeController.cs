@@ -72,6 +72,11 @@ namespace DigitalniKlubCitalaca.Controllers
             sadrzajGrupe.AutorId = korisnikId;
             sadrzajGrupe.DatumObjave = DateTime.Now;
 
+            if (string.IsNullOrWhiteSpace(sadrzajGrupe.Opis))
+            {
+                sadrzajGrupe.Opis = string.Empty;
+            }
+
             if (sadrzajGrupe.TipSadrzaja == TipSadrzaja.pdf)
             {
 

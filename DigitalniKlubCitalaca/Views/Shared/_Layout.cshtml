@@ -46,65 +46,54 @@
                     Knjige
                 </a>
 
-<<<<<<< HEAD
-                <a asp-controller="Profil" asp-action="Index" style="text-decoration:none; color:#333;">
-                    Profil
-                </a>
-=======
-                <a asp-controller="Komentar" asp-action="Index" style="text-decoration:none; color:#333;">
-                    Komentari
-                </a>
+<a asp-controller="CitalackaGrupa" asp-action="Index" style="text-decoration:none; color:#333;">
+    Grupe
+</a>
 
-                <a asp-controller="SadrzajGrupe" asp-action="Index" style="text-decoration:none; color:#333;">
-                    Objave
-                </a>
+@if (SignInManager.IsSignedIn(User))
+{
+    <a asp-controller="Profil"
+       asp-action="Index"
+       style="
+        background:#1f1f1f;
+        color:white;
+        padding:12px 24px;
+        border-radius:30px;
+        text-decoration:none;">
+        Moj profil
+    </a>
 
-                @if (SignInManager.IsSignedIn(User))
-                {
-                    <a asp-controller="Profil"
-                       asp-action="Index"
-                       style="
-                background:#1f1f1f;
-                color:white;
-                padding:12px 24px;
-                border-radius:30px;
-                text-decoration:none;">
-                        Moj profil
-                    </a>
->>>>>>> ff53ba39257716bfa1d46f886828fae9080944d1
-
-                    <form asp-area="Identity"
-                          asp-page="/Account/Logout"
-                          asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
-                          method="post"
-                          style="margin:0;">
-                        <button type="submit"
-                                style="
-                        background:#e85d75;
-                        color:white;
-                        padding:12px 24px;
-                        border-radius:30px;
-                        border:none;
-                        font-weight:600;
-                        cursor:pointer;">
-                            Odjava
-                        </button>
-                    </form>
-                }
-                else
-                {
-                    <a asp-area="Identity"
-                       asp-page="/Account/Login"
-                       style="
-                background:#1f1f1f;
-                color:white;
-                padding:12px 24px;
-                border-radius:30px;
-                text-decoration:none;">
-                        Pridruži se
-                    </a>
-                }
-
+    <form asp-area="Identity"
+          asp-page="/Account/Logout"
+          asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
+          method="post"
+          style="margin:0;">
+        <button type="submit"
+                style="
+            background:#e85d75;
+            color:white;
+            padding:12px 24px;
+            border-radius:30px;
+            border:none;
+            font-weight:600;
+            cursor:pointer;">
+            Odjava
+        </button>
+    </form>
+}
+else
+{
+    <a asp-area="Identity"
+       asp-page="/Account/Login"
+       style="
+        background:#1f1f1f;
+        color:white;
+        padding:12px 24px;
+        border-radius:30px;
+        text-decoration:none;">
+        Pridruži se
+    </a>
+}
             </nav>
 
         </header>
