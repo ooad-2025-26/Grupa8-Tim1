@@ -19,11 +19,14 @@
             Pomoć
         </a>
 
-        <a asp-area="Identity"
-           asp-page="/Account/Register"
-           class="btn-pink">
-            Pridruži se
-        </a>
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <a asp-area="Identity"
+               asp-page="/Account/Register"
+               class="btn-pink">
+                Pridruži se
+            </a>
+        }
 
     </div>
 
