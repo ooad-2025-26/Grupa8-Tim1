@@ -17,6 +17,12 @@
 
     <section class="section">
         <h1 class="section-title" style="text-align:center;">Moj Profil</h1>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div style="max-width:500px; margin:0 auto 25px; background:#22c55e; color:white; padding:14px 22px; border-radius:14px; text-align:center; font-weight:600;">
+                ✅ @TempData["SuccessMessage"]
+            </div>
+        }
 
         <div style="display:grid; grid-template-columns:320px 1fr; gap:35px; max-width:1000px; margin:40px auto;">
 
@@ -56,17 +62,6 @@
                            style="color:#e85d75; text-decoration:none; font-weight:600;">
                             Uredi profil
                         </a>
-
-                        <form asp-area="Identity"
-                              asp-page="/Account/Logout"
-                              asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
-                              method="post"
-                              style="margin:0;">
-                            <button type="submit"
-                                    style="background:#1f1f1f; color:white; border:none; border-radius:22px; padding:9px 18px; font-weight:600; cursor:pointer;">
-                                Odjava
-                            </button>
-                        </form>
                     </div>
                     
                 </div>

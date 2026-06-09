@@ -157,6 +157,8 @@ namespace DigitalniKlubCitalaca.Controllers
                 
                 await _context.SaveChangesAsync();
 
+                TempData["SuccessMessage"] = "Profil je uspješno ažuriran!";
+
                 return RedirectToAction(nameof(Index));
             }
 
