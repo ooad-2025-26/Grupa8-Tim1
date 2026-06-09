@@ -20,17 +20,22 @@ namespace DigitalniKlubCitalaca.Controllers
         }
 
         public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null) return NotFound();
+{
+    if (id == null) return NotFound();
 
-            var citalackaGrupa = await _context.CitalackeGrupe
-                .FirstOrDefaultAsync(m => m.GrupaId == id);
+    var citalackaGrupa = await _context.CitalackeGrupe
+        .FirstOrDefaultAsync(m => m.GrupaId == id);
 
-            if (citalackaGrupa == null) return NotFound();
+    if (citalackaGrupa == null) return NotFound();
 
-            return View(citalackaGrupa);
-        }
+    ViewBag.Objave = await _context.SadrzajiGrupe
+        .Include(s => s.Autor)
+        .Where(s => s.GrupaId == id)
+        .OrderByDescending(s => s.DatumObjave)
+        .ToListAsync();
 
+    return View(citalackaGrupa);
+}
         public IActionResult Create()
         {
             return View();

@@ -8079,11 +8079,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
+      "projectUniqueName": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
       "projectName": "DigitalniKlubCitalaca",
-      "projectPath": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
+      "projectPath": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
       "packagesPath": "/Users/aminapestalic/.nuget/packages/",
-      "outputPath": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/obj/",
+      "outputPath": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aminapestalic/.nuget/NuGet/NuGet.Config"
@@ -8167,13 +8167,5 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
-    }
-  ]
+  }
 }

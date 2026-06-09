@@ -17,6 +17,15 @@ namespace DigitalniKlubCitalaca.Controllers
         {
             return View();
         }
+        public IActionResult About()
+{
+    return View();
+}
+
+public IActionResult Help()
+{
+    return View();
+}
 
         public IActionResult Privacy()
         {

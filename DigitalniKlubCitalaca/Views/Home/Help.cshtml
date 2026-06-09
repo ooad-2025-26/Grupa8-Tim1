@@ -1,0 +1,66 @@
+@{
+    ViewData["Title"] = "Pomoć";
+}
+
+<section style="
+    max-width:1000px;
+    margin:auto;
+    padding:60px 20px;">
+
+    <div style="
+        display:flex;
+        justify-content:flex-end;
+        gap:15px;
+        margin-bottom:40px;">
+
+        <a asp-controller="Home"
+           asp-action="About"
+           class="btn-dark">
+            O nama
+        </a>
+
+        <a asp-area="Identity"
+           asp-page="/Account/Register"
+           class="btn-pink">
+            Pridruži se
+        </a>
+
+    </div>
+
+    <h1 style="
+        text-align:center;
+        font-family:Georgia,serif;
+        font-size:60px;
+        margin-bottom:50px;">
+        Trebate pomoć?
+    </h1>
+
+    <div class="card" style="padding:25px; margin-bottom:15px;">
+        <h4>Kako se pridružiti klubu?</h4>
+        <p style="color:#777;">
+            Registrujte korisnički račun i kreirajte svoj profil.
+        </p>
+    </div>
+
+    <div class="card" style="padding:25px; margin-bottom:15px;">
+        <h4>Da li je članstvo besplatno?</h4>
+        <p style="color:#777;">
+            Da. Korištenje Digitalnog kluba čitalaca je potpuno besplatno.
+        </p>
+    </div>
+
+    <div class="card" style="padding:25px; margin-bottom:15px;">
+        <h4>Kako pronaći grupu?</h4>
+        <p style="color:#777;">
+            U sekciji Grupe možete pregledati sve dostupne čitalačke grupe.
+        </p>
+    </div>
+
+    <div class="card" style="padding:25px;">
+        <h4>Kako objaviti sadržaj?</h4>
+        <p style="color:#777;">
+            Nakon pridruživanja grupi možete dijeliti objave i komentare sa ostalim članovima.
+        </p>
+    </div>
+
+</section>

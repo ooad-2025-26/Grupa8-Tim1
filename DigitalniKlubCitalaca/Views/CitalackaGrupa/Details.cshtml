@@ -1,12 +1,14 @@
 ﻿@model DigitalniKlubCitalaca.Models.CitalackaGrupa
+@using DigitalniKlubCitalaca.Models
 
 @{
     ViewData["Title"] = "Detalji grupe";
+    var objave = ViewBag.Objave as List<SadrzajGrupe>;
 }
 
 <section class="section">
 
-    <div style="max-width:900px; margin:auto;">
+    <div style="max-width:1000px; margin:auto;">
 
         <a asp-action="Index"
            style="color:#777; text-decoration:none;">
@@ -16,11 +18,7 @@
         <div class="card"
              style="margin-top:25px; padding:35px;">
 
-            <div style="
-                display:flex;
-                gap:20px;
-                align-items:center;
-                margin-bottom:25px;">
+            <div style="display:flex; gap:20px; align-items:center; margin-bottom:25px;">
 
                 <div style="
                     width:90px;
@@ -35,35 +33,18 @@
                 </div>
 
                 <div>
-
-                    <div style="
-                        display:flex;
-                        gap:8px;
-                        flex-wrap:wrap;
-                        margin-bottom:10px;">
-
-                        <span class="badge">
-                            @Model.Zanr
-                        </span>
-
-                        <span class="badge">
-                            @Model.TipGrupe
-                        </span>
-
+                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;">
+                        <span class="badge">@Model.Zanr</span>
+                        <span class="badge">@Model.TipGrupe</span>
                     </div>
 
-                    <h1 style="
-                        font-family:Georgia,serif;
-                        margin:0;">
+                    <h1 style="font-family:Georgia,serif; margin:0;">
                         @Model.Naziv
                     </h1>
 
-                    <p style="
-                        color:#8a8a8a;
-                        margin-top:8px;">
+                    <p style="color:#8a8a8a; margin-top:8px;">
                         📍 @Model.Grad, @Model.Regija
                     </p>
-
                 </div>
 
             </div>
@@ -77,46 +58,29 @@
 
                 <h3>Opis grupe</h3>
 
-                <p style="
-                    line-height:1.8;
-                    color:#444;">
-                    @Model.Opis
+                <p style="line-height:1.8; color:#444;">
+                    @(string.IsNullOrWhiteSpace(Model.Opis)
+                        ? "Opis grupe nije dodan."
+                        : Model.Opis)
                 </p>
 
             </div>
 
-            <div style="
-                display:grid;
-                grid-template-columns:1fr 1fr;
-                gap:18px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
 
                 <div class="card">
-
                     <h4>Broj članova</h4>
-
-                    <p>
-                        👥 Maksimalno:
-                        @Model.MaksimalanBrojClanova
-                    </p>
-
+                    <p>👥 Maksimalno: @Model.MaksimalanBrojClanova</p>
                 </div>
 
                 <div class="card">
-
                     <h4>Kreirana</h4>
-
-                    <p>
-                        📅 @Model.DatumKreiranja.ToString("dd.MM.yyyy")
-                    </p>
-
+                    <p>📅 @Model.DatumKreiranja.ToString("dd.MM.yyyy")</p>
                 </div>
 
             </div>
 
-            <div style="
-                display:flex;
-                gap:12px;
-                margin-top:30px;">
+            <div style="display:flex; gap:12px; margin-top:30px;">
 
                 <a class="btn-pink"
                    asp-action="Edit"
@@ -130,6 +94,110 @@
                 </a>
 
             </div>
+
+        </div>
+
+        <div class="card"
+             style="margin-top:30px; padding:32px;">
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:25px;">
+                <div>
+                    <h2 style="font-family:Georgia,serif; margin:0;">
+                        Objave u grupi
+                    </h2>
+
+                    <p style="color:#8a8a8a; margin:6px 0 0;">
+                        Sadržaji koje članovi dijele unutar ove čitalačke grupe.
+                    </p>
+                </div>
+
+                <a class="btn-pink"
+                   asp-controller="SadrzajGrupe"
+                   asp-action="Create"
+                   asp-route-grupaId="@Model.GrupaId">
+                    + Nova objava
+                </a>
+            </div>
+
+            @if (objave != null && objave.Any())
+            {
+                <div style="display:flex; flex-direction:column; gap:18px;">
+                    @foreach (var objava in objave)
+                    {
+                        <div style="
+                            border:1px solid #eee7df;
+                            border-radius:22px;
+                            padding:22px;
+                            background:#fbfaf5;">
+
+                            <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                                <div>
+                                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;">
+                                        <span class="badge">@objava.TipSadrzaja</span>
+                                        <span class="badge">@objava.StatusSadrzaja</span>
+                                    </div>
+
+                                    <h3 style="font-family:Georgia,serif; margin:0;">
+                                        @(string.IsNullOrWhiteSpace(objava.Naslov)
+                                            ? "Objava bez naslova"
+                                            : objava.Naslov)
+                                    </h3>
+
+                                    <p style="color:#8a8a8a; font-size:14px; margin-top:6px;">
+                                        Autor: @(objava.Autor?.Email ?? objava.Autor?.UserName ?? "Nepoznat korisnik")
+                                        · @objava.DatumObjave.ToString("dd.MM.yyyy HH:mm")
+                                    </p>
+                                </div>
+
+                                <a class="btn-dark"
+                                   asp-controller="SadrzajGrupe"
+                                   asp-action="Details"
+                                   asp-route-id="@objava.SadrzajId">
+                                    Otvori
+                                </a>
+                            </div>
+
+                            <p style="color:#555; line-height:1.7; margin-top:15px;">
+                                @(string.IsNullOrWhiteSpace(objava.Opis)
+                                    ? "Opis objave nije dodan."
+                                    : objava.Opis)
+                            </p>
+
+                            @if (!string.IsNullOrWhiteSpace(objava.Link))
+                            {
+                                <a href="@objava.Link"
+                                   target="_blank"
+                                   style="color:#e85d75; text-decoration:none; font-weight:600;">
+                                    Otvori povezani link
+                                </a>
+                            }
+
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div style="
+                    background:#fbfaf5;
+                    border:1px dashed #e7ddd3;
+                    border-radius:22px;
+                    padding:28px;
+                    text-align:center;
+                    color:#8a8a8a;">
+
+                    <div style="font-size:42px; margin-bottom:10px;">📝</div>
+
+                    <h3 style="color:#333; font-family:Georgia,serif;">
+                        Još nema objava u ovoj grupi
+                    </h3>
+
+                    <p>
+                        Dodajte prvu objavu, preporuku, fajl ili link za članove grupe.
+                    </p>
+
+                </div>
+            }
 
         </div>
 

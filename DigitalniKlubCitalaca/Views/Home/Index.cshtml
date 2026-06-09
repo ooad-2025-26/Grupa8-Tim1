@@ -1,8 +1,55 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Početna";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section id="pocetna"
+         style="
+         min-height:85vh;
+         display:flex;
+         align-items:center;
+         justify-content:center;
+         text-align:center;
+         padding:40px;">
+
+        
+
+    <div>
+        <h1 style="
+            font-size:80px;
+            font-family:Georgia,serif;
+            line-height:1.1;
+            margin-bottom:20px;">
+
+            Digitalni klub <br />
+
+            <span style="
+                color:#e85d75;
+                font-style:italic;
+                font-weight:300;">
+                čitalaca
+            </span>
+        </h1>
+
+        <p style="
+            max-width:650px;
+            margin:auto;
+            color:#777;
+            font-size:20px;
+            line-height:1.8;">
+
+            Dobrodošli u vaš novi omiljeni kutak za čitanje.
+            Povežite se sa ljubiteljima knjiga,
+            dijelite utiske i otkrijte nove svjetove.
+        </p>
+
+        <div style="margin-top:35px;">
+            <a asp-controller="Home"
+               asp-action="About"
+               class="btn-pink"
+               style="padding:16px 32px; font-size:18px;">
+                Započni putovanje →
+            </a>
+        </div>
+    </div>
+
+</section>

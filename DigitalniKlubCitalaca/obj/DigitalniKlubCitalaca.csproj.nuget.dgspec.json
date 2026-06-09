@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj": {}
+    "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj": {}
   },
   "projects": {
-    "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj": {
+    "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
+        "projectUniqueName": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
         "projectName": "DigitalniKlubCitalaca",
-        "projectPath": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
+        "projectPath": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
         "packagesPath": "/Users/aminapestalic/.nuget/packages/",
-        "outputPath": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/obj/",
+        "outputPath": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/aminapestalic/.nuget/NuGet/NuGet.Config"

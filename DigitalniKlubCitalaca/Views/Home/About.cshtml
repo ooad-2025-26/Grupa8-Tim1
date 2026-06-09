@@ -1,0 +1,71 @@
+@{
+    ViewData["Title"] = "O nama";
+}
+
+<section style="
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;">
+
+    <div style="
+        display:flex;
+        justify-content:flex-end;
+        gap:15px;
+        margin-bottom:40px;">
+
+        <a asp-controller="Home"
+           asp-action="Help"
+           class="btn-dark">
+            Pomoć
+        </a>
+
+        <a asp-area="Identity"
+           asp-page="/Account/Register"
+           class="btn-pink">
+            Pridruži se
+        </a>
+
+    </div>
+
+    <div style="
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:50px;
+        align-items:center;">
+
+        <div>
+
+            <h1 style="
+                font-size:60px;
+                font-family:Georgia,serif;">
+                O našem klubu
+            </h1>
+
+            <p style="
+                color:#777;
+                line-height:1.9;
+                font-size:18px;">
+
+                Digitalni klub čitalaca okuplja ljubitelje knjiga,
+                diskusija i razmjene iskustava. Naš cilj je stvaranje
+                zajednice u kojoj članovi mogu dijeliti preporuke,
+                objavljivati sadržaje i zajedno istraživati svijet književnosti.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <img src="/images/slika.jpg"
+                 style="
+                 width:100%;
+                 border-radius:30px;
+                 object-fit:cover;
+                 height:500px;" />
+
+        </div>
+
+    </div>
+
+</section>

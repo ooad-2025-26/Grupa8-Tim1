@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KiPn0J9w0YY=",
+  "dgSpecHash": "V/ZHP5aX4+Y=",
   "success": true,
-  "projectFilePath": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
+  "projectFilePath": "/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
   "expectedPackageFiles": [
     "/Users/aminapestalic/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/aminapestalic/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
@@ -173,15 +173,5 @@
     "/Users/aminapestalic/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512",
     "/Users/aminapestalic/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problem reading the cache file /Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
-      "projectPath": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/aminapestalic/Documents/GitHub/Grupa8-Tim1/DigitalniKlubCitalaca/DigitalniKlubCitalaca.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }
