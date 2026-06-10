@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Pristup odbijen";
+}
+
+<div class="text-center mt-5">
+
+    <h1 style="
+        color:#e85d75;
+        font-size:60px;
+        font-weight:700;">
+        Pristup odbijen
+    </h1>
+
+    <p style="
+        font-size:22px;
+        color:#555;">
+        Nemate potrebna ovlaštenja za pristup ovoj stranici.
+    </p>
+
+    <a asp-controller="Home"
+       asp-action="Index"
+       style="
+        display:inline-block;
+        margin-top:20px;
+        background:#e85d75;
+        color:white;
+        padding:12px 28px;
+        border-radius:30px;
+        text-decoration:none;">
+        Povratak na početnu stranicu
+    </a>
+
+</div>

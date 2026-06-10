@@ -1,17 +1,33 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using DigitalniKlubCitalaca.Models
+@using DigitalniKlubCitalaca.Data
 @inject SignInManager<Korisnik> SignInManager
 @inject UserManager<Korisnik> UserManager
-
-@using DigitalniKlubCitalaca.Data
-@inject UserManager<Korisnik> UserManager
 @inject ApplicationDbContext Context
+
+@{
+    Korisnik trenutniKorisnik = null;
+    bool suspendovan = false;
+    int brojNeprocitanih = 0;
+
+    if (SignInManager.IsSignedIn(User))
+    {
+        trenutniKorisnik = await UserManager.GetUserAsync(User);
+
+        if (trenutniKorisnik != null)
+        {
+            suspendovan = trenutniKorisnik.StatusNaloga == StatusNaloga.blokiran;
+
+            brojNeprocitanih = Context.Notifikacije
+                .Count(n => n.KorisnikId == trenutniKorisnik.Id && !n.Procitana);
+        }
+    }
+}
 
 <!DOCTYPE html>
 <html lang="bs">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DigitalniKlubCitalaca</title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -22,22 +38,10 @@
 
     <div style="max-width:1400px; margin:auto; padding:25px;">
 
-        <header style="
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            margin-bottom:40px;
-        ">
+        <header style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px;">
 
-            <a asp-controller="Home"
-               asp-action="Index"
-               style="
-                    text-decoration:none;
-                    font-size:32px;
-                    font-weight:700;
-                    color:#e85d75;
-                    font-family:Georgia, serif;
-               ">
+            <a asp-controller="Home" asp-action="Index"
+               style="text-decoration:none; font-size:32px; font-weight:700; color:#e85d75; font-family:Georgia, serif;">
                 Digitalni Klub Čitalaca
             </a>
 
@@ -47,20 +51,17 @@
                     Početna
                 </a>
 
-                <a asp-controller="Knjiga" asp-action="Index" style="text-decoration:none; color:#333;">
-                    Knjige
-                </a>
-
-
-
-                <a asp-controller="CitalackaGrupa" asp-action="Index" style="text-decoration:none; color:#333;">
-                    Grupe
-                </a>
-                @if (SignInManager.IsSignedIn(User))
+                @if (!suspendovan)
                 {
-                    var trenutniKorisnik = await UserManager.GetUserAsync(User);
+                    <a asp-controller="Knjiga" asp-action="Index" style="text-decoration:none; color:#333;">
+                        Knjige
+                    </a>
 
-                    if (trenutniKorisnik != null && trenutniKorisnik.Uloga == Uloga.administrator)
+                    <a asp-controller="CitalackaGrupa" asp-action="Index" style="text-decoration:none; color:#333;">
+                        Grupe
+                    </a>
+
+                    @if (trenutniKorisnik != null && trenutniKorisnik.Uloga == Uloga.administrator)
                     {
                         <a asp-controller="Admin" asp-action="Index" style="text-decoration:none; color:#333;">
                             Admin
@@ -68,82 +69,51 @@
                     }
                 }
 
-@if (SignInManager.IsSignedIn(User))
-{
-    var korisnik = await UserManager.GetUserAsync(User);
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    @if (!suspendovan)
+                    {
+                        <a asp-controller="Notifikacija"
+                           asp-action="Index"
+                           style="text-decoration:none; font-size:24px; position:relative;">
+                            🔔
 
-    var brojNeprocitanih = Context.Notifikacije
-        .Count(n => n.KorisnikId == korisnik.Id && !n.Procitana);
+                            @if (brojNeprocitanih > 0)
+                            {
+                                <span style="position:absolute; top:-8px; right:-12px; background:#e85d75; color:white; border-radius:50%; padding:2px 6px; font-size:12px; font-weight:bold;">
+                                    @brojNeprocitanih
+                                </span>
+                            }
+                        </a>
+                    }
 
-    <a asp-controller="Notifikacija"
-       asp-action="Index"
-       style="
-       text-decoration:none;
-       font-size:24px;
-       position:relative;">
-        🔔
+                    <a asp-controller="Profil"
+                       asp-action="Index"
+                       style="background:#1f1f1f; color:white; padding:12px 24px; border-radius:30px; text-decoration:none;">
+                        Moj profil
+                    </a>
 
-        @if (brojNeprocitanih > 0)
-        {
-            <span style="
-                position:absolute;
-                top:-8px;
-                right:-12px;
-                background:#e85d75;
-                color:white;
-                border-radius:50%;
-                padding:2px 6px;
-                font-size:12px;
-                font-weight:bold;">
-                @brojNeprocitanih
-            </span>
-        }
-    </a>
+                    <form asp-area="Identity"
+                          asp-page="/Account/Logout"
+                          asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
+                          method="post"
+                          style="margin:0;">
+                        <button type="submit"
+                                style="background:#e85d75; color:white; padding:12px 24px; border-radius:30px; border:none; font-weight:600; cursor:pointer;">
+                            Odjava
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <a asp-area="Identity"
+                       asp-page="/Account/Login"
+                       style="background:#1f1f1f; color:white; padding:12px 24px; border-radius:30px; text-decoration:none;">
+                        Pridruži se
+                    </a>
+                }
 
-    <a asp-controller="Profil"
-       asp-action="Index"
-       style="
-        background:#1f1f1f;
-        color:white;
-        padding:12px 24px;
-        border-radius:30px;
-        text-decoration:none;">
-        Moj profil
-    </a>
-
-    <form asp-area="Identity"
-          asp-page="/Account/Logout"
-          asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
-          method="post"
-          style="margin:0;">
-        <button type="submit"
-                style="
-            background:#e85d75;
-            color:white;
-            padding:12px 24px;
-            border-radius:30px;
-            border:none;
-            font-weight:600;
-            cursor:pointer;">
-            Odjava
-        </button>
-    </form>
-}
-else
-{
-    <a asp-area="Identity"
-       asp-page="/Account/Login"
-       style="
-        background:#1f1f1f;
-        color:white;
-        padding:12px 24px;
-        border-radius:30px;
-        text-decoration:none;">
-        Pridruži se
-    </a>
-}
             </nav>
-
         </header>
 
         <main>

@@ -26,7 +26,7 @@ namespace DigitalniKlubCitalaca.Controllers
 
             if (trenutniKorisnik == null || trenutniKorisnik.Uloga != Uloga.administrator)
             {
-               return Forbid();
+                return RedirectToAction("AccessDenied", "Home");
             }
 
             var korisniciQuery = _context.Korisnici.AsQueryable();
@@ -58,7 +58,7 @@ namespace DigitalniKlubCitalaca.Controllers
 
             if (trenutniKorisnik == null || trenutniKorisnik.Uloga != Uloga.administrator)
             {
-                return Forbid();
+                return RedirectToAction("AccessDenied", "Home");
             }
 
             var korisnik = await _context.Korisnici.FindAsync(id);
@@ -86,7 +86,7 @@ namespace DigitalniKlubCitalaca.Controllers
 
             if (trenutniKorisnik == null || trenutniKorisnik.Uloga != Uloga.administrator)
             {
-                return Forbid();
+                return RedirectToAction("AccessDenied", "Home");
             }
 
             var korisnik = await _context.Korisnici.FindAsync(id);
@@ -106,12 +106,32 @@ namespace DigitalniKlubCitalaca.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult Postavke()
+        public async Task<IActionResult> Postavke()
         {
+            var trenutniKorisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var trenutniKorisnik = await _context.Korisnici
+                .FirstOrDefaultAsync(k => k.Id == trenutniKorisnikId);
+
+            if (trenutniKorisnik == null || trenutniKorisnik.Uloga != Uloga.administrator)
+            {
+                return RedirectToAction("AccessDenied", "Home");
+            }
+
             return View();
         }
-        public IActionResult DnevnikAktivnosti()
+        public async Task<IActionResult> DnevnikAktivnosti()
         {
+            var trenutniKorisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var trenutniKorisnik = await _context.Korisnici
+                .FirstOrDefaultAsync(k => k.Id == trenutniKorisnikId);
+
+            if (trenutniKorisnik == null || trenutniKorisnik.Uloga != Uloga.administrator)
+            {
+                return RedirectToAction("AccessDenied", "Home");
+            }
+
             return View();
         }
     }
