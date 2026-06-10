@@ -27,11 +27,18 @@ namespace DigitalniKlubCitalaca.Controllers
                 return RedirectToAction("Index", "Home");
 
             var notifikacije = await _context.Notifikacije
-                .Where(n => n.KorisnikId == korisnik.Id)
-                .OrderByDescending(n => n.Datum)
-                .ToListAsync();
+    .Where(n => n.KorisnikId == korisnik.Id)
+    .OrderByDescending(n => n.Datum)
+    .ToListAsync();
 
-            return View(notifikacije);
+foreach (var notifikacija in notifikacije)
+{
+    notifikacija.Procitana = true;
+}
+
+await _context.SaveChangesAsync();
+
+return View(notifikacije);
         }
     }
 }

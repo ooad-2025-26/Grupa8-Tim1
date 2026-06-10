@@ -1,5 +1,6 @@
 using DigitalniKlubCitalaca.Data;
 using DigitalniKlubCitalaca.Models;
+using DigitalniKlubCitalaca.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,7 +22,7 @@ builder.Services.AddDefaultIdentity<Korisnik>(options =>
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-
+builder.Services.AddScoped<NotifikacijaService>();
 
 var app = builder.Build();
 

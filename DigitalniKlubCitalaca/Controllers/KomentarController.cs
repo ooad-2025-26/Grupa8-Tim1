@@ -59,6 +59,25 @@ namespace DigitalniKlubCitalaca.Controllers
             {
                 _context.Add(komentar);
                 await _context.SaveChangesAsync();
+
+                var sadrzaj = await _context.SadrzajiGrupe
+                    .FirstOrDefaultAsync(s => s.SadrzajId == komentar.SadrzajId);
+
+                if (sadrzaj != null && sadrzaj.AutorId != komentar.AutorId)
+                {
+                    var notifikacija = new Notifikacija
+                    {
+                        KorisnikId = sadrzaj.AutorId,
+                        Poruka = "Novi komentar na vašoj objavi.",
+                        Link = "/Komentar/Index",
+                        Datum = DateTime.Now,
+                        Procitana = false
+                    };
+
+                    _context.Notifikacije.Add(notifikacija);
+                    await _context.SaveChangesAsync();
+                }
+
                 return RedirectToAction(nameof(Index));
             }
 

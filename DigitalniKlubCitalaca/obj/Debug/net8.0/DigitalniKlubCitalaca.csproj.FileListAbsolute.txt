@@ -549,3 +549,9 @@
 /Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/bin/Debug/net8.0/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/bin/Debug/net8.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/bin/Debug/net8.0/runtimes/win-x86/native/e_sqlite3.dll
+/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/bin/Debug/net8.0/publish/web.config
+/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/bin/Debug/net8.0/publish/appsettings.Development.json
+/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/bin/Debug/net8.0/publish/appsettings.json
+/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/bin/Debug/net8.0/publish/DigitalniKlubCitalaca.deps.json
+/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/bin/Debug/net8.0/publish/DigitalniKlubCitalaca.runtimeconfig.json
+/Users/aminapestalic/Desktop/Grupa8-Tim1-Projekat/DigitalniKlubCitalaca/bin/Debug/net8.0/publish/DigitalniKlubCitalaca.staticwebassets.endpoints.json
