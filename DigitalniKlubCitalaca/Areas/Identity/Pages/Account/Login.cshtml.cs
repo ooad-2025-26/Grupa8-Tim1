@@ -22,11 +22,16 @@ namespace DigitalniKlubCitalaca.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<Korisnik> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly UserManager<Korisnik> _userManager;
 
-        public LoginModel(SignInManager<Korisnik> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(
+     SignInManager<Korisnik> signInManager,
+     ILogger<LoginModel> logger,
+     UserManager<Korisnik> userManager)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _userManager = userManager;
         }
 
         /// <summary>
@@ -112,7 +117,20 @@ namespace DigitalniKlubCitalaca.Areas.Identity.Pages.Account
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                var user = _userManager.Users.FirstOrDefault(u => u.Email == Input.Email);
+
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Ne postoji korisnik sa unesenim emailom.");
+                    return Page();
+                }
+
+                var result = await _signInManager.PasswordSignInAsync(
+                    user.UserName,
+                    Input.Password,
+                    Input.RememberMe,
+                    lockoutOnFailure: false);
+
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
