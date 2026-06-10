@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using DigitalniKlubCitalaca.Models
 @inject SignInManager<Korisnik> SignInManager
+@inject UserManager<Korisnik> UserManager
 
 <!DOCTYPE html>
 <html lang="bs">
@@ -46,9 +47,22 @@
                     Knjige
                 </a>
 
-<a asp-controller="CitalackaGrupa" asp-action="Index" style="text-decoration:none; color:#333;">
-    Grupe
-</a>
+
+
+                <a asp-controller="CitalackaGrupa" asp-action="Index" style="text-decoration:none; color:#333;">
+                    Grupe
+                </a>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    var trenutniKorisnik = await UserManager.GetUserAsync(User);
+
+                    if (trenutniKorisnik != null && trenutniKorisnik.Uloga == Uloga.administrator)
+                    {
+                        <a asp-controller="Admin" asp-action="Index" style="text-decoration:none; color:#333;">
+                            Admin
+                        </a>
+                    }
+                }
 
 @if (SignInManager.IsSignedIn(User))
 {

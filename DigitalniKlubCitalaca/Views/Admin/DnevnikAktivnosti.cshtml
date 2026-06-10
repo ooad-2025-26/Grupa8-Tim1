@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Dnevnik aktivnosti";
+}
+
+<h1 class="mb-2">Dnevnik aktivnosti</h1>
+<p class="text-muted mb-4">Pregled aktivnosti korisnika u sistemu.</p>
+
+<div class="card shadow-sm border-0 p-4 mt-3" style="border-radius: 22px;">
+    <h4 class="mb-4">Aktivnosti</h4>
+
+    <table class="table align-middle">
+        <thead>
+            <tr>
+                <th>Korisnik</th>
+                <th>Aktivnost</th>
+                <th>Vrijeme</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Admin</td>
+                <td>Pregled administracije sistema</td>
+                <td>Danas</td>
+            </tr>
+            <tr>
+                <td>Admin</td>
+                <td>Pregled postavki sistema</td>
+                <td>Danas</td>
+            </tr>
+            <tr>
+                <td>Sistem</td>
+                <td>Aplikacija pokrenuta</td>
+                <td>Danas</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-outline-secondary px-4" style="border-radius:20px;">
+            Nazad
+        </a>
+    </div>
+</div>
