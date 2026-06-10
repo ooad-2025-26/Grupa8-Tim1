@@ -1,0 +1,38 @@
+@model IEnumerable<DigitalniKlubCitalaca.Models.Notifikacija>
+
+@{
+    ViewData["Title"] = "Notifikacije";
+}
+
+<section class="section">
+
+    <h1 class="section-title">
+        🔔 Notifikacije
+    </h1>
+
+    <div style="max-width:800px; margin:auto;">
+
+        @if (!Model.Any())
+        {
+            <div class="card" style="padding:25px;">
+                Nemate novih notifikacija.
+            </div>
+        }
+
+        @foreach (var item in Model)
+        {
+            <div class="card"
+                 style="padding:20px; margin-bottom:15px;">
+
+                <h5>@item.Poruka</h5>
+
+                <p style="color:#888;">
+                    @item.Datum.ToString("dd.MM.yyyy HH:mm")
+                </p>
+
+            </div>
+        }
+
+    </div>
+
+</section>

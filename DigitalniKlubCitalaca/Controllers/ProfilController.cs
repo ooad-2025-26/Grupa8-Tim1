@@ -66,29 +66,41 @@ namespace DigitalniKlubCitalaca.Controllers
 
         // POST: Profil/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("OpisProfila,Lokacija")] Profil profil)
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> Create([Bind("OpisProfila,Lokacija")] Profil profil)
+{
+    var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+    if (korisnikId == null)
+    {
+        return RedirectToPage("/Account/Login", new { area = "Identity" });
+    }
+
+    profil.KorisnikId = korisnikId;
+    ModelState.Remove("KorisnikId");
+    ModelState.Remove("Korisnik");
+
+    if (ModelState.IsValid)
+    {
+        _context.Add(profil);
+        await _context.SaveChangesAsync();
+
+        _context.Notifikacije.Add(new Notifikacija
         {
-            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            KorisnikId = korisnikId,
+            Poruka = "Vaš profil je uspješno kreiran.",
+            Link = Url.Action("Index", "Profil"),
+            Datum = DateTime.Now,
+            Procitana = false
+        });
 
-            if (korisnikId == null)
-            {
-                return RedirectToPage("/Account/Login", new { area = "Identity" });
-            }
+        await _context.SaveChangesAsync();
 
-            profil.KorisnikId = korisnikId;
-            ModelState.Remove("KorisnikId");
-            ModelState.Remove("Korisnik");
+        return RedirectToAction(nameof(Index));
+    }
 
-            if (ModelState.IsValid)
-            {
-                _context.Add(profil);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-
-            return View(profil);
-        }
+    return View(profil);
+}
 
         // GET: Profil/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -157,9 +169,20 @@ namespace DigitalniKlubCitalaca.Controllers
                 
                 await _context.SaveChangesAsync();
 
-                TempData["SuccessMessage"] = "Profil je uspješno ažuriran!";
+_context.Notifikacije.Add(new Notifikacija
+{
+    KorisnikId = korisnikId,
+    Poruka = "Vaš profil je uspješno ažuriran.",
+    Link = Url.Action("Index", "Profil"),
+    Datum = DateTime.Now,
+    Procitana = false
+});
 
-                return RedirectToAction(nameof(Index));
+await _context.SaveChangesAsync();
+
+TempData["SuccessMessage"] = "Profil je uspješno ažuriran!";
+
+return RedirectToAction(nameof(Index));
             }
 
             return View(profilIzBaze);

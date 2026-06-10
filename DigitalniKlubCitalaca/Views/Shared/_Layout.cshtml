@@ -52,6 +52,14 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
+    <a asp-controller="Notifikacija"
+       asp-action="Index"
+       style="
+       text-decoration:none;
+       font-size:24px;">
+        🔔
+    </a>
+
     <a asp-controller="Profil"
        asp-action="Index"
        style="

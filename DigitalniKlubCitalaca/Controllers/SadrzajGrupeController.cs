@@ -110,9 +110,33 @@ namespace DigitalniKlubCitalaca.Controllers
             }
 
             _context.SadrzajiGrupe.Add(sadrzajGrupe);
-            await _context.SaveChangesAsync();
+await _context.SaveChangesAsync();
 
-            return RedirectToAction("Details", "CitalackaGrupa", new { id = sadrzajGrupe.GrupaId });
+var grupa = await _context.CitalackeGrupe
+    .FirstOrDefaultAsync(g => g.GrupaId == sadrzajGrupe.GrupaId);
+
+var nazivGrupe = grupa?.Naziv ?? "čitalačkoj grupi";
+
+var korisnici = await _context.Korisnici.ToListAsync();
+
+foreach (var korisnik in korisnici)
+{
+    if (korisnik.Id != korisnikId)
+    {
+        _context.Notifikacije.Add(new Notifikacija
+        {
+            KorisnikId = korisnik.Id,
+            Poruka = $"Nova objava u grupi \"{nazivGrupe}\".",
+            Link = Url.Action("Details", "CitalackaGrupa", new { id = sadrzajGrupe.GrupaId }),
+            Datum = DateTime.Now,
+            Procitana = false
+        });
+    }
+}
+
+await _context.SaveChangesAsync();
+
+return RedirectToAction("Details", "CitalackaGrupa", new { id = sadrzajGrupe.GrupaId });
         }
 
         [HttpPost]

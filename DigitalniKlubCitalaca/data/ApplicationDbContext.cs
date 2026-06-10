@@ -19,6 +19,7 @@ namespace DigitalniKlubCitalaca.Data
         public DbSet<Komentar> Komentari { get; set; }
         public DbSet<Knjiga> Knjige { get; set; }
         public DbSet<KnjigaGrupa> KnjigeGrupe { get; set; }
+        public DbSet<Notifikacija> Notifikacije { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
