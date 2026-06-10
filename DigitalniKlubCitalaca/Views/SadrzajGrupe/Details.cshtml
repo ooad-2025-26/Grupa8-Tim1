@@ -1,70 +1,225 @@
 ﻿@model DigitalniKlubCitalaca.Models.SadrzajGrupe
+@using DigitalniKlubCitalaca.Models
 
 @{
     ViewData["Title"] = "Detalji objave";
+    var komentari = ViewBag.Komentari as List<Komentar> ?? new List<Komentar>();
 }
 
 <section class="section">
     <div style="max-width:900px; margin:auto;">
 
-        <a asp-action="Index" style="color:#777; text-decoration:none;">
-            ← Nazad
+        <a asp-controller="CitalackaGrupa"
+               asp-action="Details"
+               asp-route-id="@Model.GrupaId"
+               style="color:#777; text-decoration:none;">
+            ← Nazad u grupu
         </a>
 
-        <div class="card" style="margin-top:22px; padding:34px; border-radius:30px;">
+        @if (Model.TipSadrzaja == TipSadrzaja.story)
+        {
+            <div style="max-width:430px; height:680px; margin:25px auto; background:#111; border-radius:32px; overflow:hidden; position:relative; box-shadow:0 20px 45px rgba(0,0,0,0.25);">
 
-            <div style="display:flex; gap:18px; align-items:flex-start; margin-bottom:25px;">
-                <div style="width:70px; height:70px; border-radius:22px; background:#fff0f3; display:flex; align-items:center; justify-content:center; font-size:32px;">
-                    📝
-                </div>
+                <div style="position:absolute; top:0; left:0; right:0; padding:16px; background:linear-gradient(to bottom, rgba(0,0,0,0.65), transparent); z-index:2; color:white;">
 
-                <div>
-                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;">
-                        <span class="badge">@Model.TipSadrzaja</span>
-                        <span class="badge">@Model.StatusSadrzaja</span>
+                    <div style="height:4px; background:rgba(255,255,255,0.35); border-radius:999px; margin-bottom:14px;">
+                        <div style="width:100%; height:4px; background:white; border-radius:999px;"></div>
                     </div>
 
-                    <h1 style="font-family:Georgia,serif; margin:0;">
-                        @(string.IsNullOrWhiteSpace(Model.Naslov) ? "Objava bez naslova" : Model.Naslov)
-                    </h1>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        @{
+                            var prvoSlovoImena = Model.Autor?.Ime?.FirstOrDefault().ToString() ?? "";
+                            var prvoSlovoPrezimena = Model.Autor?.Prezime?.FirstOrDefault().ToString() ?? "";
+                            var inicijali = (prvoSlovoImena + prvoSlovoPrezimena).ToUpper();
 
-                    <p style="color:#8a8a8a; margin-top:8px;">
-                        Autor: @(Model.Autor?.Email ?? Model.Autor?.UserName ?? "Nepoznat korisnik")
-                    </p>
+                            if (string.IsNullOrWhiteSpace(inicijali))
+                            {
+                                inicijali = "👤";
+                            }
+                        }
 
-                    <p style="color:#8a8a8a; margin-top:8px;">
-                        📅 @Model.DatumObjave.ToString("dd.MM.yyyy HH:mm")
+                        <div style="width:42px; height:42px; border-radius:50%; background:white; color:#d62976; display:flex; align-items:center; justify-content:center; font-weight:800;">
+                            @inicijali
+                        </div>
+
+                        <div>
+                            <strong>
+                                @(Model.Autor?.Ime ?? Model.Autor?.Email ?? Model.Autor?.UserName ?? "Korisnik")
+                            </strong>
+                            <div style="font-size:12px; opacity:0.85;">
+                                @Model.DatumObjave.ToString("dd.MM.yyyy HH:mm")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @if (!string.IsNullOrWhiteSpace(Model.Link))
+                {
+                    <img src="@Model.Link"
+                         style="width:100%; height:100%; object-fit:cover; display:block;" />
+                }
+                else
+                {
+                    <div style="height:100%; display:flex; align-items:center; justify-content:center; color:white;">
+                        Story slika nije pronađena.
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="card" style="margin-top:22px; padding:34px; border-radius:30px;">
+
+                <div style="display:flex; gap:18px; align-items:flex-start; margin-bottom:25px;">
+                    <div style="width:70px; height:70px; border-radius:22px; background:#fff0f3; display:flex; align-items:center; justify-content:center; font-size:32px;">
+                        📝
+                    </div>
+
+                    <div>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;">
+                            <span class="badge">@Model.TipSadrzaja</span>
+                            <span class="badge">@Model.StatusSadrzaja</span>
+                        </div>
+
+                        <h1 style="font-family:Georgia,serif; margin:0;">
+                            @(string.IsNullOrWhiteSpace(Model.Naslov) ? "Objava bez naslova" : Model.Naslov)
+                        </h1>
+
+                        <p style="color:#8a8a8a; margin-top:8px;">
+                            Autor: @(Model.Autor?.Email ?? Model.Autor?.UserName ?? "Nepoznat korisnik")
+                        </p>
+
+                        <p style="color:#8a8a8a; margin-top:8px;">
+                            📅 @Model.DatumObjave.ToString("dd.MM.yyyy HH:mm")
+                        </p>
+                    </div>
+                </div>
+
+                <div style="background:#fbfaf5; border:1px solid #eee7df; border-radius:22px; padding:24px; margin-bottom:22px;">
+                    <h3 style="margin-top:0;">
+                        @(Model.TipSadrzaja == TipSadrzaja.clanak ? "Tekst osvrta" : "Opis objave")
+                    </h3>
+
+                    <p style="line-height:1.7; color:#444; margin-bottom:0;">
+                        @(string.IsNullOrWhiteSpace(Model.Opis) ? "Opis nije dodan." : Model.Opis)
                     </p>
                 </div>
-            </div>
 
-            <div style="background:#fbfaf5; border:1px solid #eee7df; border-radius:22px; padding:24px; margin-bottom:22px;">
-                <h3 style="margin-top:0;">Opis objave</h3>
+                @if (!string.IsNullOrWhiteSpace(Model.Link))
+                {
+                    <div style="margin-bottom:24px;">
+                        <a href="@Model.Link" target="_blank" class="btn-pink">
+                            @(Model.TipSadrzaja == TipSadrzaja.pdf ? "Otvori PDF materijal" : "Otvori povezani sadržaj")
+                        </a>
+                    </div>
+                }
 
-                <p style="line-height:1.7; color:#444; margin-bottom:0;">
-                    @(string.IsNullOrWhiteSpace(Model.Opis) ? "Opis nije dodan." : Model.Opis)
-                </p>
-            </div>
+                <div style="margin-top:32px; background:#fbfaf5; border:1px solid #eee7df; border-radius:26px; padding:26px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
+                        <div>
+                            <h3 style="font-family:Georgia,serif; margin:0;">Komentari</h3>
+                            <p style="color:#8a8a8a; margin:6px 0 0;">
+                                Podijelite mišljenje o ovoj objavi ili osvrtu.
+                            </p>
+                        </div>
 
-            @if (!string.IsNullOrWhiteSpace(Model.Link))
-            {
-                <div style="margin-bottom:24px;">
-                   <a href="@Model.Link" target="_blank" class="btn-pink">
-    Otvori povezani sadržaj
-</a> 
+                        <span class="badge">
+                            @komentari.Count komentara
+                        </span>
+                    </div>
+
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        <form asp-controller="SadrzajGrupe"
+                              asp-action="DodajKomentar"
+                              method="post"
+                              style="background:white; border:1px solid #eee7df; border-radius:22px; padding:18px; margin-bottom:24px;">
+
+                            @Html.AntiForgeryToken()
+
+                            <input type="hidden" name="sadrzajId" value="@Model.SadrzajId" />
+
+                            <textarea name="tekst"
+                                      rows="3"
+                                      placeholder="Napišite komentar..."
+                                      style="width:100%; border:1px solid #eee7df; border-radius:18px; padding:14px; resize:vertical; outline:none;"></textarea>
+
+                            <div style="display:flex; justify-content:flex-end; margin-top:12px;">
+                                <button type="submit" class="btn-pink">
+                                    Objavi komentar
+                                </button>
+                            </div>
+                        </form>
+                    }
+                    else
+                    {
+                        <div style="background:white; border:1px dashed #e7ddd3; border-radius:20px; padding:18px; color:#8a8a8a; margin-bottom:22px;">
+                            Morate biti prijavljeni da biste komentarisali.
+                        </div>
+                    }
+
+                    @if (komentari.Any())
+                    {
+                        <div style="display:flex; flex-direction:column; gap:14px;">
+                            @foreach (var komentar in komentari)
+                            {
+                                var prvoSlovoImenaKomentar = komentar.Autor?.Ime?.FirstOrDefault().ToString() ?? "";
+                                var prvoSlovoPrezimenaKomentar = komentar.Autor?.Prezime?.FirstOrDefault().ToString() ?? "";
+                                var inicijaliKomentar = (prvoSlovoImenaKomentar + prvoSlovoPrezimenaKomentar).ToUpper();
+
+                                if (string.IsNullOrWhiteSpace(inicijaliKomentar))
+                                {
+                                    inicijaliKomentar = "👤";
+                                }
+
+                                <div style="background:white; border:1px solid #eee7df; border-radius:22px; padding:18px; display:flex; gap:14px;">
+
+                                    <div style="width:46px; height:46px; border-radius:50%; background:linear-gradient(135deg,#fff0f3,#f3d9df); color:#d94f70; display:flex; align-items:center; justify-content:center; font-weight:800; flex-shrink:0;">
+                                        @inicijaliKomentar
+                                    </div>
+
+                                    <div style="flex:1;">
+                                        <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                                            <strong>
+                                                @(komentar.Autor?.Ime ?? komentar.Autor?.Email ?? komentar.Autor?.UserName ?? "Korisnik")
+                                            </strong>
+
+                                            <small style="color:#8a8a8a;">
+                                                @komentar.DatumKomentara.ToString("dd.MM.yyyy HH:mm")
+                                            </small>
+                                        </div>
+
+                                        <p style="margin:9px 0 0; line-height:1.7; color:#444;">
+                                            @komentar.Tekst
+                                        </p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="background:white; border:1px dashed #e7ddd3; border-radius:20px; padding:22px; text-align:center; color:#8a8a8a;">
+                            <div style="font-size:34px; margin-bottom:8px;">💬</div>
+                            Još nema komentara. Budite prvi koji će komentarisati.
+                        </div>
+                    }
                 </div>
-            }
 
-            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:30px;">
-                <a class="btn-pink" asp-action="Edit" asp-route-id="@Model.SadrzajId">
-                    Uredi objavu
-                </a>
+                <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:30px;">
+                    <a class="btn-pink" asp-action="Edit" asp-route-id="@Model.SadrzajId">
+                        Uredi objavu
+                    </a>
 
-                <a class="btn-dark" asp-action="Index">
-                    Nazad na objave
-                </a>
+                    <a class="btn-dark"
+                           asp-controller="CitalackaGrupa"
+                           asp-action="Details"
+                           asp-route-id="@Model.GrupaId">
+                        Nazad u grupu
+                    </a>
+                </div>
+
             </div>
-
-        </div>
+        }
     </div>
 </section>

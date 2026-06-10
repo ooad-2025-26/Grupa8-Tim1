@@ -18,9 +18,13 @@ namespace DigitalniKlubCitalaca.Controllers
 
         public async Task<IActionResult> Index()
         {
+            var sada = DateTime.Now;
+
             var sadrzaji = _context.SadrzajiGrupe
                 .Include(s => s.Autor)
-                .Include(s => s.CitalackaGrupa);
+                .Include(s => s.CitalackaGrupa)
+                .Where(s => s.TipSadrzaja != TipSadrzaja.story
+                            || s.DatumObjave.AddHours(24) > sada);
 
             return View(await sadrzaji.ToListAsync());
         }
@@ -36,7 +40,50 @@ namespace DigitalniKlubCitalaca.Controllers
 
             if (sadrzajGrupe == null) return NotFound();
 
+            if (sadrzajGrupe.TipSadrzaja == TipSadrzaja.story &&
+                sadrzajGrupe.DatumObjave.AddHours(24) <= DateTime.Now)
+            {
+                return NotFound();
+            }
+
+            ViewBag.Komentari = await _context.Komentari
+                .Include(k => k.Autor)
+                .Where(k => k.SadrzajId == id)
+                .OrderByDescending(k => k.DatumKomentara)
+                .ToListAsync();
+
             return View(sadrzajGrupe);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public async Task<IActionResult> DodajKomentar(int sadrzajId, string tekst)
+        {
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (korisnikId == null)
+            {
+                return RedirectToPage("/Account/Login", new { area = "Identity" });
+            }
+
+            if (string.IsNullOrWhiteSpace(tekst))
+            {
+                return RedirectToAction("Details", new { id = sadrzajId });
+            }
+
+            var komentar = new Komentar
+            {
+                SadrzajId = sadrzajId,
+                AutorId = korisnikId,
+                Tekst = tekst,
+                DatumKomentara = DateTime.Now
+            };
+
+            _context.Komentari.Add(komentar);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Details", new { id = sadrzajId });
         }
 
         [Authorize]
@@ -79,10 +126,17 @@ namespace DigitalniKlubCitalaca.Controllers
 
             if (sadrzajGrupe.TipSadrzaja == TipSadrzaja.pdf)
             {
-
                 if (pdfFile == null || pdfFile.Length == 0)
                 {
                     ModelState.AddModelError("pdfFile", "Morate odabrati PDF dokument.");
+                }
+            }
+
+            if (sadrzajGrupe.TipSadrzaja == TipSadrzaja.story)
+            {
+                if (string.IsNullOrWhiteSpace(sadrzajGrupe.Link))
+                {
+                    ModelState.AddModelError("Link", "Morate odabrati sliku ili uslikati story.");
                 }
             }
 
@@ -110,33 +164,33 @@ namespace DigitalniKlubCitalaca.Controllers
             }
 
             _context.SadrzajiGrupe.Add(sadrzajGrupe);
-await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
-var grupa = await _context.CitalackeGrupe
-    .FirstOrDefaultAsync(g => g.GrupaId == sadrzajGrupe.GrupaId);
+            var grupa = await _context.CitalackeGrupe
+                .FirstOrDefaultAsync(g => g.GrupaId == sadrzajGrupe.GrupaId);
 
-var nazivGrupe = grupa?.Naziv ?? "čitalačkoj grupi";
+            var nazivGrupe = grupa?.Naziv ?? "čitalačkoj grupi";
 
-var korisnici = await _context.Korisnici.ToListAsync();
+            var korisnici = await _context.Korisnici.ToListAsync();
 
-foreach (var korisnik in korisnici)
-{
-    if (korisnik.Id != korisnikId)
-    {
-        _context.Notifikacije.Add(new Notifikacija
-        {
-            KorisnikId = korisnik.Id,
-            Poruka = $"Nova objava u grupi \"{nazivGrupe}\".",
-            Link = Url.Action("Details", "CitalackaGrupa", new { id = sadrzajGrupe.GrupaId }),
-            Datum = DateTime.Now,
-            Procitana = false
-        });
-    }
-}
+            foreach (var korisnik in korisnici)
+            {
+                if (korisnik.Id != korisnikId)
+                {
+                    _context.Notifikacije.Add(new Notifikacija
+                    {
+                        KorisnikId = korisnik.Id,
+                        Poruka = $"Nova objava u grupi \"{nazivGrupe}\".",
+                        Link = Url.Action("Details", "CitalackaGrupa", new { id = sadrzajGrupe.GrupaId }),
+                        Datum = DateTime.Now,
+                        Procitana = false
+                    });
+                }
+            }
 
-await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
-return RedirectToAction("Details", "CitalackaGrupa", new { id = sadrzajGrupe.GrupaId });
+            return RedirectToAction("Details", "CitalackaGrupa", new { id = sadrzajGrupe.GrupaId });
         }
 
         [HttpPost]
@@ -147,6 +201,14 @@ return RedirectToAction("Details", "CitalackaGrupa", new { id = sadrzajGrupe.Gru
             ModelState.Remove("CitalackaGrupa");
 
             if (id != sadrzajGrupe.SadrzajId) return NotFound();
+
+            if (sadrzajGrupe.TipSadrzaja == TipSadrzaja.story)
+            {
+                if (string.IsNullOrWhiteSpace(sadrzajGrupe.Link))
+                {
+                    ModelState.AddModelError("Link", "Morate odabrati sliku ili uslikati story.");
+                }
+            }
 
             if (sadrzajGrupe.TipSadrzaja == TipSadrzaja.pdf && pdfFile != null)
             {
