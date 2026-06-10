@@ -3,42 +3,54 @@
 
 @{
     ViewData["Title"] = "Detalji grupe";
-    var objave = ViewBag.Objave as List<SadrzajGrupe>;
+
+    var objave = ViewBag.Objave as List<SadrzajGrupe> ?? new List<SadrzajGrupe>();
+
+    var storyObjave = objave
+        .Where(o => o.TipSadrzaja == TipSadrzaja.story && o.DatumObjave.AddHours(24) > DateTime.Now)
+        .OrderByDescending(o => o.DatumObjave)
+        .ToList();
+
+    var pdfObjave = objave
+        .Where(o => o.TipSadrzaja == TipSadrzaja.pdf)
+        .OrderByDescending(o => o.DatumObjave)
+        .ToList();
+
+    var clanci = objave
+        .Where(o => o.TipSadrzaja == TipSadrzaja.clanak)
+        .OrderByDescending(o => o.DatumObjave)
+        .ToList();
 }
 
 <section class="section">
+    <div style="max-width:1100px; margin:auto;">
 
-    <div style="max-width:1000px; margin:auto;">
-
-        <a asp-action="Index"
-           style="color:#777; text-decoration:none;">
-            ← Nazad
+        <a asp-action="Index" style="color:#777; text-decoration:none;">
+            ← Nazad na grupe
         </a>
 
-        <div class="card"
-             style="margin-top:25px; padding:35px;">
+        <div class="card" style="margin-top:25px; padding:36px; border-radius:32px;">
 
-            <div style="display:flex; gap:20px; align-items:center; margin-bottom:25px;">
-
+            <div style="display:flex; gap:22px; align-items:center; margin-bottom:28px;">
                 <div style="
-                    width:90px;
-                    height:90px;
-                    border-radius:24px;
-                    background:#fff0f3;
+                    width:92px;
+                    height:92px;
+                    border-radius:28px;
+                    background:linear-gradient(135deg,#fff0f3,#fbfaf5);
                     display:flex;
                     align-items:center;
                     justify-content:center;
-                    font-size:42px;">
+                    font-size:44px;">
                     📚
                 </div>
 
-                <div>
+                <div style="flex:1;">
                     <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;">
                         <span class="badge">@Model.Zanr</span>
                         <span class="badge">@Model.TipGrupe</span>
                     </div>
 
-                    <h1 style="font-family:Georgia,serif; margin:0;">
+                    <h1 style="font-family:Georgia,serif; margin:0; font-size:38px;">
                         @Model.Naziv
                     </h1>
 
@@ -47,160 +59,220 @@
                     </p>
                 </div>
 
+                <a class="btn-pink"
+                       asp-controller="SadrzajGrupe"
+                       asp-action="Create"
+                       asp-route-grupaId="@Model.GrupaId">
+                    + Nova objava
+                </a>
             </div>
 
             <div style="
                 background:#fbfaf5;
                 border:1px solid #eee7df;
-                border-radius:22px;
-                padding:25px;
-                margin-bottom:25px;">
+                border-radius:24px;
+                padding:26px;
+                margin-bottom:24px;">
+                <h3 style="font-family:Georgia,serif; margin-top:0;">Opis grupe</h3>
 
-                <h3>Opis grupe</h3>
-
-                <p style="line-height:1.8; color:#444;">
+                <p style="line-height:1.8; color:#444; margin-bottom:0;">
                     @(string.IsNullOrWhiteSpace(Model.Opis)
                         ? "Opis grupe nije dodan."
                         : Model.Opis)
                 </p>
-
             </div>
 
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
-
-                <div class="card">
+                <div class="card" style="border-radius:22px;">
                     <h4>Broj članova</h4>
                     <p>👥 Maksimalno: @Model.MaksimalanBrojClanova</p>
                 </div>
 
-                <div class="card">
+                <div class="card" style="border-radius:22px;">
                     <h4>Kreirana</h4>
                     <p>📅 @Model.DatumKreiranja.ToString("dd.MM.yyyy")</p>
                 </div>
-
             </div>
-
-            <div style="display:flex; gap:12px; margin-top:30px;">
-
-                <a class="btn-pink"
-                   asp-action="Edit"
-                   asp-route-id="@Model.GrupaId">
-                    Uredi grupu
-                </a>
-
-                <a class="btn-dark"
-                   asp-action="Index">
-                    Nazad
-                </a>
-
-            </div>
-
         </div>
 
-        <div class="card"
-             style="margin-top:30px; padding:32px;">
-
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:25px;">
+        <div class="card" style="margin-top:30px; padding:32px; border-radius:32px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:22px;">
                 <div>
-                    <h2 style="font-family:Georgia,serif; margin:0;">
-                        Objave u grupi
-                    </h2>
-
-                    <p style="color:#8a8a8a; margin:6px 0 0;">
-                        Sadržaji koje članovi dijele unutar ove čitalačke grupe.
-                    </p>
+                    <h2 style="font-family:Georgia,serif; margin:0;">Story objave</h2>
+                    <p style="color:#8a8a8a; margin:6px 0 0;">Kratke objave članova koje traju 24 sata.</p>
                 </div>
-
-                <a class="btn-pink"
-                   asp-controller="SadrzajGrupe"
-                   asp-action="Create"
-                   asp-route-grupaId="@Model.GrupaId">
-                    + Nova objava
-                </a>
             </div>
 
-            @if (objave != null && objave.Any())
+            @if (storyObjave.Any())
             {
-                <div style="display:flex; flex-direction:column; gap:18px;">
-                    @foreach (var objava in objave)
+                <div style="display:flex; gap:20px; overflow-x:auto; padding:8px 0 4px;">
+                    @foreach (var story in storyObjave)
+                    {
+                        var prvoSlovoImena = story.Autor?.Ime?.FirstOrDefault().ToString() ?? "";
+                        var prvoSlovoPrezimena = story.Autor?.Prezime?.FirstOrDefault().ToString() ?? "";
+                        var inicijali = (prvoSlovoImena + prvoSlovoPrezimena).ToUpper();
+
+                        if (string.IsNullOrWhiteSpace(inicijali))
+                        {
+                            inicijali = "👤";
+                        }
+
+                        <a asp-controller="SadrzajGrupe"
+                               asp-action="Details"
+                               asp-route-id="@story.SadrzajId"
+                               style="text-decoration:none; color:#333; text-align:center; min-width:90px;">
+
+                            <div style="
+                                width:82px;
+                                height:82px;
+                                border-radius:50%;
+                                padding:4px;
+                                background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf);
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                margin:auto;
+                                box-shadow:0 8px 18px rgba(214,41,118,0.22);">
+
+                                <div style="
+                                    width:70px;
+                                    height:70px;
+                                    border-radius:50%;
+                                    background:white;
+                                    display:flex;
+                                    align-items:center;
+                                    justify-content:center;
+                                    color:#d62976;
+                                    font-weight:800;
+                                    font-size:23px;">
+                                    @inicijali
+                                </div>
+                            </div>
+
+                            <small style="display:block; margin-top:8px; color:#555;">
+                                @(story.Autor?.Ime ?? "Story")
+                            </small>
+                        </a>
+                    }
+                </div>
+            }
+            else
+            {
+                <div style="background:#fbfaf5; border:1px dashed #e7ddd3; border-radius:22px; padding:24px; color:#8a8a8a;">
+                    Još nema aktivnih story objava.
+                </div>
+            }
+        </div>
+
+        <div class="card" style="margin-top:30px; padding:32px; border-radius:32px;">
+            <h2 style="font-family:Georgia,serif; margin:0;">PDF materijali</h2>
+            <p style="color:#8a8a8a; margin-top:6px;">Dokumenti, bilješke i materijali koje članovi dijele.</p>
+
+            @if (pdfObjave.Any())
+            {
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:22px;">
+                    @foreach (var pdf in pdfObjave)
                     {
                         <div style="
                             border:1px solid #eee7df;
-                            border-radius:22px;
-                            padding:22px;
-                            background:#fbfaf5;">
+                            border-radius:24px;
+                            background:#fbfaf5;
+                            padding:22px;">
 
-                            <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
-                                <div>
-                                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;">
-                                        <span class="badge">@objava.TipSadrzaja</span>
-                                        <span class="badge">@objava.StatusSadrzaja</span>
-                                    </div>
+                            <div style="font-size:34px; margin-bottom:10px;">📄</div>
 
-                                    <h3 style="font-family:Georgia,serif; margin:0;">
-                                        @(string.IsNullOrWhiteSpace(objava.Naslov)
-                                            ? "Objava bez naslova"
-                                            : objava.Naslov)
-                                    </h3>
+                            <span class="badge">PDF</span>
 
-                                    <p style="color:#8a8a8a; font-size:14px; margin-top:6px;">
-                                        Autor: @(objava.Autor?.Email ?? objava.Autor?.UserName ?? "Nepoznat korisnik")
-                                        · @objava.DatumObjave.ToString("dd.MM.yyyy HH:mm")
-                                    </p>
-                                </div>
+                            <h3 style="font-family:Georgia,serif; margin:12px 0 8px;">
+                                @(string.IsNullOrWhiteSpace(pdf.Naslov) ? "PDF materijal" : pdf.Naslov)
+                            </h3>
 
-                                <a class="btn-dark"
-                                   asp-controller="SadrzajGrupe"
-                                   asp-action="Details"
-                                   asp-route-id="@objava.SadrzajId">
-                                    Otvori
-                                </a>
-                            </div>
-
-                            <p style="color:#555; line-height:1.7; margin-top:15px;">
-                                @(string.IsNullOrWhiteSpace(objava.Opis)
-                                    ? "Opis objave nije dodan."
-                                    : objava.Opis)
+                            <p style="color:#8a8a8a; font-size:14px;">
+                                @(pdf.Autor?.Email ?? pdf.Autor?.UserName ?? "Nepoznat korisnik")
+                                · @pdf.DatumObjave.ToString("dd.MM.yyyy")
                             </p>
 
-                            @if (!string.IsNullOrWhiteSpace(objava.Link))
-                            {
-                                <a href="@objava.Link"
-                                   target="_blank"
-                                   style="color:#e85d75; text-decoration:none; font-weight:600;">
-                                    Otvori povezani link
-                                </a>
-                            }
-
+                            <a class="btn-dark"
+                                   asp-controller="SadrzajGrupe"
+                                   asp-action="Details"
+                                   asp-route-id="@pdf.SadrzajId">
+                                Otvori PDF
+                            </a>
                         </div>
                     }
                 </div>
             }
             else
             {
-                <div style="
-                    background:#fbfaf5;
-                    border:1px dashed #e7ddd3;
-                    border-radius:22px;
-                    padding:28px;
-                    text-align:center;
-                    color:#8a8a8a;">
-
-                    <div style="font-size:42px; margin-bottom:10px;">📝</div>
-
-                    <h3 style="color:#333; font-family:Georgia,serif;">
-                        Još nema objava u ovoj grupi
-                    </h3>
-
-                    <p>
-                        Dodajte prvu objavu, preporuku, fajl ili link za članove grupe.
-                    </p>
-
+                <div style="background:#fbfaf5; border:1px dashed #e7ddd3; border-radius:22px; padding:24px; color:#8a8a8a; margin-top:20px;">
+                    Još nema PDF materijala.
                 </div>
             }
+        </div>
 
+        <div class="card" style="margin-top:30px; padding:32px; border-radius:32px;">
+            <h2 style="font-family:Georgia,serif; margin:0;">Članci i osvrti</h2>
+            <p style="color:#8a8a8a; margin-top:6px;">Lični osvrti, mišljenja i preporuke o knjigama.</p>
+
+            @if (clanci.Any())
+            {
+                <div style="display:flex; flex-direction:column; gap:18px; margin-top:22px;">
+                    @foreach (var clanak in clanci)
+                    {
+                        <div style="
+                            border:1px solid #eee7df;
+                            border-radius:26px;
+                            padding:24px;
+                            background:#fbfaf5;">
+
+                            <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+                                <div>
+                                    <span class="badge">Članak / osvrt</span>
+
+                                    <h3 style="font-family:Georgia,serif; margin:12px 0 8px; font-size:25px;">
+                                        @(string.IsNullOrWhiteSpace(clanak.Naslov)
+                                            ? "Osvrt bez naslova"
+                                            : clanak.Naslov)
+                                    </h3>
+
+                                    <p style="color:#8a8a8a; font-size:14px; margin:0;">
+                                        Autor: @(clanak.Autor?.Email ?? clanak.Autor?.UserName ?? "Nepoznat korisnik")
+                                        · @clanak.DatumObjave.ToString("dd.MM.yyyy HH:mm")
+                                    </p>
+                                </div>
+
+                                <a class="btn-dark"
+                                       asp-controller="SadrzajGrupe"
+                                       asp-action="Details"
+                                       asp-route-id="@clanak.SadrzajId">
+                                    Pročitaj
+                                </a>
+                            </div>
+
+                            <p style="color:#555; line-height:1.8; margin-top:16px;">
+                                @{
+                                    var tekst = string.IsNullOrWhiteSpace(clanak.Opis)
+                                        ? "Tekst osvrta nije dodan."
+                                        : clanak.Opis;
+
+                                    if (tekst.Length > 260)
+                                    {
+                                        tekst = tekst.Substring(0, 260) + "...";
+                                    }
+                                }
+                                @tekst
+                            </p>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div style="background:#fbfaf5; border:1px dashed #e7ddd3; border-radius:22px; padding:24px; color:#8a8a8a; margin-top:20px;">
+                    Još nema članaka ni osvrta.
+                </div>
+            }
         </div>
 
     </div>
-
 </section>
