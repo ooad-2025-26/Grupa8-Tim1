@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -19,44 +18,38 @@ namespace DigitalniKlubCitalaca.Controllers
             _context = context;
         }
 
-        // GET: ZahtjevZaPristup
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.ZahtjeviZaPristup.Include(z => z.CitalackaGrupa).Include(z => z.Korisnik);
+            var applicationDbContext = _context.ZahtjeviZaPristup
+                .Include(z => z.CitalackaGrupa)
+                .Include(z => z.Korisnik);
+
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: ZahtjevZaPristup/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var zahtjevZaPristup = await _context.ZahtjeviZaPristup
                 .Include(z => z.CitalackaGrupa)
                 .Include(z => z.Korisnik)
                 .FirstOrDefaultAsync(m => m.ZahtjevId == id);
+
             if (zahtjevZaPristup == null)
-            {
                 return NotFound();
-            }
 
             return View(zahtjevZaPristup);
         }
 
-        // GET: ZahtjevZaPristup/Create
         public IActionResult Create()
         {
             ViewData["GrupaId"] = new SelectList(_context.CitalackeGrupe, "GrupaId", "GrupaId");
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId");
+            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "Id", "Id");
             return View();
         }
 
-        // POST: ZahtjevZaPristup/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ZahtjevId,KorisnikId,GrupaId,DatumZahtjeva,StatusZahtjeva")] ZahtjevZaPristup zahtjevZaPristup)
@@ -65,42 +58,38 @@ namespace DigitalniKlubCitalaca.Controllers
             {
                 _context.Add(zahtjevZaPristup);
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["GrupaId"] = new SelectList(_context.CitalackeGrupe, "GrupaId", "GrupaId", zahtjevZaPristup.GrupaId);
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId", zahtjevZaPristup.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "Id", "Id", zahtjevZaPristup.KorisnikId);
+
             return View(zahtjevZaPristup);
         }
 
-        // GET: ZahtjevZaPristup/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var zahtjevZaPristup = await _context.ZahtjeviZaPristup.FindAsync(id);
+
             if (zahtjevZaPristup == null)
-            {
                 return NotFound();
-            }
+
             ViewData["GrupaId"] = new SelectList(_context.CitalackeGrupe, "GrupaId", "GrupaId", zahtjevZaPristup.GrupaId);
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId", zahtjevZaPristup.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "Id", "Id", zahtjevZaPristup.KorisnikId);
+
             return View(zahtjevZaPristup);
         }
 
-        // POST: ZahtjevZaPristup/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ZahtjevId,KorisnikId,GrupaId,DatumZahtjeva,StatusZahtjeva")] ZahtjevZaPristup zahtjevZaPristup)
         {
             if (id != zahtjevZaPristup.ZahtjevId)
-            {
                 return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
@@ -112,53 +101,118 @@ namespace DigitalniKlubCitalaca.Controllers
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!ZahtjevZaPristupExists(zahtjevZaPristup.ZahtjevId))
-                    {
                         return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+
+                    throw;
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["GrupaId"] = new SelectList(_context.CitalackeGrupe, "GrupaId", "GrupaId", zahtjevZaPristup.GrupaId);
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "KorisnikId", "KorisnikId", zahtjevZaPristup.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Korisnici, "Id", "Id", zahtjevZaPristup.KorisnikId);
+
             return View(zahtjevZaPristup);
         }
 
-        // GET: ZahtjevZaPristup/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Odobri(int id)
+        {
+            var zahtjev = await _context.ZahtjeviZaPristup
+                .Include(z => z.CitalackaGrupa)
+                .FirstOrDefaultAsync(z => z.ZahtjevId == id);
+
+            if (zahtjev == null)
+                return NotFound();
+
+            zahtjev.StatusZahtjeva = StatusZahtjeva.odobren;
+
+            bool vecJeClan = await _context.ClanstvaGrupe
+                .AnyAsync(c => c.KorisnikId == zahtjev.KorisnikId &&
+                               c.GrupaId == zahtjev.GrupaId);
+
+            if (!vecJeClan)
+            {
+                _context.ClanstvaGrupe.Add(new ClanstvoGrupe
+                {
+                    KorisnikId = zahtjev.KorisnikId,
+                    GrupaId = zahtjev.GrupaId,
+                    DatumPridruzivanja = DateTime.Now,
+                    StatusClanstva = StatusClanstva.clan
+                });
+            }
+
+            _context.Notifikacije.Add(new Notifikacija
+            {
+                KorisnikId = zahtjev.KorisnikId,
+                Poruka = $"Vaš zahtjev za pristup grupi \"{zahtjev.CitalackaGrupa.Naziv}\" je odobren.",
+                Link = Url.Action("Details", "CitalackaGrupa", new { id = zahtjev.GrupaId }),
+                Datum = DateTime.Now,
+                Procitana = false
+            });
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Odbij(int id)
+        {
+            var zahtjev = await _context.ZahtjeviZaPristup
+                .Include(z => z.CitalackaGrupa)
+                .FirstOrDefaultAsync(z => z.ZahtjevId == id);
+
+            if (zahtjev == null)
+                return NotFound();
+
+            zahtjev.StatusZahtjeva = StatusZahtjeva.odbijen;
+
+            _context.Notifikacije.Add(new Notifikacija
+            {
+                KorisnikId = zahtjev.KorisnikId,
+                Poruka = $"Vaš zahtjev za pristup grupi \"{zahtjev.CitalackaGrupa.Naziv}\" je odbijen.",
+                Link = Url.Action("DostupneGrupe", "CitalackaGrupa"),
+                Datum = DateTime.Now,
+                Procitana = false
+            });
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var zahtjevZaPristup = await _context.ZahtjeviZaPristup
                 .Include(z => z.CitalackaGrupa)
                 .Include(z => z.Korisnik)
                 .FirstOrDefaultAsync(m => m.ZahtjevId == id);
+
             if (zahtjevZaPristup == null)
-            {
                 return NotFound();
-            }
 
             return View(zahtjevZaPristup);
         }
 
-        // POST: ZahtjevZaPristup/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var zahtjevZaPristup = await _context.ZahtjeviZaPristup.FindAsync(id);
+
             if (zahtjevZaPristup != null)
             {
                 _context.ZahtjeviZaPristup.Remove(zahtjevZaPristup);
             }
 
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
 
