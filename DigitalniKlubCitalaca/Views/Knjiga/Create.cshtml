@@ -5,66 +5,57 @@
 }
 
 <section class="section">
+    <div style="max-width:800px; margin:auto;">
 
-    <div style="max-width:700px; margin:auto;">
-
-        <div style="margin-bottom:30px;">
-            <h1 class="section-title">Dodaj novu knjigu</h1>
-
-            <p style="color:#8a8a8a; margin-top:-10px;">
-                Unesite podatke o knjizi za Digitalni klub čitalaca.
-            </p>
-        </div>
+        <h1 class="section-title">Dodaj knjigu</h1>
+        <p style="color:#8a8a8a; margin-top:-10px;">
+            Dodajte novu knjigu u digitalnu biblioteku.
+        </p>
 
         <div class="card form-box">
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
 
-            <form asp-action="Create">
-
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div asp-validation-summary="All" class="text-danger"></div>
 
                 <label asp-for="Naziv">Naziv knjige</label>
                 <input asp-for="Naziv" placeholder="Unesite naziv knjige..." />
                 <span asp-validation-for="Naziv" class="text-danger"></span>
 
                 <label asp-for="Autor">Autor</label>
-                <input asp-for="Autor" placeholder="Ime autora..." />
+                <input asp-for="Autor" placeholder="Unesite autora..." />
                 <span asp-validation-for="Autor" class="text-danger"></span>
 
-                <label asp-for="Opis">Opis</label>
-                <textarea asp-for="Opis"
-                          rows="5"
-                          placeholder="Kratak opis knjige..."></textarea>
-                <span asp-validation-for="Opis" class="text-danger"></span>
-
-                <label asp-for="BrojStranica">Broj stranica</label>
-                <input asp-for="BrojStranica" type="number" />
-                <span asp-validation-for="BrojStranica" class="text-danger"></span>
-
                 <label asp-for="Zanr">Žanr</label>
-                <input asp-for="Zanr" placeholder="Drama, Roman, Fantastika..." />
+                <input asp-for="Zanr" placeholder="Drama, roman, poezija, fantastika..." />
                 <span asp-validation-for="Zanr" class="text-danger"></span>
 
-                <div style="
-                    display:flex;
-                    gap:12px;
-                    margin-top:30px;">
+                <label asp-for="BrojStranica">Broj stranica</label>
+                <input asp-for="BrojStranica" type="number" min="1" placeholder="Unesite broj stranica..." />
+                <span asp-validation-for="BrojStranica" class="text-danger"></span>
 
+                <label asp-for="Opis">Kratki opis knjige</label>
+                <textarea asp-for="Opis" rows="7" placeholder="Napišite kratak opis knjige..."></textarea>
+                <span asp-validation-for="Opis" class="text-danger"></span>
+
+                <label>PDF knjige</label>
+                <input type="file" name="pdfFile" accept="application/pdf" />
+                <small style="color:#8a8a8a;">
+                    Odaberite PDF dokument koji će korisnici moći čitati nakon prijave.
+                </small>
+
+                <div style="display:flex; gap:12px; margin-top:28px;">
                     <button type="submit" class="btn-pink">
                         Sačuvaj knjigu
                     </button>
 
-                    <a asp-action="Index" class="btn-dark">
-                        Nazad
+                    <a class="btn-dark" asp-action="Index">
+                        Nazad na biblioteku
                     </a>
-
                 </div>
-
             </form>
-
         </div>
-
     </div>
-
 </section>
 
 @section Scripts {

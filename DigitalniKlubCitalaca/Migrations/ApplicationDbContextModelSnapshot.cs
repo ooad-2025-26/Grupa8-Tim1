@@ -117,6 +117,10 @@ namespace DigitalniKlubCitalaca.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PdfPutanja")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Zanr")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

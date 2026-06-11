@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DigitalniKlubCitalaca.Data;
 using DigitalniKlubCitalaca.Models;
+using System.Security.Claims;
 
 namespace DigitalniKlubCitalaca.Controllers
 {
@@ -19,174 +16,210 @@ namespace DigitalniKlubCitalaca.Controllers
             _context = context;
         }
 
-        // GET: Knjiga
-        public async Task<IActionResult> Index()
+        private async Task<bool> JeAdministrator()
         {
-            return View(await _context.Knjige.ToListAsync());
+            if (User.Identity == null || !User.Identity.IsAuthenticated)
+                return false;
+
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var korisnik = await _context.Korisnici
+                .FirstOrDefaultAsync(k => k.Id == korisnikId);
+
+            return korisnik != null && korisnik.Uloga == Uloga.administrator;
         }
 
-        // GET: Knjiga/Details/5
-        // GET: Knjiga/Details/5
-public async Task<IActionResult> Details(int? id)
-{
-    if (id == null)
-    {
-        return NotFound();
-    }
-
-    var knjiga = await _context.Knjige
-        .FirstOrDefaultAsync(m => m.KnjigaId == id);
-
-    if (knjiga == null)
-    {
-        return NotFound();
-    }
-
-    ViewBag.Komentari = await _context.Komentari
-        .Include(k => k.Autor)
-        .OrderByDescending(k => k.DatumKomentara)
-        .Take(5)
-        .ToListAsync();
-
-    return View(knjiga);
-}
-        // POST: Knjiga/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("KnjigaId,Naziv,Autor,Opis,BrojStranica,Zanr")] Knjiga knjiga)
+        public async Task<IActionResult> Index(string? zanr)
         {
-            if (ModelState.IsValid)
+            var knjige = _context.Knjige.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(zanr))
             {
-                _context.Add(knjiga);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                knjige = knjige.Where(k => k.Zanr == zanr);
             }
-            return View(knjiga);
+
+            ViewBag.Zanrovi = await _context.Knjige
+                .Where(k => !string.IsNullOrWhiteSpace(k.Zanr))
+                .Select(k => k.Zanr)
+                .Distinct()
+                .OrderBy(z => z)
+                .ToListAsync();
+
+            ViewBag.OdabraniZanr = zanr;
+            ViewBag.JeAdministrator = await JeAdministrator();
+
+            return View(await knjige.OrderBy(k => k.Naziv).ToListAsync());
         }
 
-        // GET: Knjiga/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var knjiga = await _context.Knjige.FindAsync(id);
-            if (knjiga == null)
-            {
-                return NotFound();
-            }
-            return View(knjiga);
-        }
-
-        // POST: Knjiga/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("KnjigaId,Naziv,Autor,Opis,BrojStranica,Zanr")] Knjiga knjiga)
-        {
-            if (id != knjiga.KnjigaId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(knjiga);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!KnjigaExists(knjiga.KnjigaId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(knjiga);
-        }
-
-        // GET: Knjiga/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var knjiga = await _context.Knjige
                 .FirstOrDefaultAsync(m => m.KnjigaId == id);
-            if (knjiga == null)
-            {
-                return NotFound();
-            }
+
+            if (knjiga == null) return NotFound();
+
+            ViewBag.JeAdministrator = await JeAdministrator();
 
             return View(knjiga);
         }
 
-        // POST: Knjiga/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [Authorize]
+        public async Task<IActionResult> Citaj(int id)
         {
             var knjiga = await _context.Knjige.FindAsync(id);
+
+            if (knjiga == null) return NotFound();
+
+            if (string.IsNullOrWhiteSpace(knjiga.PdfPutanja))
+                return NotFound();
+
+            return Redirect(knjiga.PdfPutanja);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Create()
+        {
+            if (!await JeAdministrator())
+                return Forbid();
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public async Task<IActionResult> Create(Knjiga knjiga, IFormFile? pdfFile)
+        {
+            if (!await JeAdministrator())
+                return Forbid();
+
+            ModelState.Remove("PdfPutanja");
+
+            if (pdfFile == null || pdfFile.Length == 0)
+            {
+                ModelState.AddModelError("pdfFile", "Morate odabrati PDF knjige.");
+            }
+
+            if (!ModelState.IsValid)
+                return View(knjiga);
+
+            var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "biblioteka");
+
+            if (!Directory.Exists(folder))
+                Directory.CreateDirectory(folder);
+
+            var fileName = Guid.NewGuid() + Path.GetExtension(pdfFile!.FileName);
+            var filePath = Path.Combine(folder, fileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await pdfFile.CopyToAsync(stream);
+            }
+
+            knjiga.PdfPutanja = "/biblioteka/" + fileName;
+
+            _context.Knjige.Add(knjiga);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (!await JeAdministrator())
+                return Forbid();
+
+            if (id == null) return NotFound();
+
+            var knjiga = await _context.Knjige.FindAsync(id);
+
+            if (knjiga == null) return NotFound();
+
+            return View(knjiga);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public async Task<IActionResult> Edit(int id, Knjiga knjiga, IFormFile? pdfFile)
+        {
+            if (!await JeAdministrator())
+                return Forbid();
+
+            if (id != knjiga.KnjigaId) return NotFound();
+
+            ModelState.Remove("PdfPutanja");
+
+            var staraKnjiga = await _context.Knjige.AsNoTracking()
+                .FirstOrDefaultAsync(k => k.KnjigaId == id);
+
+            if (staraKnjiga == null) return NotFound();
+
+            knjiga.PdfPutanja = staraKnjiga.PdfPutanja;
+
+            if (pdfFile != null && pdfFile.Length > 0)
+            {
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "biblioteka");
+
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
+
+                var fileName = Guid.NewGuid() + Path.GetExtension(pdfFile.FileName);
+                var filePath = Path.Combine(folder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await pdfFile.CopyToAsync(stream);
+                }
+
+                knjiga.PdfPutanja = "/biblioteka/" + fileName;
+            }
+
+            if (!ModelState.IsValid)
+                return View(knjiga);
+
+            _context.Update(knjiga);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (!await JeAdministrator())
+                return Forbid();
+
+            if (id == null) return NotFound();
+
+            var knjiga = await _context.Knjige
+                .FirstOrDefaultAsync(m => m.KnjigaId == id);
+
+            if (knjiga == null) return NotFound();
+
+            return View(knjiga);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            if (!await JeAdministrator())
+                return Forbid();
+
+            var knjiga = await _context.Knjige.FindAsync(id);
+
             if (knjiga != null)
             {
                 _context.Knjige.Remove(knjiga);
+                await _context.SaveChangesAsync();
             }
 
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-[HttpPost]
-[ValidateAntiForgeryToken]
-public async Task<IActionResult> DodajKomentar(int knjigaId, string tekst)
-{
-    if (string.IsNullOrWhiteSpace(tekst))
-    {
-        TempData["KomentarGreska"] = "Komentar ne može biti prazan.";
-        return RedirectToAction(nameof(Details), new { id = knjigaId });
-    }
-
-    var prviSadrzaj = await _context.SadrzajiGrupe.FirstOrDefaultAsync();
-
-    var prviKorisnik = await _context.Korisnici.FirstOrDefaultAsync();
-
-    if (prviSadrzaj == null || prviKorisnik == null)
-    {
-        TempData["KomentarGreska"] = "Nije moguće dodati komentar jer nedostaje sadržaj ili korisnik.";
-        return RedirectToAction(nameof(Details), new { id = knjigaId });
-    }
-
-    var komentar = new Komentar
-    {
-        Tekst = tekst,
-        DatumKomentara = DateTime.Now,
-        SadrzajId = prviSadrzaj.SadrzajId,
-        AutorId = prviKorisnik.Id
-    };
-
-    _context.Komentari.Add(komentar);
-    await _context.SaveChangesAsync();
-
-    TempData["KomentarPoruka"] = "Komentar je uspješno objavljen.";
-
-    return RedirectToAction(nameof(Details), new { id = knjigaId });
-}
-        private bool KnjigaExists(int id)
-        {
-            return _context.Knjige.Any(e => e.KnjigaId == id);
         }
     }
 }

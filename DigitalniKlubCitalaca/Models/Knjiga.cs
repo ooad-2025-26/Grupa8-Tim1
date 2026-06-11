@@ -15,6 +15,8 @@ namespace DigitalniKlubCitalaca.Models
 
         public string Zanr { get; set; } = string.Empty;
 
+        public string PdfPutanja { get; set; } = string.Empty;
+
         public Knjiga() { }
     }
 }
