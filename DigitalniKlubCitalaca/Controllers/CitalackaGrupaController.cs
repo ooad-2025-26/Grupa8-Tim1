@@ -38,7 +38,7 @@ namespace DigitalniKlubCitalaca.Controllers
             return View(grupe);
         }
 
-        public async Task<IActionResult> DostupneGrupe()
+        public async Task<IActionResult> DostupneGrupe(string? regija, string? zanr)
         {
             var korisnik = await _userManager.GetUserAsync(User);
 
@@ -56,9 +56,42 @@ namespace DigitalniKlubCitalaca.Controllers
                 .Select(z => z.GrupaId)
                 .ToListAsync();
 
-            var dostupneGrupe = await _context.CitalackeGrupe
+            var dostupneGrupeQuery = _context.CitalackeGrupe
                 .Where(g => !mojeGrupe.Contains(g.GrupaId) &&
                             !mojiZahtjevi.Contains(g.GrupaId))
+                .AsQueryable();
+
+            ViewBag.Regije = await dostupneGrupeQuery
+                .Where(g => !string.IsNullOrWhiteSpace(g.Regija))
+                .Select(g => g.Regija)
+                .Distinct()
+                .OrderBy(r => r)
+                .ToListAsync();
+
+            ViewBag.Zanrovi = await dostupneGrupeQuery
+                .Where(g => !string.IsNullOrWhiteSpace(g.Zanr))
+                .Select(g => g.Zanr)
+                .Distinct()
+                .OrderBy(z => z)
+                .ToListAsync();
+
+            if (!string.IsNullOrWhiteSpace(regija))
+            {
+                dostupneGrupeQuery = dostupneGrupeQuery
+                    .Where(g => g.Regija == regija);
+            }
+
+            if (!string.IsNullOrWhiteSpace(zanr))
+            {
+                dostupneGrupeQuery = dostupneGrupeQuery
+                    .Where(g => g.Zanr == zanr);
+            }
+
+            ViewBag.OdabranaRegija = regija;
+            ViewBag.OdabraniZanr = zanr;
+
+            var dostupneGrupe = await dostupneGrupeQuery
+                .OrderByDescending(g => g.DatumKreiranja)
                 .ToListAsync();
 
             return View(dostupneGrupe);
@@ -98,15 +131,6 @@ namespace DigitalniKlubCitalaca.Controllers
                     DatumPridruzivanja = DateTime.Now,
                     StatusClanstva = StatusClanstva.clan
                 });
-
-                _context.Notifikacije.Add(new Notifikacija
-                {
-                    KorisnikId = korisnik.Id,
-                    Poruka = $"Uspješno ste se pridružili grupi \"{grupa.Naziv}\".",
-                    Link = Url.Action("Details", "CitalackaGrupa", new { id = grupa.GrupaId }),
-                    Datum = DateTime.Now,
-                    Procitana = false
-                });
             }
             else
             {
@@ -117,31 +141,6 @@ namespace DigitalniKlubCitalaca.Controllers
                     DatumZahtjeva = DateTime.Now,
                     StatusZahtjeva = StatusZahtjeva.na_cekanju
                 });
-
-                _context.Notifikacije.Add(new Notifikacija
-                {
-                    KorisnikId = korisnik.Id,
-                    Poruka = $"Vaš zahtjev za pristup grupi \"{grupa.Naziv}\" je poslan.",
-                    Link = Url.Action("DostupneGrupe", "CitalackaGrupa"),
-                    Datum = DateTime.Now,
-                    Procitana = false
-                });
-
-                var admini = await _context.Korisnici
-                    .Where(k => k.Uloga == Uloga.administrator)
-                    .ToListAsync();
-
-                foreach (var admin in admini)
-                {
-                    _context.Notifikacije.Add(new Notifikacija
-                    {
-                        KorisnikId = admin.Id,
-                        Poruka = $"Novi zahtjev za pristup privatnoj grupi \"{grupa.Naziv}\".",
-                        Link = Url.Action("Index", "ZahtjevZaPristup"),
-                        Datum = DateTime.Now,
-                        Procitana = false
-                    });
-                }
             }
 
             await _context.SaveChangesAsync();

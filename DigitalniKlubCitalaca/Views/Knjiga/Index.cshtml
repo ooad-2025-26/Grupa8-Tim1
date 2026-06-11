@@ -8,111 +8,204 @@
 }
 
 <section class="section">
-    <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin-bottom:30px;">
+    <div style="
+        background:linear-gradient(135deg,#fff0f3,#fbfaf5);
+        border:1px solid #eee7df;
+        border-radius:34px;
+        padding:38px;
+        margin-bottom:30px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:25px;
+        flex-wrap:wrap;">
+
         <div>
-            <h1 class="section-title">Pronađi svoj žanr</h1>
-            <p style="color:#8a8a8a; margin-top:-10px; max-width:700px;">
-                Digitalna biblioteka dostupna svim ljubiteljima knjiga. Istražite različite žanrove,
-                pročitajte opis knjige i započnite svoje novo čitalačko putovanje.
+            <span class="badge">Digitalna biblioteka</span>
+
+            <h1 style="font-family:Georgia,serif; font-size:42px; margin:14px 0 10px;">
+                Biblioteka
+            </h1>
+
+            <p style="color:#6f6f6f; max-width:650px; line-height:1.7; margin:0;">
+                Pronađite svoj žanr, istražite preporučene knjige i pročitajte kratki opis
+                prije nego započnete novo čitalačko putovanje.
             </p>
         </div>
 
-        @if (jeAdministrator)
-        {
-            <a class="btn-pink" asp-action="Create">
-                + Dodaj knjigu
-            </a>
-        }
-    </div>
-
-    <div class="card" style="padding:24px; border-radius:28px; margin-bottom:30px;">
-        <h3 style="font-family:Georgia,serif; margin-top:0;">Žanrovi</h3>
-
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a asp-action="Index"
-                   class="badge"
-                   style="text-decoration:none; @(string.IsNullOrWhiteSpace(odabraniZanr) ? "background:#e85d75;color:white;" : "")">
-                Svi žanrovi
-            </a>
-
-            @foreach (var zanr in zanrovi)
-            {
-                <a asp-action="Index"
-                       asp-route-zanr="@zanr"
-                       class="badge"
-                       style="text-decoration:none; @(odabraniZanr == zanr ? "background:#e85d75;color:white;" : "")">
-                    @zanr
-                </a>
-            }
+        <div style="
+            width:115px;
+            height:115px;
+            border-radius:32px;
+            background:white;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:56px;
+            box-shadow:0 16px 35px rgba(0,0,0,0.08);">
+            📚
         </div>
     </div>
 
-    @if (Model.Any())
-    {
-        <div class="grid-3">
-            @foreach (var item in Model)
+    <div style="display:grid; grid-template-columns:260px 1fr; gap:26px; align-items:start;">
+
+        <aside class="card" style="padding:24px; border-radius:30px; position:sticky; top:20px;">
+            <h3 style="font-family:Georgia,serif; margin-top:0;">
+                Pronađi svoj žanr
+            </h3>
+
+            <p style="color:#8a8a8a; font-size:14px; line-height:1.6;">
+                Filtrirajte biblioteku prema žanru koji vam najviše odgovara.
+            </p>
+
+            <div style="display:flex; flex-direction:column; gap:10px; margin-top:18px;">
+                <a asp-action="Index"
+                       style="
+                    text-decoration:none;
+                    padding:12px 14px;
+                    border-radius:16px;
+                    border:1px solid #eee7df;
+                    color:@(string.IsNullOrWhiteSpace(odabraniZanr) ? "white" : "#444");
+                    background:@(string.IsNullOrWhiteSpace(odabraniZanr) ? "#e85d75" : "#fbfaf5");">
+                    Svi žanrovi
+                </a>
+
+                @foreach (var zanr in zanrovi)
+                {
+                    <a asp-action="Index"
+                           asp-route-zanr="@zanr"
+                           style="
+                        text-decoration:none;
+                        padding:12px 14px;
+                        border-radius:16px;
+                        border:1px solid #eee7df;
+                        color:@(odabraniZanr == zanr ? "white" : "#444");
+                        background:@(odabraniZanr == zanr ? "#e85d75" : "#fbfaf5");">
+                        @zanr
+                    </a>
+                }
+            </div>
+
+            @if (jeAdministrator)
             {
-                <div class="card" style="overflow:hidden; border-radius:30px;">
-                    <div style="
-                        height:190px;
-                        background:linear-gradient(135deg,#fff0f3,#f2ebe4);
-                        border-radius:24px;
-                        display:flex;
-                        align-items:center;
-                        justify-content:center;
-                        font-size:72px;
-                        margin-bottom:20px;">
-                        📖
-                    </div>
+                <a class="btn-pink"
+                       asp-action="Create"
+                       style="width:100%; text-align:center; margin-top:24px;">
+                    + Dodaj knjigu
+                </a>
+            }
+        </aside>
 
-                    <span class="badge">@item.Zanr</span>
-
-                    <h2 style="font-family:Georgia,serif; margin:16px 0 6px;">
-                        @item.Naziv
+        <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; gap:15px; flex-wrap:wrap;">
+                <div>
+                    <h2 style="font-family:Georgia,serif; margin:0;">
+                        Dostupne knjige
                     </h2>
-
-                    <p style="color:#8a8a8a; margin-bottom:14px;">
-                        Autor: @item.Autor
+                    <p style="color:#8a8a8a; margin:6px 0 0;">
+                        @(string.IsNullOrWhiteSpace(odabraniZanr)
+                            ? "Prikazane su sve knjige iz biblioteke."
+                            : $"Prikazane su knjige iz žanra: {odabraniZanr}.")
                     </p>
+                </div>
 
-                    <p style="color:#555; min-height:78px; line-height:1.6;">
-                        @(string.IsNullOrWhiteSpace(item.Opis)
-                            ? "Opis knjige nije dodan."
-                            : item.Opis.Length > 135
-                                ? item.Opis.Substring(0, 135) + "..."
-                                : item.Opis)
-                    </p>
+                <span class="badge">
+                    @Model.Count() knjiga
+                </span>
+            </div>
 
-                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin:18px 0;">
-                        <span class="badge">📄 @item.BrojStranica stranica</span>
-                    </div>
+            @if (Model.Any())
+            {
+                <div style="display:flex; flex-direction:column; gap:18px;">
+                    @foreach (var item in Model)
+                    {
+                        <div class="card" style="
+                            padding:22px;
+                            border-radius:30px;
+                            display:grid;
+                            grid-template-columns:86px 1fr auto;
+                            gap:20px;
+                            align-items:center;">
 
-                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;">
-                        <a class="btn-pink" asp-action="Details" asp-route-id="@item.KnjigaId">
-                            Pročitaj više
-                        </a>
+                            <div style="
+                                width:86px;
+                                height:112px;
+                                border-radius:20px;
+                                background:linear-gradient(145deg,#fff0f3,#f2ebe4);
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                font-size:42px;
+                                box-shadow:0 10px 24px rgba(0,0,0,0.06);">
+                                📖
+                            </div>
 
-                        @if (jeAdministrator)
-                        {
-                            <a class="btn-dark" asp-action="Edit" asp-route-id="@item.KnjigaId">
-                                Uredi
-                            </a>
+                            <div>
+                                <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
+                                    <span class="badge">@item.Zanr</span>
+                                    <span class="badge">📄 @item.BrojStranica stranica</span>
+                                </div>
 
-                            <a class="btn-dark" asp-action="Delete" asp-route-id="@item.KnjigaId">
-                                Obriši
-                            </a>
-                        }
-                    </div>
+                                <h3 style="font-family:Georgia,serif; margin:0 0 6px; font-size:26px;">
+                                    @item.Naziv
+                                </h3>
+
+                                <p style="color:#8a8a8a; margin:0 0 12px;">
+                                    Autor: @item.Autor
+                                </p>
+
+                                <p style="color:#555; line-height:1.7; margin:0;">
+                                    @(string.IsNullOrWhiteSpace(item.Opis)
+                                        ? "Opis knjige nije dodan."
+                                        : item.Opis.Length > 220
+                                            ? item.Opis.Substring(0, 220) + "..."
+                                            : item.Opis)
+                                </p>
+                            </div>
+
+                            <div style="display:flex; flex-direction:column; gap:10px; min-width:135px;">
+                                <a class="btn-pink"
+                                       asp-action="Details"
+                                       asp-route-id="@item.KnjigaId"
+                                       style="text-align:center;">
+                                    Pročitaj više
+                                </a>
+
+                                @if (jeAdministrator)
+                                {
+                                    <a class="btn-dark"
+                                           asp-action="Edit"
+                                           asp-route-id="@item.KnjigaId"
+                                           style="text-align:center;">
+                                        Uredi
+                                    </a>
+
+                                    <a class="btn-dark"
+                                           asp-action="Delete"
+                                           asp-route-id="@item.KnjigaId"
+                                           style="text-align:center;">
+                                        Obriši
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="card" style="
+                    padding:45px;
+                    text-align:center;
+                    color:#8a8a8a;
+                    border-radius:30px;">
+                    <div style="font-size:52px; margin-bottom:12px;">📚</div>
+                    <h3 style="font-family:Georgia,serif; color:#333;">
+                        Nema knjiga za odabrani žanr
+                    </h3>
+                    <p>Odaberite drugi žanr ili dodajte novu knjigu u biblioteku.</p>
                 </div>
             }
         </div>
-    }
-    else
-    {
-        <div class="card" style="padding:35px; text-align:center; color:#8a8a8a; border-radius:28px;">
-            <div style="font-size:48px; margin-bottom:12px;">📚</div>
-            <h3 style="font-family:Georgia,serif; color:#333;">Nema knjiga za odabrani žanr</h3>
-            <p>Dodajte knjige u biblioteku ili odaberite drugi žanr.</p>
-        </div>
-    }
+    </div>
 </section>

@@ -5,44 +5,84 @@
 }
 
 <section class="section">
-    <div style="max-width:800px; margin:auto;">
+    <div style="max-width:900px; margin:auto;">
 
-        <h1 class="section-title">Dodaj knjigu</h1>
-        <p style="color:#8a8a8a; margin-top:-10px;">
-            Dodajte novu knjigu u digitalnu biblioteku.
-        </p>
+        <a asp-action="Index" style="color:#777; text-decoration:none;">
+            ← Nazad na biblioteku
+        </a>
 
-        <div class="card form-box">
+        <div class="card" style="margin-top:24px; padding:36px; border-radius:34px;">
+
+            <div style="display:flex; gap:18px; align-items:center; margin-bottom:28px;">
+                <div style="
+                    width:76px;
+                    height:76px;
+                    border-radius:24px;
+                    background:linear-gradient(145deg,#fff0f3,#f2ebe4);
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:34px;">
+                    📚
+                </div>
+
+                <div>
+                    <h1 style="font-family:Georgia,serif; margin:0;">
+                        Dodaj knjigu
+                    </h1>
+                    <p style="color:#8a8a8a; margin:6px 0 0;">
+                        Unesite podatke o knjizi i dodajte PDF dokument za čitanje.
+                    </p>
+                </div>
+            </div>
+
             <form asp-action="Create" method="post" enctype="multipart/form-data">
                 @Html.AntiForgeryToken()
 
                 <div asp-validation-summary="All" class="text-danger"></div>
 
-                <label asp-for="Naziv">Naziv knjige</label>
-                <input asp-for="Naziv" placeholder="Unesite naziv knjige..." />
-                <span asp-validation-for="Naziv" class="text-danger"></span>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+                    <div>
+                        <label asp-for="Naziv">Naziv knjige</label>
+                        <input asp-for="Naziv" placeholder="npr. Mali princ" />
+                        <span asp-validation-for="Naziv" class="text-danger"></span>
+                    </div>
 
-                <label asp-for="Autor">Autor</label>
-                <input asp-for="Autor" placeholder="Unesite autora..." />
-                <span asp-validation-for="Autor" class="text-danger"></span>
+                    <div>
+                        <label asp-for="Autor">Autor</label>
+                        <input asp-for="Autor" placeholder="npr. Antoine de Saint-Exupéry" />
+                        <span asp-validation-for="Autor" class="text-danger"></span>
+                    </div>
 
-                <label asp-for="Zanr">Žanr</label>
-                <input asp-for="Zanr" placeholder="Drama, roman, poezija, fantastika..." />
-                <span asp-validation-for="Zanr" class="text-danger"></span>
+                    <div>
+                        <label asp-for="Zanr">Žanr</label>
+                        <input asp-for="Zanr" placeholder="roman, drama, poezija..." />
+                        <span asp-validation-for="Zanr" class="text-danger"></span>
+                    </div>
 
-                <label asp-for="BrojStranica">Broj stranica</label>
-                <input asp-for="BrojStranica" type="number" min="1" placeholder="Unesite broj stranica..." />
-                <span asp-validation-for="BrojStranica" class="text-danger"></span>
+                    <div>
+                        <label asp-for="BrojStranica">Broj stranica</label>
+                        <input asp-for="BrojStranica" type="number" min="1" placeholder="npr. 96" />
+                        <span asp-validation-for="BrojStranica" class="text-danger"></span>
+                    </div>
+                </div>
 
-                <label asp-for="Opis">Kratki opis knjige</label>
+                <label asp-for="Opis" style="margin-top:18px;">Kratki opis knjige</label>
                 <textarea asp-for="Opis" rows="7" placeholder="Napišite kratak opis knjige..."></textarea>
                 <span asp-validation-for="Opis" class="text-danger"></span>
 
-                <label>PDF knjige</label>
-                <input type="file" name="pdfFile" accept="application/pdf" />
-                <small style="color:#8a8a8a;">
-                    Odaberite PDF dokument koji će korisnici moći čitati nakon prijave.
-                </small>
+                <div style="
+                    margin-top:22px;
+                    background:#fbfaf5;
+                    border:1px dashed #e7ddd3;
+                    border-radius:24px;
+                    padding:22px;">
+                    <label>PDF knjige</label>
+                    <input type="file" name="pdfFile" accept="application/pdf" />
+                    <small style="color:#8a8a8a;">
+                        Dodajte PDF dokument koji će korisnici moći otvoriti nakon prijave.
+                    </small>
+                </div>
 
                 <div style="display:flex; gap:12px; margin-top:28px;">
                     <button type="submit" class="btn-pink">
@@ -50,7 +90,7 @@
                     </button>
 
                     <a class="btn-dark" asp-action="Index">
-                        Nazad na biblioteku
+                        Odustani
                     </a>
                 </div>
             </form>

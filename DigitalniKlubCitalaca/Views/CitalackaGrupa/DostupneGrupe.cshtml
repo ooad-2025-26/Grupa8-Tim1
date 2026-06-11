@@ -1,104 +1,229 @@
 @model IEnumerable<DigitalniKlubCitalaca.Models.CitalackaGrupa>
 
 @{
-    ViewData["Title"] = "Grupe za pristup";
+    ViewData["Title"] = "Pridruži se grupama";
+
+    var regije = ViewBag.Regije as List<string> ?? new List<string>();
+    var zanrovi = ViewBag.Zanrovi as List<string> ?? new List<string>();
+
+    var odabranaRegija = ViewBag.OdabranaRegija as string;
+    var odabraniZanr = ViewBag.OdabraniZanr as string;
 }
 
 <section class="section">
 
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
+    <div style="
+        background:linear-gradient(135deg,#fff0f3,#fbfaf5);
+        border:1px solid #eee7df;
+        border-radius:34px;
+        padding:38px;
+        margin-bottom:30px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:24px;
+        flex-wrap:wrap;">
+
         <div>
-            <h1 class="section-title">Grupe za pristup</h1>
-            <p style="color:#8a8a8a; margin-top:-10px;">
-                Pregled grupa kojima se još možeš priključiti.
+            <span class="badge">Čitalačke grupe</span>
+
+            <h1 style="font-family:Georgia,serif; font-size:42px; margin:14px 0 10px;">
+                Pridruži se grupama
+            </h1>
+
+            <p style="color:#6f6f6f; max-width:700px; line-height:1.7; margin:0;">
+                Pronađite čitalačke grupe prema regiji i žanru koji odgovaraju vašim interesima.
             </p>
         </div>
 
         <a class="btn-dark" asp-action="Index">
-            Nazad na grupe
+            Moje grupe
         </a>
     </div>
 
-    <div class="grid-3">
-        @foreach (var item in Model)
-        {
-            var zanr = item.Zanr?.ToLower() ?? "";
-            var slikaGrupe = "/images/slike/default.jpg";
+    <div class="card" style="padding:26px; border-radius:30px; margin-bottom:30px;">
+        <form asp-action="DostupneGrupe" method="get">
+            <div style="
+                display:grid;
+                grid-template-columns:1fr 1fr auto;
+                gap:18px;
+                align-items:end;">
 
-            if (zanr.Contains("drama"))
-                slikaGrupe = "/images/slike/drama.jpg";
-            else if (zanr.Contains("mister") || zanr.Contains("krimi") || zanr.Contains("triler"))
-                slikaGrupe = "/images/slike/mystery.jpg";
-            else if (zanr.Contains("fant") || zanr.Contains("sf") || zanr.Contains("nauč") || zanr.Contains("nauc"))
-                slikaGrupe = "/images/slike/fantastika.jpg";
-            else if (zanr.Contains("psih"))
-                slikaGrupe = "/images/slike/psihologija.jpg";
-            else if (zanr.Contains("histor") || zanr.Contains("istor") || zanr.Contains("povij"))
-                slikaGrupe = "/images/slike/historija.jpg";
-            else if (zanr.Contains("poez") || zanr.Contains("poem"))
-                slikaGrupe = "/images/slike/poezija.jpg";
-            else if (zanr.Contains("roman") || zanr.Contains("klas") || zanr.Contains("ljubav") || zanr.Contains("savremen"))
-                slikaGrupe = "/images/slike/romani.jpg";
-
-            <div class="card">
-
-                <img src="@slikaGrupe"
-                     alt="Slika grupe"
-                     style="
+                <div>
+                    <label style="font-weight:700;">📍 Regija</label>
+                    <select name="regija" style="
                         width:100%;
-                        height:180px;
-                        object-fit:cover;
-                        border-radius:22px;
-                        margin-bottom:20px;" />
+                        padding:13px 14px;
+                        border:1px solid #eee7df;
+                        border-radius:16px;
+                        background:white;">
+                        <option value="">Vidi sve regije</option>
 
-                <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
-                    <span class="badge">@item.Zanr</span>
-                    <span class="badge">@item.TipGrupe</span>
+                        @foreach (var regija in regije)
+                        {
+                            if (odabranaRegija == regija)
+                            {
+                                <option value="@regija" selected>@regija</option>
+                            }
+                            else
+                            {
+                                <option value="@regija">@regija</option>
+                            }
+                        }
+                    </select>
                 </div>
 
-                <h2 style="font-family:Georgia,serif; margin:0 0 8px;">
-                    @(string.IsNullOrWhiteSpace(item.Naziv) ? "Grupa bez naziva" : item.Naziv)
-                </h2>
+                <div>
+                    <label style="font-weight:700;">📚 Žanr</label>
+                    <select name="zanr" style="
+                        width:100%;
+                        padding:13px 14px;
+                        border:1px solid #eee7df;
+                        border-radius:16px;
+                        background:white;">
+                        <option value="">Vidi sve žanrove</option>
 
-                <p style="color:#8a8a8a; font-size:14px;">
-                    📍 @item.Grad, @item.Regija
-                </p>
+                        @foreach (var zanr in zanrovi)
+                        {
+                            if (odabraniZanr == zanr)
+                            {
+                                <option value="@zanr" selected>@zanr</option>
+                            }
+                            else
+                            {
+                                <option value="@zanr">@zanr</option>
+                            }
+                        }
+                    </select>
+                </div>
 
-                <p style="color:#8a8a8a; font-size:14px;">
-                    👥 Maksimalno članova: @item.MaksimalanBrojClanova
-                </p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button type="submit" class="btn-pink">
+                        Filtriraj
+                    </button>
 
-                <p style="color:#8a8a8a; font-size:14px;">
-                    📅 Kreirana: @item.DatumKreiranja.ToString("dd.MM.yyyy")
-                </p>
-
-                <p style="color:#555; min-height:75px;">
-                    @(string.IsNullOrWhiteSpace(item.Opis)
-                        ? "Opis grupe nije dodan."
-                        : item.Opis.Length > 120
-                            ? item.Opis.Substring(0, 120) + "..."
-                            : item.Opis)
-                </p>
-
-                <form asp-action="PridruziSe" method="post" style="margin-top:20px;">
-                    <input type="hidden" name="id" value="@item.GrupaId" />
-
-                    @if (item.TipGrupe == DigitalniKlubCitalaca.Models.TipGrupe.javna)
-                    {
-                        <button type="submit" class="btn-pink">
-                            Pridruži se
-                        </button>
-                    }
-                    else
-                    {
-                        <button type="submit" class="btn-dark">
-                            Pošalji zahtjev
-                        </button>
-                    }
-                </form>
-
+                    <a class="btn-dark" asp-action="DostupneGrupe">
+                        Vidi sve
+                    </a>
+                </div>
             </div>
-        }
+        </form>
     </div>
+
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; gap:16px; flex-wrap:wrap;">
+        <div>
+            <h2 style="font-family:Georgia,serif; margin:0;">
+                Dostupne grupe
+            </h2>
+
+            <p style="color:#8a8a8a; margin:6px 0 0;">
+                @Model.Count() grupa pronađeno.
+            </p>
+        </div>
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="grid-3">
+            @foreach (var item in Model)
+            {
+                var zanr = item.Zanr?.ToLower() ?? "";
+                var slikaGrupe = "/images/slike/default.jpg";
+
+                if (zanr.Contains("drama"))
+                    slikaGrupe = "/images/slike/drama.jpg";
+                else if (zanr.Contains("mister") || zanr.Contains("krimi") || zanr.Contains("triler"))
+                    slikaGrupe = "/images/slike/mystery.jpg";
+                else if (zanr.Contains("fant") || zanr.Contains("sf") || zanr.Contains("nauč") || zanr.Contains("nauc"))
+                    slikaGrupe = "/images/slike/fantastika.jpg";
+                else if (zanr.Contains("psih"))
+                    slikaGrupe = "/images/slike/psihologija.jpg";
+                else if (zanr.Contains("histor") || zanr.Contains("istor") || zanr.Contains("povij"))
+                    slikaGrupe = "/images/slike/historija.jpg";
+                else if (zanr.Contains("poez") || zanr.Contains("poem"))
+                    slikaGrupe = "/images/slike/poezija.jpg";
+                else if (zanr.Contains("roman") || zanr.Contains("klas") || zanr.Contains("ljubav") || zanr.Contains("savremen"))
+                    slikaGrupe = "/images/slike/romani.jpg";
+
+                <div class="card" style="border-radius:30px; overflow:hidden;">
+
+                    <img src="@slikaGrupe"
+                         alt="Slika grupe"
+                         style="
+                    width:100%;
+                    height:180px;
+                    object-fit:cover;
+                    border-radius:22px;
+                    margin-bottom:20px;" />
+
+                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
+                        <span class="badge">@item.Zanr</span>
+                        <span class="badge">@item.TipGrupe</span>
+                    </div>
+
+                    <h2 style="font-family:Georgia,serif; margin:0 0 8px;">
+                        @(string.IsNullOrWhiteSpace(item.Naziv) ? "Grupa bez naziva" : item.Naziv)
+                    </h2>
+
+                    <p style="color:#8a8a8a; font-size:14px;">
+                        📍 @item.Grad, @item.Regija
+                    </p>
+
+                    <p style="color:#8a8a8a; font-size:14px;">
+                        👥 Maksimalno članova: @item.MaksimalanBrojClanova
+                    </p>
+
+                    <p style="color:#8a8a8a; font-size:14px;">
+                        📅 Kreirana: @item.DatumKreiranja.ToString("dd.MM.yyyy")
+                    </p>
+
+                    <p style="color:#555; min-height:75px; line-height:1.6;">
+                        @(string.IsNullOrWhiteSpace(item.Opis)
+                            ? "Opis grupe nije dodan."
+                            : item.Opis.Length > 120
+                                ? item.Opis.Substring(0, 120) + "..."
+                                : item.Opis)
+                    </p>
+
+                    <form asp-action="PridruziSe" method="post" style="margin-top:20px;">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@item.GrupaId" />
+
+                        @if (item.TipGrupe == DigitalniKlubCitalaca.Models.TipGrupe.javna)
+                        {
+                            <button type="submit" class="btn-pink">
+                                Pridruži se
+                            </button>
+                        }
+                        else
+                        {
+                            <button type="submit" class="btn-dark">
+                                Pošalji zahtjev
+                            </button>
+                        }
+                    </form>
+
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="card" style="padding:40px; text-align:center; border-radius:30px; color:#8a8a8a;">
+            <div style="font-size:50px; margin-bottom:12px;">🔍</div>
+
+            <h3 style="font-family:Georgia,serif; color:#333;">
+                Nema grupa za odabrane filtere
+            </h3>
+
+            <p>
+                Pokušajte odabrati drugu regiju ili drugi žanr.
+            </p>
+
+            <a class="btn-pink" asp-action="DostupneGrupe">
+                Vidi sve grupe
+            </a>
+        </div>
+    }
 
 </section>

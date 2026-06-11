@@ -1,51 +1,90 @@
 ﻿@model DigitalniKlubCitalaca.Models.Knjiga
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Obriši knjigu";
 }
 
-<h1>Delete</h1>
+<section class="section">
+    <div style="max-width:850px; margin:auto;">
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Knjiga</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Naziv)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Naziv)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Autor)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Autor)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Opis)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Opis)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BrojStranica)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BrojStranica)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Zanr)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Zanr)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="KnjigaId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
-</div>
+        <a asp-action="Index" style="color:#777; text-decoration:none;">
+            ← Nazad na biblioteku
+        </a>
+
+        <div class="card" style="margin-top:24px; padding:36px; border-radius:34px;">
+
+            <div style="display:flex; gap:18px; align-items:center; margin-bottom:28px;">
+                <div style="
+                    width:76px;
+                    height:76px;
+                    border-radius:24px;
+                    background:#fff0f3;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:34px;">
+                    🗑️
+                </div>
+
+                <div>
+                    <h1 style="font-family:Georgia,serif; margin:0;">
+                        Obriši knjigu
+                    </h1>
+                    <p style="color:#8a8a8a; margin:6px 0 0;">
+                        Ova akcija će ukloniti knjigu iz digitalne biblioteke.
+                    </p>
+                </div>
+            </div>
+
+            <div style="
+                background:#fbfaf5;
+                border:1px solid #eee7df;
+                border-radius:26px;
+                padding:24px;
+                margin-bottom:26px;">
+
+                <span class="badge">@Model.Zanr</span>
+
+                <h2 style="font-family:Georgia,serif; margin:14px 0 6px;">
+                    @Model.Naziv
+                </h2>
+
+                <p style="color:#8a8a8a;">
+                    Autor: @Model.Autor · @Model.BrojStranica stranica
+                </p>
+
+                <p style="color:#555; line-height:1.7;">
+                    @(string.IsNullOrWhiteSpace(Model.Opis)
+                        ? "Opis knjige nije dodan."
+                        : Model.Opis)
+                </p>
+            </div>
+
+            <div style="
+                background:#fff0f3;
+                border:1px solid #f3c6d0;
+                border-radius:22px;
+                padding:18px;
+                color:#8a3a4a;
+                margin-bottom:24px;">
+                Da li ste sigurni da želite obrisati ovu knjigu?
+            </div>
+
+            <form asp-action="Delete" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="KnjigaId" />
+
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <button type="submit" class="btn-pink">
+                        Da, obriši
+                    </button>
+
+                    <a class="btn-dark" asp-action="Index">
+                        Odustani
+                    </a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
