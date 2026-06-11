@@ -1,7 +1,28 @@
-﻿@{
-    ViewData["Title"] = "Početna";
-}
+﻿@using Microsoft.AspNetCore.Identity
+@using DigitalniKlubCitalaca.Models
+@inject UserManager<Korisnik> UserManager
+@inject SignInManager<Korisnik> SignInManager
 
+@{
+    ViewData["Title"] = "Početna";
+    Korisnik trenutniKorisnik = null;
+
+    if (SignInManager.IsSignedIn(User))
+    {
+        trenutniKorisnik = await UserManager.GetUserAsync(User);
+    }
+}
+@if (trenutniKorisnik != null && trenutniKorisnik.StatusNaloga == StatusNaloga.blokiran)
+{
+    <div class="alert alert-danger text-center p-4 mt-5" style="border-radius:20px;">
+        <h2>Vaš nalog je suspendovan</h2>
+        <p class="mb-0">
+            Trenutno nemate pristup funkcionalnostima sistema.
+            Za više informacija obratite se administratoru.
+        </p>
+    </div>
+}else
+{
 <section id="pocetna"
          style="
          min-height:85vh;
@@ -53,3 +74,4 @@
     </div>
 
 </section>
+}
