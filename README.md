@@ -32,4 +32,5 @@ Email: nkaric@etf.unsa.ba
 ->Link za pristup aplikaciji putem interneta:
 link: https://nkaric2-001-site1.rtempurl.com
 
+
 ---------------------------------------------------
