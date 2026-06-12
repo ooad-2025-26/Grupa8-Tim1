@@ -21,6 +21,17 @@
         .OrderByDescending(o => o.DatumObjave)
         .ToList();
 }
+@if (TempData["Greska"] != null)
+{
+    <div style="background:#ef4444;
+                    color:white;
+                    padding:12px;
+                    border-radius:10px;
+                    margin-bottom:20px;
+                    text-align:center;">
+        @TempData["Greska"]
+    </div>
+}
 
 <section class="section">
     <div style="max-width:1100px; margin:auto;">

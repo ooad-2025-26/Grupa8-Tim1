@@ -210,6 +210,14 @@
                     <a class="btn-pink" asp-action="Edit" asp-route-id="@Model.SadrzajId">
                         Uredi objavu
                     </a>
+                    @if (ViewBag.JeModerator == true)
+                    {
+                        <a class="btn-pink"
+                           asp-action="Delete"
+                           asp-route-id="@Model.SadrzajId">
+                            Obriši objavu
+                        </a>
+                    }
 
                     <a class="btn-dark"
                            asp-controller="CitalackaGrupa"

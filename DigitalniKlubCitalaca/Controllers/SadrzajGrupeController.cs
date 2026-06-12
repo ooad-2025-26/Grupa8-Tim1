@@ -52,6 +52,13 @@ namespace DigitalniKlubCitalaca.Controllers
                 .OrderByDescending(k => k.DatumKomentara)
                 .ToListAsync();
 
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var korisnik = await _context.Korisnici
+                .FirstOrDefaultAsync(k => k.Id == korisnikId);
+
+            ViewBag.JeModerator = korisnik != null && korisnik.Uloga == Uloga.moderator;
+
             return View(sadrzajGrupe);
         }
 
@@ -103,8 +110,24 @@ namespace DigitalniKlubCitalaca.Controllers
         }
 
         [Authorize]
-        public IActionResult Create(int grupaId)
+        public async Task<IActionResult> Create(int grupaId)
         {
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var trenutniKorisnik = await _context.Korisnici
+                .FirstOrDefaultAsync(k => k.Id == korisnikId);
+
+            if (trenutniKorisnik == null)
+            {
+                return RedirectToAction("AccessDenied", "Home");
+            }
+
+            if (trenutniKorisnik.Uloga == Uloga.administrator)
+            {
+                TempData["Greska"] = "Administrator ne može objavljivati sadržaj u čitalačkim grupama.";
+                return RedirectToAction("Details", "CitalackaGrupa", new { id = grupaId });
+            }
+
             var objava = new SadrzajGrupe
             {
                 GrupaId = grupaId,
@@ -126,6 +149,20 @@ namespace DigitalniKlubCitalaca.Controllers
             ModelState.Remove("Link");
 
             var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var trenutniKorisnik = await _context.Korisnici
+    .FirstOrDefaultAsync(k => k.Id == korisnikId);
+
+            if (trenutniKorisnik == null)
+            {
+                return RedirectToAction("AccessDenied", "Home");
+            }
+
+            if (trenutniKorisnik.Uloga == Uloga.administrator)
+            {
+                TempData["Greska"] = "Administrator ne može objavljivati sadržaj u čitalačkim grupama.";
+                return RedirectToAction("Details", "CitalackaGrupa", new { id = sadrzajGrupe.GrupaId });
+            }
+
 
             if (korisnikId == null)
                 return RedirectToPage("/Account/Login", new { area = "Identity" });
@@ -267,6 +304,15 @@ namespace DigitalniKlubCitalaca.Controllers
 
         public async Task<IActionResult> Delete(int? id)
         {
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var korisnik = await _context.Korisnici
+                .FirstOrDefaultAsync(k => k.Id == korisnikId);
+
+            if (korisnik == null || korisnik.Uloga != Uloga.moderator)
+            {
+                return RedirectToAction("AccessDenied", "Home");
+            }
             if (id == null) return NotFound();
 
             var sadrzajGrupe = await _context.SadrzajiGrupe
@@ -283,6 +329,15 @@ namespace DigitalniKlubCitalaca.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var korisnik = await _context.Korisnici
+                .FirstOrDefaultAsync(k => k.Id == korisnikId);
+
+            if (korisnik == null || korisnik.Uloga != Uloga.moderator)
+            {
+                return RedirectToAction("AccessDenied", "Home");
+            }
             var sadrzajGrupe = await _context.SadrzajiGrupe.FindAsync(id);
 
             if (sadrzajGrupe == null) return NotFound();
