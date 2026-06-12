@@ -17,6 +17,12 @@ Email: apestalic1@etf.unsa.ba
 
 ---------------------------------------------------
 
+->Registrovan korisnik (moderator):
+Email: nedz@gmail.com
+Šifra: Babomama_12
+
+---------------------------------------------------
+
 ->Registrovan korisnik (korisnik):
 Email: nkaric@etf.unsa.ba
 Šifra: Klub123!
