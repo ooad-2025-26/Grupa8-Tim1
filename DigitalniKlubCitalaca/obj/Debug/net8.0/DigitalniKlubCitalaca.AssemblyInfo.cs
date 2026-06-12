@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DigitalniKlubCitalaca")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d74014239efc064be2b724c5fbe05198b62ff24")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5d18dc9a8aa72e01a012184e32e07a6acd07c52")]
 [assembly: System.Reflection.AssemblyProductAttribute("DigitalniKlubCitalaca")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DigitalniKlubCitalaca")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

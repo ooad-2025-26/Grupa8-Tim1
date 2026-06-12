@@ -131,6 +131,15 @@ namespace DigitalniKlubCitalaca.Controllers
                     DatumPridruzivanja = DateTime.Now,
                     StatusClanstva = StatusClanstva.clan
                 });
+
+                _context.Notifikacije.Add(new Notifikacija
+                {
+                    KorisnikId = korisnik.Id,
+                    Poruka = $"Uspješno ste se pridružili grupi \"{grupa.Naziv}\".",
+                    Link = Url.Action("Details", "CitalackaGrupa", new { id = grupa.GrupaId }),
+                    Datum = DateTime.Now,
+                    Procitana = false
+                });
             }
             else
             {
@@ -141,6 +150,34 @@ namespace DigitalniKlubCitalaca.Controllers
                     DatumZahtjeva = DateTime.Now,
                     StatusZahtjeva = StatusZahtjeva.na_cekanju
                 });
+
+                _context.Notifikacije.Add(new Notifikacija
+                {
+                    KorisnikId = korisnik.Id,
+                    Poruka = $"Vaš zahtjev za pristup grupi \"{grupa.Naziv}\" je poslan.",
+                    Link = Url.Action("DostupneGrupe", "CitalackaGrupa"),
+                    Datum = DateTime.Now,
+                    Procitana = false
+                });
+
+                var admini = await _context.Korisnici
+                    .Where(k => k.Uloga == Uloga.administrator)
+                    .ToListAsync();
+
+                foreach (var admin in admini)
+                {
+                    if (admin.Id == korisnik.Id)
+                        continue;
+
+                    _context.Notifikacije.Add(new Notifikacija
+                    {
+                        KorisnikId = admin.Id,
+                        Poruka = $"Novi zahtjev za pristup privatnoj grupi \"{grupa.Naziv}\".",
+                        Link = Url.Action("Index", "ZahtjevZaPristup"),
+                        Datum = DateTime.Now,
+                        Procitana = false
+                    });
+                }
             }
 
             await _context.SaveChangesAsync();
