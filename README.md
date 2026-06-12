@@ -30,8 +30,6 @@ Email: nkaric@etf.unsa.ba
 ---------------------------------------------------
 
 ->Link za pristup aplikaciji putem interneta:
-link: http://nkaric2-001-site1.rtempurl.com
-Username: 11308934
-Šifra: 60-dayfreetrial
+link: https://nkaric2-001-site1.rtempurl.com
 
 ---------------------------------------------------
