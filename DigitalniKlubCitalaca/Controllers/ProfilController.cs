@@ -36,6 +36,9 @@ namespace DigitalniKlubCitalaca.Controllers
                 return RedirectToAction(nameof(Create));
             }
 
+            ViewBag.BrojGrupa = await _context.ClanstvaGrupe
+    .CountAsync(c => c.KorisnikId == korisnikId);
+
             return View(new List<Profil> { profil });
         }
 
@@ -219,6 +222,29 @@ return RedirectToAction(nameof(Index));
             }
 
             await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> PromijeniProfilnuSliku(string profilnaSlika)
+        {
+            var korisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var korisnik = await _context.Korisnici
+                .FirstOrDefaultAsync(k => k.Id == korisnikId);
+
+            if (korisnik == null)
+            {
+                return NotFound();
+            }
+
+            korisnik.ProfilnaSlika = profilnaSlika;
+
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Profilna slika je uspješno promijenjena!";
+
             return RedirectToAction(nameof(Index));
         }
 

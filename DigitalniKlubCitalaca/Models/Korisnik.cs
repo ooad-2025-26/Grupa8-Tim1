@@ -6,7 +6,7 @@ namespace DigitalniKlubCitalaca.Models
     {
         public string Ime { get; set; } = string.Empty;
         public string Prezime { get; set; } = string.Empty;
-        public string ProfilnaSlika { get; set; } = string.Empty;
+        public string ProfilnaSlika { get; set; }
         public string Biografija { get; set; } = string.Empty;
 
         public double LokacijaX { get; set; }
@@ -17,6 +17,7 @@ namespace DigitalniKlubCitalaca.Models
 
         public Uloga Uloga { get; set; }
         public StatusNaloga StatusNaloga { get; set; }
+
 
         public Korisnik() { }
     }
